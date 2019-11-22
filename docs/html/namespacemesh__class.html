@@ -58,6 +58,8 @@ $(function() {
 関数/サブルーチン</h2></td></tr>
 <tr class="memitem:a9f6832e58fffc7b02584995c19b3747c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemesh__class.html#a9f6832e58fffc7b02584995c19b3747c">init</a> (self)</td></tr>
 <tr class="separator:a9f6832e58fffc7b02584995c19b3747c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc8fbfcb9a1bc2b56f63c51aedc469e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemesh__class.html#a7bc8fbfcb9a1bc2b56f63c51aedc469e">read_off</a> (self, filename)</td></tr>
+<tr class="separator:a7bc8fbfcb9a1bc2b56f63c51aedc469e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>境界メッシュ </p>
@@ -85,16 +87,81 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>初期化する </p>
+<p>ne,np,p,ndを与えた後，初期化する </p>
 
-<p class="definition"> <a class="el" href="mesh__class_8f90_source.html">mesh_class.f90</a> の <a class="el" href="mesh__class_8f90_source.html#l00021">21</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">class</span>(mesh),<span class="keywordtype">intent(inout)</span> :: self</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="mesh__class_8f90_source.html">mesh_class.f90</a> の <a class="el" href="mesh__class_8f90_source.html#l00031">31</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">class</span>(mesh),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">call </span>assert(<span class="keyword">allocated</span>(self%p))</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">call </span>assert(<span class="keyword">allocated</span>(self%nd))</div></div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemesh__class_a9f6832e58fffc7b02584995c19b3747c_cgraph.png" border="0" usemap="#namespacemesh__class_a9f6832e58fffc7b02584995c19b3747c_cgraph" alt=""/></div>
+<map name="namespacemesh__class_a9f6832e58fffc7b02584995c19b3747c_cgraph" id="namespacemesh__class_a9f6832e58fffc7b02584995c19b3747c_cgraph">
+<area shape="rect" id="node2" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="171,5,265,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7bc8fbfcb9a1bc2b56f63c51aedc469e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc8fbfcb9a1bc2b56f63c51aedc469e">&#9670;&nbsp;</a></span>read_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mesh_class::read_off </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structmesh__class_1_1mesh.html">mesh</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(*), intent(in)&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>.off (Object File Format) ファイルを読み込む </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">filename</td><td>ファイル名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="mesh__class_8f90_source.html">mesh_class.f90</a> の <a class="el" href="mesh__class_8f90_source.html#l00041">41</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">class</span>(mesh),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: filename</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">character(1000)</span> :: ctmp</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">integer</span> :: itmp, i</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">open</span>(10,file=filename)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">! 一行目は無視</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">read</span>(10,*) ctmp</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">! 節点数，要素数，(辺の数)をread</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">read</span>(10,*) self%np, self%ne, itmp</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">! 各節点の座標をread</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">allocate</span>(self%p(3,self%np))</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">do</span> i=1,self%np</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;       <span class="keyword">read</span>(10,*) self%p(1:3,i)</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">! 各要素の節点番号をread</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">allocate</span>(self%nd(3,self%ne))</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;       <span class="comment">! 1列目は節点の数</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       <span class="keyword">read</span>(10,*) itmp, self%nd(1:3,i)</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;       <span class="comment">! 三角形メッシュのみ対応</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;       <span class="keyword">call </span>assert(itmp == 3)</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">! .offの節点番号は0から始まるので，1足す</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    self%nd(:,:) = self%nd(:,:) + 1</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">close</span>(10)</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div></div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemesh__class_a7bc8fbfcb9a1bc2b56f63c51aedc469e_cgraph.png" border="0" usemap="#namespacemesh__class_a7bc8fbfcb9a1bc2b56f63c51aedc469e_cgraph" alt=""/></div>
+<map name="namespacemesh__class_a7bc8fbfcb9a1bc2b56f63c51aedc469e_cgraph" id="namespacemesh__class_a7bc8fbfcb9a1bc2b56f63c51aedc469e_cgraph">
+<area shape="rect" id="node2" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="200,5,295,32"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月22日(金) 16時05分27秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月22日(金) 18時04分48秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

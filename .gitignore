@@ -1,0 +1,13 @@
+/bin/
+*.el2
+*.el3
+*.stl
+*.off
+*.dat
+core
+core.*
+fort.*
+*.orig
+*.o
+*.mod
+a.out

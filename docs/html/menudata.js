@@ -4,7 +4,8 @@ var menudata={children:[
 {text:"モジュール一覧",url:"namespaces.html"},
 {text:"モジュールメンバ",url:"namespacemembers.html",children:[
 {text:"全て",url:"namespacemembers.html"},
-{text:"関数/サブルーチン",url:"namespacemembers_func.html"}]}]},
+{text:"関数/サブルーチン",url:"namespacemembers_func.html"},
+{text:"変数",url:"namespacemembers_vars.html"}]}]},
 {text:"データ型一覧",url:"annotated.html",children:[
 {text:"データ型一覧",url:"annotated.html"},
 {text:"データフィールド",url:"functions.html",children:[

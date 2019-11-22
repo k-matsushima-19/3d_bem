@@ -102,8 +102,8 @@ ifdef OPT
   CFLAGS += $(COPTS)
 endif
 
-.PHONY: $(SUBDIRS) all clean c prof install
-all: $(SUBDIRS) $(TARGET)
+.PHONY: $(SUBDIRS) all clean c prof install doxygen
+all: $(SUBDIRS) $(TARGET) doxygen
 
 $(SUBDIRS):
 	@$(MAKE) -C $@
@@ -135,6 +135,9 @@ clean: c
 c:
 	@-rm -rf $(OBJS) $(DEPS) $(TARGET) $(OBJDIR)/*.mod
 
+# doxygen
+doxygen:
+	@-doxygen > /dev/null
 
 prof: FFLAGS += -pg
 prof: LDFLAGS += -pg

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: mathモジュール</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">mathモジュール</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:a7067d0000671bceadcbc035efb64d1cd"><td class="memItemLeft" align="right" valign="top">real(8) function, dimension(3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a7067d0000671bceadcbc035efb64d1cd">vector_product</a> (vec1, vec2)</td></tr>
+<tr class="memdesc:a7067d0000671bceadcbc035efb64d1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの外積  <a href="#a7067d0000671bceadcbc035efb64d1cd">[詳解]</a><br /></td></tr>
+<tr class="separator:a7067d0000671bceadcbc035efb64d1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca08d0d90451de708df601a56fc3d5a"><td class="memItemLeft" align="right" valign="top">real(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a4ca08d0d90451de708df601a56fc3d5a">vector_length</a> (vec)</td></tr>
+<tr class="memdesc:a4ca08d0d90451de708df601a56fc3d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの長さ  <a href="#a4ca08d0d90451de708df601a56fc3d5a">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ca08d0d90451de708df601a56fc3d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数/サブルーチン詳解</h2>
+<a id="a4ca08d0d90451de708df601a56fc3d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca08d0d90451de708df601a56fc3d5a">&#9670;&nbsp;</a></span>vector_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) function math::vector_length </td>
+          <td>(</td>
+          <td class="paramtype">real(8), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ベクトルの長さ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>3次元ベクトル <img class="formulaInl" alt="$ a $" src="form_2.png"/> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><img class="formulaInl" alt="$ |a| $" src="form_4.png"/> </dd></dl>
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00022">22</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="mesh3d__class_8f90_source.html#l00040">mesh3d_class::init()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: vec(3)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    vector_length = sqrt(dot_product(vec,vec))</div></div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemath_a4ca08d0d90451de708df601a56fc3d5a_icgraph.png" border="0" usemap="#namespacemath_a4ca08d0d90451de708df601a56fc3d5a_icgraph" alt=""/></div>
+<map name="namespacemath_a4ca08d0d90451de708df601a56fc3d5a_icgraph" id="namespacemath_a4ca08d0d90451de708df601a56fc3d5a_icgraph">
+<area shape="rect" id="node2" href="namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="mesh3d_class::init" alt="" coords="191,5,321,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7067d0000671bceadcbc035efb64d1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7067d0000671bceadcbc035efb64d1cd">&#9670;&nbsp;</a></span>vector_product()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) function, dimension(3) math::vector_product </td>
+          <td>(</td>
+          <td class="paramtype">real(8), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>vec1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>vec2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ベクトルの外積 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec1</td><td>3次元ベクトル <img class="formulaInl" alt="$ a $" src="form_2.png"/> </td></tr>
+    <tr><td class="paramname">vec2</td><td>3次元ベクトル <img class="formulaInl" alt="$ b $" src="form_3.png"/> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><img class="formulaInl" alt="$a \times b$" src="form_1.png"/> </dd></dl>
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00009">9</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="mesh3d__class_8f90_source.html#l00040">mesh3d_class::init()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: vec1(3)</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: vec2(3)</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">real(8)</span> :: out(3)</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    out(1) = vec1(2)*vec2(3) - vec1(3)*vec2(2)</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    out(2) = vec1(3)*vec2(1) - vec1(1)*vec2(3)</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    out(3) = vec1(1)*vec2(2) - vec1(2)*vec2(1)</div></div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemath_a7067d0000671bceadcbc035efb64d1cd_icgraph.png" border="0" usemap="#namespacemath_a7067d0000671bceadcbc035efb64d1cd_icgraph" alt=""/></div>
+<map name="namespacemath_a7067d0000671bceadcbc035efb64d1cd_icgraph" id="namespacemath_a7067d0000671bceadcbc035efb64d1cd_icgraph">
+<area shape="rect" id="node2" href="namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="mesh3d_class::init" alt="" coords="199,5,329,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月22日(金) 18時52分20秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
