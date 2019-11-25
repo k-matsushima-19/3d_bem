@@ -1,8 +1,8 @@
 /**
 @mainpage 概要
 
-@section コンパイル
-
-make
+@section 必要なライブラリ
+\par LAPACK & BLAS
+sudo apt install liblapack-dev
 
 */

@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: incwave3d_helmholtz_classモジュール</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ型</a> &#124;
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">incwave3d_helmholtz_classモジュール</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structincwave3d__helmholtz__class_1_1incwave3d__helmholtz.html">incwave3d_helmholtz</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:a0767c2db1430d6026d07f066c08d7cb4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__class.html#a0767c2db1430d6026d07f066c08d7cb4">init</a> (self, w, c, amp, pvec)</td></tr>
+<tr class="memdesc:a0767c2db1430d6026d07f066c08d7cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="#a0767c2db1430d6026d07f066c08d7cb4">[詳解]</a><br /></td></tr>
+<tr class="separator:a0767c2db1430d6026d07f066c08d7cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d30ef7c03230b44c2868dba7c674b8e"><td class="memItemLeft" align="right" valign="top">elemental subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__class.html#a0d30ef7c03230b44c2868dba7c674b8e">destructor</a> (self)</td></tr>
+<tr class="separator:a0d30ef7c03230b44c2868dba7c674b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7146fff5db2015e37fc2143d149d7d"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__class.html#acb7146fff5db2015e37fc2143d149d7d">calc</a> (self, x)</td></tr>
+<tr class="separator:acb7146fff5db2015e37fc2143d149d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434842f3e698d21b5c6ad49d842c9494"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__class.html#a434842f3e698d21b5c6ad49d842c9494">calc_normalderivative</a> (self, x, nvec)</td></tr>
+<tr class="separator:a434842f3e698d21b5c6ad49d842c9494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数/サブルーチン詳解</h2>
+<a id="acb7146fff5db2015e37fc2143d149d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb7146fff5db2015e37fc2143d149d7d">&#9670;&nbsp;</a></span>calc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8) function incwave3d_helmholtz_class::calc </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structincwave3d__helmholtz__class_1_1incwave3d__helmholtz.html">incwave3d_helmholtz</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(2), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="incwave3d__helmholtz__class_8f90_source.html">incwave3d_helmholtz_class.f90</a> の <a class="el" href="incwave3d__helmholtz__class_8f90_source.html#l00055">55</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="math_8f90_source.html#l00006">math::ione</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">class</span>(incwave3d_helmholtz),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: x(2)</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">complex(8)</span> :: calc</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    calc = self%amp * exp(<a class="code" href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">ione</a>*self%k*<a class="code" href="interfacemath_1_1rdot__product.html">rdot_product</a>(self%pvec,x))</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="ttc" id="interfacemath_1_1rdot__product_html"><div class="ttname"><a href="interfacemath_1_1rdot__product.html">math::rdot_product</a></div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00010">math.f90:10</a></div></div>
+<div class="ttc" id="namespacemath_html_abcc8438bee3c1535812c6db4870f5ea2"><div class="ttname"><a href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">math::ione</a></div><div class="ttdeci">complex(8), parameter ione</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00006">math.f90:6</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a434842f3e698d21b5c6ad49d842c9494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434842f3e698d21b5c6ad49d842c9494">&#9670;&nbsp;</a></span>calc_normalderivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8) function incwave3d_helmholtz_class::calc_normalderivative </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structincwave3d__helmholtz__class_1_1incwave3d__helmholtz.html">incwave3d_helmholtz</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(2), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(2), intent(in)&#160;</td>
+          <td class="paramname"><em>nvec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="incwave3d__helmholtz__class_8f90_source.html">incwave3d_helmholtz_class.f90</a> の <a class="el" href="incwave3d__helmholtz__class_8f90_source.html#l00064">64</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="math_8f90_source.html#l00006">math::ione</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">class</span>(incwave3d_helmholtz),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: x(2)</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: nvec(2) <span class="comment">! 単位法線ベクトル</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">complex(8)</span> :: calc_normalderivative</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    calc_normalderivative = self%amp * <a class="code" href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">ione</a>*self%k*<a class="code" href="interfacemath_1_1rdot__product.html">rdot_product</a>(self%pvec,nvec)*exp(<a class="code" href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">ione</a>*self%k*<a class="code" href="interfacemath_1_1rdot__product.html">rdot_product</a>(self%pvec,x))</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="ttc" id="interfacemath_1_1rdot__product_html"><div class="ttname"><a href="interfacemath_1_1rdot__product.html">math::rdot_product</a></div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00010">math.f90:10</a></div></div>
+<div class="ttc" id="namespacemath_html_abcc8438bee3c1535812c6db4870f5ea2"><div class="ttname"><a href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">math::ione</a></div><div class="ttdeci">complex(8), parameter ione</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00006">math.f90:6</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0d30ef7c03230b44c2868dba7c674b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d30ef7c03230b44c2868dba7c674b8e">&#9670;&nbsp;</a></span>destructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">elemental subroutine incwave3d_helmholtz_class::destructor </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structincwave3d__helmholtz__class_1_1incwave3d__helmholtz.html">incwave3d_helmholtz</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="incwave3d__helmholtz__class_8f90_source.html">incwave3d_helmholtz_class.f90</a> の <a class="el" href="incwave3d__helmholtz__class_8f90_source.html#l00051">51</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">class</span>(incwave3d_helmholtz),<span class="keywordtype">intent(inout)</span> :: self</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a0767c2db1430d6026d07f066c08d7cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0767c2db1430d6026d07f066c08d7cb4">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine incwave3d_helmholtz_class::init </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structincwave3d__helmholtz__class_1_1incwave3d__helmholtz.html">incwave3d_helmholtz</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), intent(in)&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex(8), intent(in)&#160;</td>
+          <td class="paramname"><em>amp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex(8), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>pvec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>角周波数 </td></tr>
+    <tr><td class="paramname">c</td><td>位相速度 </td></tr>
+    <tr><td class="paramname">amp</td><td>複素振幅 </td></tr>
+    <tr><td class="paramname">pvec</td><td>伝播方向を表すベクトル <img class="formulaInl" alt="$ p\in C^3 $" src="form_5.png"/> <img class="formulaInl" alt="$ (p_1^2+p_2^2+p_3^2=1) $" src="form_7.png"/> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="incwave3d__helmholtz__class_8f90_source.html">incwave3d_helmholtz_class.f90</a> の <a class="el" href="incwave3d__helmholtz__class_8f90_source.html#l00035">35</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">class</span>(incwave3d_helmholtz),<span class="keywordtype">intent(out)</span> :: self</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: w</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: amp</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: pvec(3)</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: c</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    self%w = w</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    self%amp = amp</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    self%pvec(:) = pvec(:)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    self%c = c</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    self%k = self%w / self%c</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div></div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月23日(土) 16時19分48秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

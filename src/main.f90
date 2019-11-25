@@ -1,16 +1,11 @@
 !> mainのプログラム
-program main
-  use mesh3d_class
+program main  
+  use examples_helmholtz
   implicit none
 
-  type(mesh3d),allocatable :: mesh
-
-  allocate(mesh)
-  call mesh%read_off("sphere.off")
-  call mesh%invert
-
-  call mesh%output_an("normal.dat")
-
+  call ana_sphere
+  ! call solve_helmholtz3d
+  
 end program main
 
   

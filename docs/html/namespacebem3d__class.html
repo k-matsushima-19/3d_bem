@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: bem3d_classモジュール</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ型</a> &#124;
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">bem3d_classモジュール</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>BEMの抽象クラス  
+<a href="#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html">bem3d</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">bemの抽象クラス  <a href="structbem3d__class_1_1bem3d.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:a939df2433a6414faefe40d8aec982ed9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebem3d__class.html#a939df2433a6414faefe40d8aec982ed9">lu_decompose</a> (self)</td></tr>
+<tr class="memdesc:a939df2433a6414faefe40d8aec982ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">係数行列amatをLU分解する  <a href="#a939df2433a6414faefe40d8aec982ed9">[詳解]</a><br /></td></tr>
+<tr class="separator:a939df2433a6414faefe40d8aec982ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417981f6d5c1c508b8f1bb1c35410946"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebem3d__class.html#a417981f6d5c1c508b8f1bb1c35410946">lu_solve</a> (self)</td></tr>
+<tr class="memdesc:a417981f6d5c1c508b8f1bb1c35410946"><td class="mdescLeft">&#160;</td><td class="mdescRight">LU分解した係数行列amatとbvecを用いて連立方程式を解く  <a href="#a417981f6d5c1c508b8f1bb1c35410946">[詳解]</a><br /></td></tr>
+<tr class="separator:a417981f6d5c1c508b8f1bb1c35410946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>BEMの抽象クラス </p>
+</div><h2 class="groupheader">関数/サブルーチン詳解</h2>
+<a id="a939df2433a6414faefe40d8aec982ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939df2433a6414faefe40d8aec982ed9">&#9670;&nbsp;</a></span>lu_decompose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine bem3d_class::lu_decompose </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structbem3d__class_1_1bem3d.html">bem3d</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>係数行列amatをLU分解する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00042">42</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">class</span>(bem3d),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">integer</span> :: info</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">allocate</span>(self%ipivot(self%size))    </div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">call </span>zgetrf(self%size, self%size, self%amat, self%size, self%ipivot, info)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(info == 0)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    self%is_factorized_amat = .true.</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div><div class="ttc" id="namespacemisc_html_afbc51c769209391c77a92e8b5a0ac0f3"><div class="ttname"><a href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">misc::assert</a></div><div class="ttdeci">subroutine, public assert(flag, message)</div><div class="ttdef"><b>Definition:</b> <a href="misc_8f90_source.html#l00036">misc.f90:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacebem3d__class_a939df2433a6414faefe40d8aec982ed9_cgraph.png" border="0" usemap="#namespacebem3d__class_a939df2433a6414faefe40d8aec982ed9_cgraph" alt=""/></div>
+<map name="namespacebem3d__class_a939df2433a6414faefe40d8aec982ed9_cgraph" id="namespacebem3d__class_a939df2433a6414faefe40d8aec982ed9_cgraph">
+<area shape="rect" id="node2" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="244,5,339,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a417981f6d5c1c508b8f1bb1c35410946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417981f6d5c1c508b8f1bb1c35410946">&#9670;&nbsp;</a></span>lu_solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine bem3d_class::lu_solve </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structbem3d__class_1_1bem3d.html">bem3d</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LU分解した係数行列amatとbvecを用いて連立方程式を解く </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00058">58</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">class</span>(bem3d),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">integer</span> :: info</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(self%is_factorized_amat)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">call </span>zgetrs(<span class="stringliteral">&#39;N&#39;</span>, self%size, 1, self%amat, self%size, self%ipivot, self%bvec, self%size, info)    </div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(info == 0)</div><div class="ttc" id="namespacemisc_html_afbc51c769209391c77a92e8b5a0ac0f3"><div class="ttname"><a href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">misc::assert</a></div><div class="ttdeci">subroutine, public assert(flag, message)</div><div class="ttdef"><b>Definition:</b> <a href="misc_8f90_source.html#l00036">misc.f90:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacebem3d__class_a417981f6d5c1c508b8f1bb1c35410946_cgraph.png" border="0" usemap="#namespacebem3d__class_a417981f6d5c1c508b8f1bb1c35410946_cgraph" alt=""/></div>
+<map name="namespacebem3d__class_a417981f6d5c1c508b8f1bb1c35410946_cgraph" id="namespacebem3d__class_a417981f6d5c1c508b8f1bb1c35410946_cgraph">
+<area shape="rect" id="node2" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="208,5,303,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月25日(月) 13時55分58秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -3,3 +3,25 @@
 \form#2:$ a $
 \form#3:$ b $
 \form#4:$ |a| $
+\form#5:$ p\in C^3 $
+\form#6:$ p_1^2+p_2^2+p_3^2=1 $
+\form#7:$ (p_1^2+p_2^2+p_3^2=1) $
+\form#8:$ r>0 $
+\form#9:$ \theta\in[0,\pi] $
+\form#10:$ \phi\in(-pi,\pi] $
+\form#11:$ \phi\in(-\pi,\pi] $
+\form#12:$ x_1=x_2=0 $
+\form#13:$ \phi $
+\form#14:$x_3=0 $
+\form#15:$ \theta $
+\form#16:$ \phi=\pi/2,\ \theta=0 $
+\form#17:$ Y_n^m(x) $
+\form#18:$ m,n $
+\form#19:$ n=0 $
+\form#20:$ n $
+\form#21:$ x\in R^3\mapsto Y_n^m(x)=Y_n^m(x/|x|) $
+\form#22:$ \leq 0 $
+\form#23:$ \geq 0 $
+\form#24:$ j_n(x) $
+\form#25:$ y_n(x) $
+\form#26:$ h_n^{(1)}(x) $

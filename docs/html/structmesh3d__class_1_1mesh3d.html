@@ -67,6 +67,18 @@ $(function() {
 <tr class="memitem:abb1154948e767767811d32bd02a6d32d"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#abb1154948e767767811d32bd02a6d32d">invert</a></td></tr>
 <tr class="memdesc:abb1154948e767767811d32bd02a6d32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の向き (法線の方向) を逆転する  <a href="#abb1154948e767767811d32bd02a6d32d">[詳解]</a><br /></td></tr>
 <tr class="separator:abb1154948e767767811d32bd02a6d32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa300b29852ee792f178cb3d79a347bc"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#afa300b29852ee792f178cb3d79a347bc">calc_enclosing_circle</a></td></tr>
+<tr class="memdesc:afa300b29852ee792f178cb3d79a347bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">このメッシュの最小包含球の半径と中心を計算する  <a href="#afa300b29852ee792f178cb3d79a347bc">[詳解]</a><br /></td></tr>
+<tr class="separator:afa300b29852ee792f178cb3d79a347bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39293638315183a0c43a3882ab31501a"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#a39293638315183a0c43a3882ab31501a">shift</a></td></tr>
+<tr class="memdesc:a39293638315183a0c43a3882ab31501a"><td class="mdescLeft">&#160;</td><td class="mdescRight">meshを並行移動  <a href="#a39293638315183a0c43a3882ab31501a">[詳解]</a><br /></td></tr>
+<tr class="separator:a39293638315183a0c43a3882ab31501a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3885370c66c764326c82140924414f0"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#af3885370c66c764326c82140924414f0">expand</a></td></tr>
+<tr class="memdesc:af3885370c66c764326c82140924414f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">meshをcenterを中心に拡大/縮小  <a href="#af3885370c66c764326c82140924414f0">[詳解]</a><br /></td></tr>
+<tr class="separator:af3885370c66c764326c82140924414f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96868673b17273483da342e7a12b5644"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#a96868673b17273483da342e7a12b5644">output_off</a></td></tr>
+<tr class="memdesc:a96868673b17273483da342e7a12b5644"><td class="mdescLeft">&#160;</td><td class="mdescRight">.off形式で境界メッシュをファイルに出力  <a href="#a96868673b17273483da342e7a12b5644">[詳解]</a><br /></td></tr>
+<tr class="separator:a96868673b17273483da342e7a12b5644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -91,12 +103,60 @@ $(function() {
 <tr class="memitem:a45f109053b5fc3ba7030bf761920c056"><td class="memItemLeft" align="right" valign="top">real(8), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#a45f109053b5fc3ba7030bf761920c056">ar</a></td></tr>
 <tr class="memdesc:a45f109053b5fc3ba7030bf761920c056"><td class="mdescLeft">&#160;</td><td class="mdescRight">各要素の面積 (ne)  <a href="#a45f109053b5fc3ba7030bf761920c056">[詳解]</a><br /></td></tr>
 <tr class="separator:a45f109053b5fc3ba7030bf761920c056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6beeec705be6bbc682985f4c64c792a"><td class="memItemLeft" align="right" valign="top">real(8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#ac6beeec705be6bbc682985f4c64c792a">radius</a></td></tr>
+<tr class="memdesc:ac6beeec705be6bbc682985f4c64c792a"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小包含球の半径  <a href="#ac6beeec705be6bbc682985f4c64c792a">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6beeec705be6bbc682985f4c64c792a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31858b73a699873538f58bc4098c82a5"><td class="memItemLeft" align="right" valign="top">real(8), dimension(3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#a31858b73a699873538f58bc4098c82a5">center</a></td></tr>
+<tr class="memdesc:a31858b73a699873538f58bc4098c82a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小包含球の中心座標  <a href="#a31858b73a699873538f58bc4098c82a5">[詳解]</a><br /></td></tr>
+<tr class="separator:a31858b73a699873538f58bc4098c82a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>三角形メッシュ </p>
 
 <p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00009">9</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">メンバ関数/サブルーチン詳解</h2>
+<a id="afa300b29852ee792f178cb3d79a347bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa300b29852ee792f178cb3d79a347bc">&#9670;&nbsp;</a></span>calc_enclosing_circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure mesh3d_class::mesh3d::calc_enclosing_circle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>このメッシュの最小包含球の半径と中心を計算する </p>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af3885370c66c764326c82140924414f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3885370c66c764326c82140924414f0">&#9670;&nbsp;</a></span>expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure mesh3d_class::mesh3d::expand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>meshをcenterを中心に拡大/縮小 </p>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="aa489d9df27c3cecbaa9e631c4171a4bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa489d9df27c3cecbaa9e631c4171a4bf">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -114,7 +174,7 @@ $(function() {
 
 <p>初期化 </p>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00028">28</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -135,7 +195,7 @@ $(function() {
 
 <p>要素の向き (法線の方向) を逆転する </p>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00034">34</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00039">39</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -156,7 +216,28 @@ $(function() {
 
 <p>外向き単位法線ベクトルをファイルに出力する </p>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a96868673b17273483da342e7a12b5644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96868673b17273483da342e7a12b5644">&#9670;&nbsp;</a></span>output_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure mesh3d_class::mesh3d::output_off </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>.off形式で境界メッシュをファイルに出力 </p>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00047">47</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -177,7 +258,28 @@ $(function() {
 
 <p>.offファイルを読み込む </p>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00030">30</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a39293638315183a0c43a3882ab31501a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39293638315183a0c43a3882ab31501a">&#9670;&nbsp;</a></span>shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure mesh3d_class::mesh3d::shift </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>meshを並行移動 </p>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00043">43</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -234,6 +336,24 @@ $(function() {
 
 <p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00021">21</a> 行目に定義があります。</p>
 <div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;     <span class="keywordtype">real(8)</span>,<span class="keywordtype">allocatable</span> :: c(:,:)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a31858b73a699873538f58bc4098c82a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31858b73a699873538f58bc4098c82a5">&#9670;&nbsp;</a></span>center</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8), dimension(3) mesh3d_class::mesh3d::center</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最小包含球の中心座標 </p>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00030">30</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     <span class="keywordtype">real(8)</span> :: center(3)</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a3af8026f76dafa4e72d8dc5166cf7964"></a>
@@ -308,13 +428,31 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     <span class="keywordtype">real(8)</span>,<span class="keywordtype">allocatable</span> :: p(:,:)</div></div><!-- fragment -->
 </div>
 </div>
+<a id="ac6beeec705be6bbc682985f4c64c792a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6beeec705be6bbc682985f4c64c792a">&#9670;&nbsp;</a></span>radius</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) mesh3d_class::mesh3d::radius</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最小包含球の半径 </p>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;     <span class="keywordtype">real(8)</span> :: radius</div></div><!-- fragment -->
+</div>
+</div>
 <hr/>次のファイルから型の詳解が抽出されました:<ul>
 <li><a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月22日(金) 18時52分20秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月25日(月) 13時55分58秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

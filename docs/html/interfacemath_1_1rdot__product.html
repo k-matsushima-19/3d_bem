@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: インターフェース math::rdot_product</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemath.html">math</a></li><li class="navelem"><a class="el" href="interfacemath_1_1rdot__product.html">rdot_product</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="interfacemath_1_1rdot__product-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">インターフェース math::rdot_product</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>内積でない (共役を取らない) ドット積  
+ <a href="interfacemath_1_1rdot__product.html#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa8046a322177b0822e29dd2e5e1c32c1"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1rdot__product.html#aa8046a322177b0822e29dd2e5e1c32c1">rdot_product1</a> (a, b)</td></tr>
+<tr class="separator:aa8046a322177b0822e29dd2e5e1c32c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6891cef92d9c71292907bf65807673c9"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1rdot__product.html#a6891cef92d9c71292907bf65807673c9">rdot_product2</a> (a, b)</td></tr>
+<tr class="separator:a6891cef92d9c71292907bf65807673c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8380e9c6da61009a3a6635751f0639cf"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1rdot__product.html#a8380e9c6da61009a3a6635751f0639cf">rdot_product3</a> (a, b)</td></tr>
+<tr class="separator:a8380e9c6da61009a3a6635751f0639cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad311af05022542b1a33a4dab22676aa"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1rdot__product.html#aad311af05022542b1a33a4dab22676aa">rdot_product4</a> (a, b)</td></tr>
+<tr class="separator:aad311af05022542b1a33a4dab22676aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>内積でない (共役を取らない) ドット積 </p>
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00012">12</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">メンバ関数/サブルーチン詳解</h2>
+<a id="aa8046a322177b0822e29dd2e5e1c32c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8046a322177b0822e29dd2e5e1c32c1">&#9670;&nbsp;</a></span>rdot_product1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8) function math::rdot_product::rdot_product1 </td>
+          <td>(</td>
+          <td class="paramtype">complex(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00120">120</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: a(:)</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: b(:)</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="namespacemath.html#a89648d008ff93d4db020fa847ead39f9">rdot_product1</a> = dot_product(b, a)</div><div class="ttc" id="namespacemath_html_a89648d008ff93d4db020fa847ead39f9"><div class="ttname"><a href="namespacemath.html#a89648d008ff93d4db020fa847ead39f9">math::rdot_product1</a></div><div class="ttdeci">complex(8) function, private rdot_product1(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00120">math.f90:120</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6891cef92d9c71292907bf65807673c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6891cef92d9c71292907bf65807673c9">&#9670;&nbsp;</a></span>rdot_product2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8) function math::rdot_product::rdot_product2 </td>
+          <td>(</td>
+          <td class="paramtype">real(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00127">127</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: a(:)</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: b(:)</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="namespacemath.html#acc430c4d0c5cf08c259ab948cfce5764">rdot_product2</a> = dot_product(a, b)</div><div class="ttc" id="namespacemath_html_acc430c4d0c5cf08c259ab948cfce5764"><div class="ttname"><a href="namespacemath.html#acc430c4d0c5cf08c259ab948cfce5764">math::rdot_product2</a></div><div class="ttdeci">complex(8) function, private rdot_product2(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00127">math.f90:127</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8380e9c6da61009a3a6635751f0639cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8380e9c6da61009a3a6635751f0639cf">&#9670;&nbsp;</a></span>rdot_product3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8) function math::rdot_product::rdot_product3 </td>
+          <td>(</td>
+          <td class="paramtype">complex(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00134">134</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: a(:)</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: b(:)</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="namespacemath.html#aa065579d753be1dff2990fb98fbd83bf">rdot_product3</a> = dot_product(conjg(a), b)</div><div class="ttc" id="namespacemath_html_aa065579d753be1dff2990fb98fbd83bf"><div class="ttname"><a href="namespacemath.html#aa065579d753be1dff2990fb98fbd83bf">math::rdot_product3</a></div><div class="ttdeci">complex(8) function, private rdot_product3(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00134">math.f90:134</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aad311af05022542b1a33a4dab22676aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad311af05022542b1a33a4dab22676aa">&#9670;&nbsp;</a></span>rdot_product4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8) function math::rdot_product::rdot_product4 </td>
+          <td>(</td>
+          <td class="paramtype">real(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00141">141</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: a(:)</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: b(:)</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="namespacemath.html#a356cadd19a7f47ff3b78cfca1216b64e">rdot_product4</a> = dot_product(a, b)</div><div class="ttc" id="namespacemath_html_a356cadd19a7f47ff3b78cfca1216b64e"><div class="ttname"><a href="namespacemath.html#a356cadd19a7f47ff3b78cfca1216b64e">math::rdot_product4</a></div><div class="ttdeci">complex(8) function, private rdot_product4(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00141">math.f90:141</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>次のファイルからインターフェースの詳解が抽出されました:<ul>
+<li><a class="el" href="math_8f90_source.html">math.f90</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月25日(月) 13時55分58秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

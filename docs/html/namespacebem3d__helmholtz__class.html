@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: bem3d_helmholtz_classモジュール</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ型</a> &#124;
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">bem3d_helmholtz_classモジュール</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>3D-Helmholtzを解くためのBEM  
+<a href="#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html">bem3d_helmholtz</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D-Helmholtzを解くためのBEM  <a href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:a1bdf89b9f6d6584dfd3b716576b6b9f7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebem3d__helmholtz__class.html#a1bdf89b9f6d6584dfd3b716576b6b9f7">init</a> (self, mesh, b_condition, w, cs)</td></tr>
+<tr class="memdesc:a1bdf89b9f6d6584dfd3b716576b6b9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">meshと各パラメータを渡してオブジェクトを初期化  <a href="#a1bdf89b9f6d6584dfd3b716576b6b9f7">[詳解]</a><br /></td></tr>
+<tr class="separator:a1bdf89b9f6d6584dfd3b716576b6b9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98fb5cbe7bd8f644ede7bf6fbbd71009"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebem3d__helmholtz__class.html#a98fb5cbe7bd8f644ede7bf6fbbd71009">gen_amat</a> (self)</td></tr>
+<tr class="memdesc:a98fb5cbe7bd8f644ede7bf6fbbd71009"><td class="mdescLeft">&#160;</td><td class="mdescRight">係数行列を作る  <a href="#a98fb5cbe7bd8f644ede7bf6fbbd71009">[詳解]</a><br /></td></tr>
+<tr class="separator:a98fb5cbe7bd8f644ede7bf6fbbd71009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc7b1442be94b7ee98b7726be517a98"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebem3d__helmholtz__class.html#a4fc7b1442be94b7ee98b7726be517a98">gen_bvec</a> (self, incw)</td></tr>
+<tr class="memdesc:a4fc7b1442be94b7ee98b7726be517a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">右辺ベクトルを作る  <a href="#a4fc7b1442be94b7ee98b7726be517a98">[詳解]</a><br /></td></tr>
+<tr class="separator:a4fc7b1442be94b7ee98b7726be517a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64942bfd2c330cdbd257de0df0c6c50a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebem3d__helmholtz__class.html#a64942bfd2c330cdbd257de0df0c6c50a">gen_solution</a> (self, sol)</td></tr>
+<tr class="memdesc:a64942bfd2c330cdbd257de0df0c6c50a"><td class="mdescLeft">&#160;</td><td class="mdescRight">解を返す  <a href="#a64942bfd2c330cdbd257de0df0c6c50a">[詳解]</a><br /></td></tr>
+<tr class="separator:a64942bfd2c330cdbd257de0df0c6c50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>3D-Helmholtzを解くためのBEM </p>
+</div><h2 class="groupheader">関数/サブルーチン詳解</h2>
+<a id="a98fb5cbe7bd8f644ede7bf6fbbd71009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98fb5cbe7bd8f644ede7bf6fbbd71009">&#9670;&nbsp;</a></span>gen_amat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine bem3d_helmholtz_class::gen_amat </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html">bem3d_helmholtz</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>係数行列を作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="bem3d__helmholtz__class_8f90_source.html">bem3d_helmholtz_class.f90</a> の <a class="el" href="bem3d__helmholtz__class_8f90_source.html#l00057">57</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="math_8f90_source.html#l00006">math::zero</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">class</span>(bem3d_helmholtz),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">integer</span> :: i, j</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">complex(8)</span> :: s, d, ds, n</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">type</span>(layerpotential3d_helmholtz),<span class="keywordtype">allocatable</span> :: lps(:)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">allocate</span>(lps(2))</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">call </span>lps(1)%init(10, self%w, self%cs(1))</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">call </span>lps(2)%init(10, self%w, self%cs(2))</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">allocate</span>(self%amat(self%size,self%size))</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    self%amat(:,:) = <a class="code" href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">zero</a></div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span>(self%b_condition == <span class="stringliteral">&quot;neumann&quot;</span>) <span class="keywordflow">then</span>       </div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;       <span class="keywordflow">do</span> j=1,self%mesh%ne</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          <span class="keywordflow">do</span> i=1,self%mesh%ne</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;             <span class="comment">! layer potentialを計算</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;             <span class="keyword">call </span>lps(1)%calc(&amp;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                  self%mesh%c(:,i), &amp;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                  self%mesh%p(:,self%mesh%nd(1,j)),&amp;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                  self%mesh%p(:,self%mesh%nd(2,j)),&amp;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                  self%mesh%p(:,self%mesh%nd(3,j)),&amp;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                  self%mesh%ar(j),&amp;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                  self%mesh%an(:,i),&amp;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                  self%mesh%an(:,j),&amp;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                  s, d, ds, n)</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;             self%amat(i,j) = d</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordflow">          end do</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;       <span class="comment">! 対角に1/2を足す</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;       <span class="keywordflow">do</span> i=1,self%mesh%ne</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          self%amat(i,i) = self%amat(i,i) + 0.5d0</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordflow">    end if</span></div><div class="ttc" id="namespacemath_html_a159c8779fbff58efb934b1f3ba4fcb26"><div class="ttname"><a href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">math::zero</a></div><div class="ttdeci">complex(8), parameter zero</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00006">math.f90:6</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4fc7b1442be94b7ee98b7726be517a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc7b1442be94b7ee98b7726be517a98">&#9670;&nbsp;</a></span>gen_bvec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine bem3d_helmholtz_class::gen_bvec </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html">bem3d_helmholtz</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structincwave3d__helmholtz__planewave__class_1_1incwave3d__helmholtz__planewave.html">incwave3d_helmholtz_planewave</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>incw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右辺ベクトルを作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">incw</td><td>入射波 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="bem3d__helmholtz__class_8f90_source.html">bem3d_helmholtz_class.f90</a> の <a class="el" href="bem3d__helmholtz__class_8f90_source.html#l00099">99</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(bem3d_helmholtz),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">type</span>(incwave3d_helmholtz_planewave),<span class="keywordtype">intent(in)</span> :: incw</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">complex(8)</span> :: u</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">allocate</span>(self%bvec(self%size))</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span>(self%b_condition == <span class="stringliteral">&quot;neumann&quot;</span>) <span class="keywordflow">then</span></div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;       <span class="keywordflow">do</span> i=1,self%mesh%ne</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          u = incw%calc(self%mesh%c(:,i))</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          self%bvec(i) = u</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;       </div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordflow">    end if</span></div></div><!-- fragment -->
+</div>
+</div>
+<a id="a64942bfd2c330cdbd257de0df0c6c50a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64942bfd2c330cdbd257de0df0c6c50a">&#9670;&nbsp;</a></span>gen_solution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine bem3d_helmholtz_class::gen_solution </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html">bem3d_helmholtz</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>sol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>解を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">sol</td><td>解 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="bem3d__helmholtz__class_8f90_source.html">bem3d_helmholtz_class.f90</a> の <a class="el" href="bem3d__helmholtz__class_8f90_source.html#l00121">121</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="math_8f90_source.html#l00006">math::zero</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">class</span>(bem3d_helmholtz),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">type</span>(solution_helmholtz),<span class="keywordtype">intent(out)</span> :: sol</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">call </span>sol%init(self%mesh)</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span>(self%b_condition == <span class="stringliteral">&quot;neumann&quot;</span>) <span class="keywordflow">then</span></div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;       sol%u_bndry(:,1) = self%bvec(:)</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;       sol%u_bndry(:,2) = <a class="code" href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">zero</a></div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordflow">    end if</span></div><div class="ttc" id="namespacemath_html_a159c8779fbff58efb934b1f3ba4fcb26"><div class="ttname"><a href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">math::zero</a></div><div class="ttdeci">complex(8), parameter zero</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00006">math.f90:6</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1bdf89b9f6d6584dfd3b716576b6b9f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdf89b9f6d6584dfd3b716576b6b9f7">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine bem3d_helmholtz_class::init </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html">bem3d_helmholtz</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), intent(inout), target&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(*), intent(in)&#160;</td>
+          <td class="paramname"><em>b_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(2), intent(in)&#160;</td>
+          <td class="paramname"><em>cs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>meshと各パラメータを渡してオブジェクトを初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">mesh</td><td>BEMに使う境界mesh </td></tr>
+    <tr><td class="paramname">b_condition</td><td>境界条件 "neumann" </td></tr>
+    <tr><td class="paramname">w</td><td>角周波数 </td></tr>
+    <tr><td class="paramname">cs</td><td>各領域の位相速度 1:外部 2:内部 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="bem3d__helmholtz__class_8f90_source.html">bem3d_helmholtz_class.f90</a> の <a class="el" href="bem3d__helmholtz__class_8f90_source.html#l00036">36</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">class</span>(bem3d_helmholtz),<span class="keywordtype">intent(out)</span> :: self</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">type</span>(mesh3d),<span class="keywordtype">intent(inout)</span>,<span class="keywordtype">target</span> :: mesh</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: b_condition</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: w</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: cs(2)</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    self%mesh =&gt; mesh</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    self%b_condition = b_condition</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    self%w = w</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    self%cs = cs</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    self%size = self%mesh%ne</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(self%b_condition == <span class="stringliteral">&quot;neumann&quot;</span>)</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div><div class="ttc" id="namespacemisc_html_afbc51c769209391c77a92e8b5a0ac0f3"><div class="ttname"><a href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">misc::assert</a></div><div class="ttdeci">subroutine, public assert(flag, message)</div><div class="ttdef"><b>Definition:</b> <a href="misc_8f90_source.html#l00036">misc.f90:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacebem3d__helmholtz__class_a1bdf89b9f6d6584dfd3b716576b6b9f7_cgraph.png" border="0" usemap="#namespacebem3d__helmholtz__class_a1bdf89b9f6d6584dfd3b716576b6b9f7_cgraph" alt=""/></div>
+<map name="namespacebem3d__helmholtz__class_a1bdf89b9f6d6584dfd3b716576b6b9f7_cgraph" id="namespacebem3d__helmholtz__class_a1bdf89b9f6d6584dfd3b716576b6b9f7_cgraph">
+<area shape="rect" id="node2" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="216,13,311,39"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月25日(月) 13時55分58秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

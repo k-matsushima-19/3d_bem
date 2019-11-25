@@ -50,6 +50,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemesh3d__class_1_1calc__miniball__wrapper.html">calc_miniball_wrapper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形メッシュ  <a href="structmesh3d__class_1_1mesh3d.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -66,10 +68,126 @@ $(function() {
 <tr class="memitem:a8f895bea96bf963c498f6c661d307769"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemesh3d__class.html#a8f895bea96bf963c498f6c661d307769">invert</a> (self)</td></tr>
 <tr class="memdesc:a8f895bea96bf963c498f6c661d307769"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の向き (法線の方向) を逆転する  <a href="#a8f895bea96bf963c498f6c661d307769">[詳解]</a><br /></td></tr>
 <tr class="separator:a8f895bea96bf963c498f6c661d307769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de74af997551484b49e644509534b28"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemesh3d__class.html#a2de74af997551484b49e644509534b28">calc_enclosing_circle</a> (self, radius, center)</td></tr>
+<tr class="memdesc:a2de74af997551484b49e644509534b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">このメッシュの最小包含球の半径と中心を計算する  <a href="#a2de74af997551484b49e644509534b28">[詳解]</a><br /></td></tr>
+<tr class="separator:a2de74af997551484b49e644509534b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f34c239fe3041e6974baea1e342a32b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemesh3d__class.html#a1f34c239fe3041e6974baea1e342a32b">shift</a> (self, vec)</td></tr>
+<tr class="memdesc:a1f34c239fe3041e6974baea1e342a32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">meshを並行移動  <a href="#a1f34c239fe3041e6974baea1e342a32b">[詳解]</a><br /></td></tr>
+<tr class="separator:a1f34c239fe3041e6974baea1e342a32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9308b7f8d7f6c2d13c4dae117a312be8"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemesh3d__class.html#a9308b7f8d7f6c2d13c4dae117a312be8">expand</a> (self, ratio)</td></tr>
+<tr class="memdesc:a9308b7f8d7f6c2d13c4dae117a312be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">meshをcenterを中心に拡大/縮小  <a href="#a9308b7f8d7f6c2d13c4dae117a312be8">[詳解]</a><br /></td></tr>
+<tr class="separator:a9308b7f8d7f6c2d13c4dae117a312be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47de05cb5da8e4068290dbd7fabea365"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemesh3d__class.html#a47de05cb5da8e4068290dbd7fabea365">output_off</a> (self, filename)</td></tr>
+<tr class="memdesc:a47de05cb5da8e4068290dbd7fabea365"><td class="mdescLeft">&#160;</td><td class="mdescRight">.off形式で境界メッシュをファイルに出力  <a href="#a47de05cb5da8e4068290dbd7fabea365">[詳解]</a><br /></td></tr>
+<tr class="separator:a47de05cb5da8e4068290dbd7fabea365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>境界メッシュ </p>
 </div><h2 class="groupheader">関数/サブルーチン詳解</h2>
+<a id="a2de74af997551484b49e644509534b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de74af997551484b49e644509534b28">&#9670;&nbsp;</a></span>calc_enclosing_circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mesh3d_class::calc_enclosing_circle </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), intent(out)&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(3), intent(out)&#160;</td>
+          <td class="paramname"><em>center</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>このメッシュの最小包含球の半径と中心を計算する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">radius</td><td>半径 </td></tr>
+    <tr><td class="paramname">center</td><td>中心座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00188">188</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(out)</span> :: radius</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(out)</span> :: center(3)</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacemesh3d__class_1_1calc__miniball__wrapper.html">calc_miniball_wrapper</a>(3, self%np, self%p, center, radius)</div><div class="ttc" id="interfacemesh3d__class_1_1calc__miniball__wrapper_html"><div class="ttname"><a href="interfacemesh3d__class_1_1calc__miniball__wrapper.html">mesh3d_class::calc_miniball_wrapper</a></div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00052">mesh3d_class.f90:52</a></div></div>
+<div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9308b7f8d7f6c2d13c4dae117a312be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9308b7f8d7f6c2d13c4dae117a312be8">&#9670;&nbsp;</a></span>expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mesh3d_class::expand </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), intent(in)&#160;</td>
+          <td class="paramname"><em>ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>meshをcenterを中心に拡大/縮小 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">ratio</td><td>半径方向にratio倍に拡大 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00222">222</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: ratio</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">! pの移動</span></div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">do</span> i=1,self%np</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;       self%p(:,i) = self%center(:) + ratio*(self%p(:,i)-self%center)</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="comment">! cの移動</span></div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;       self%c(:,i) = self%center(:) + ratio*(self%c(:,i)-self%center)</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">! radiusの変更</span></div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    self%radius = self%radius * ratio</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    </div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ad705600a8742c631f57be26373fdb572"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad705600a8742c631f57be26373fdb572">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -87,10 +205,14 @@ $(function() {
 </div><div class="memdoc">
 <p>ne, np, p, ndを与えた後，その他のメンバを初期化する </p>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00040">40</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00065">65</a> 行目に定義があります。</p>
 
-<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>, <a class="el" href="math_8f90_source.html#l00022">math::vector_length()</a>, <a class="el" href="math_8f90_source.html#l00009">math::vector_product()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">class</span>(mesh3d),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">call </span>assert(<span class="keyword">allocated</span>(self%p))</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">call </span>assert(<span class="keyword">allocated</span>(self%nd))</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">! 重心</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">allocated</span>(self%c)) <span class="keyword">deallocate</span>(self%c)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">allocate</span>(self%c(3,self%ne))</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       self%c(:,i) = (self%p(:,self%nd(1,i))+self%p(:,self%nd(2,i))+self%p(:,self%nd(3,i))) / 3.d0</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">! 法線と要素面積</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">allocated</span>(self%an)) <span class="keyword">deallocate</span>(self%an)</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">allocated</span>(self%ar)) <span class="keyword">deallocate</span>(self%ar)</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">allocate</span>(self%an(3,self%ne))</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">allocate</span>(self%ar(self%ne))</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;       <span class="comment">! (節点1-&gt;節点2) x (節点1-&gt;節点3)を計算</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;       self%an(:,i) = vector_product(self%p(:,self%nd(2,i))-self%p(:,self%nd(1,i)), self%p(:,self%nd(3,i))-self%p(:,self%nd(1,i)))</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       <span class="comment">! 面積 = ↑の外積の長さ / 2</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;       self%ar(i) = vector_length(self%an(:,i)) * 0.5d0</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;       <span class="comment">! 単位ベクトルにする</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;       self%an(:,i) = self%an(:,i) / (self%ar(i)*2.d0)       </div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div></div><!-- fragment --><div class="dynheader">
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>, <a class="el" href="math_8f90_source.html#l00060">math::vector_length()</a>, <a class="el" href="math_8f90_source.html#l00047">math::vector_product()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">real(8)</span> :: ave, var</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(<span class="keyword">allocated</span>(self%p))</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(<span class="keyword">allocated</span>(self%nd))</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">! 重心</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">allocated</span>(self%c)) <span class="keyword">deallocate</span>(self%c)</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">allocate</span>(self%c(3,self%ne))</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;       self%c(:,i) = (self%p(:,self%nd(1,i))+self%p(:,self%nd(2,i))+self%p(:,self%nd(3,i))) / 3.d0</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">! 法線と要素面積</span></div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">allocated</span>(self%an)) <span class="keyword">deallocate</span>(self%an)</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">allocated</span>(self%ar)) <span class="keyword">deallocate</span>(self%ar)</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">allocate</span>(self%an(3,self%ne))</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">allocate</span>(self%ar(self%ne))</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;       <span class="comment">! (節点1-&gt;節点2) x (節点1-&gt;節点3)を計算</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;       self%an(:,i) = <a class="code" href="namespacemath.html#a7067d0000671bceadcbc035efb64d1cd">vector_product</a>(self%p(:,self%nd(2,i))-self%p(:,self%nd(1,i)), self%p(:,self%nd(3,i))-self%p(:,self%nd(1,i)))</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;       <span class="comment">! 面積 = ↑の外積の長さ / 2</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;       self%ar(i) = <a class="code" href="namespacemath.html#a4ca08d0d90451de708df601a56fc3d5a">vector_length</a>(self%an(:,i)) * 0.5d0</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;       <span class="comment">! 単位ベクトルにする</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;       self%an(:,i) = self%an(:,i) / (self%ar(i)*2.d0)       </div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">call </span>self%calc_enclosing_circle(self%radius, self%center)</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">! 要素面積の平均</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ave = sum(self%ar) / self%ne</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">! 要素面積の分散</span></div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    var = sum((self%ar-ave)**2) / self%ne</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# Number of elements: &quot;</span>, self%ne</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# Number of vertices: &quot;</span>, self%np</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# Minimum area of triangles: &quot;</span>, minval(self%ar)</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# Maximum area of triangles: &quot;</span>, maxval(self%ar)</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# CV of triangle areas: &quot;</span>, sqrt(var) / ave</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    </div><div class="ttc" id="namespacemath_html_a7067d0000671bceadcbc035efb64d1cd"><div class="ttname"><a href="namespacemath.html#a7067d0000671bceadcbc035efb64d1cd">math::vector_product</a></div><div class="ttdeci">real(8) function, dimension(3) vector_product(vec1, vec2)</div><div class="ttdoc">ベクトルの外積 </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00047">math.f90:47</a></div></div>
+<div class="ttc" id="namespacemath_html_a4ca08d0d90451de708df601a56fc3d5a"><div class="ttname"><a href="namespacemath.html#a4ca08d0d90451de708df601a56fc3d5a">math::vector_length</a></div><div class="ttdeci">real(8) function vector_length(vec)</div><div class="ttdoc">ベクトルの長さ </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00060">math.f90:60</a></div></div>
+<div class="ttc" id="namespacemisc_html_afbc51c769209391c77a92e8b5a0ac0f3"><div class="ttname"><a href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">misc::assert</a></div><div class="ttdeci">subroutine, public assert(flag, message)</div><div class="ttdef"><b>Definition:</b> <a href="misc_8f90_source.html#l00036">misc.f90:36</a></div></div>
+<div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemesh3d__class_ad705600a8742c631f57be26373fdb572_cgraph.png" border="0" usemap="#namespacemesh3d__class_ad705600a8742c631f57be26373fdb572_cgraph" alt=""/></div>
@@ -129,8 +251,9 @@ $(function() {
 
 <p>要素の向き (法線の方向) を逆転する </p>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00128">128</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">class</span>(mesh3d),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">integer</span> :: i, itmp</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">! 各要素の節点2と節点3を入れ替え</span></div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;       itmp = self%nd(3,i)</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;       self%nd(3,i) = self%nd(2,i)</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;       self%nd(2,i) = itmp</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">! 法線を反転</span></div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    self%an(:,:) = -self%an(:,:)</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00168">168</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">integer</span> :: i, itmp</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">! 各要素の節点2と節点3を入れ替え</span></div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;       itmp = self%nd(3,i)</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;       self%nd(3,i) = self%nd(2,i)</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;       self%nd(2,i) = itmp</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">! 法線を反転</span></div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    self%an(:,:) = -self%an(:,:)</div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1468a3f69f402d206b8786278523946"></a>
@@ -176,8 +299,57 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00112">112</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">class</span>(mesh3d),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: filename</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">open</span>(10,file=filename,status=<span class="stringliteral">&quot;replace&quot;</span>)</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;       <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(6e24.16)&#39;</span>) self%c(1:3,i), self%an(1:3,i)</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">close</span>(10)</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00152">152</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: filename</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">open</span>(10,file=filename,status=<span class="stringliteral">&quot;replace&quot;</span>)</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;       <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(6e24.16)&#39;</span>) self%c(1:3,i), self%an(1:3,i)</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">close</span>(10)</div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a47de05cb5da8e4068290dbd7fabea365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47de05cb5da8e4068290dbd7fabea365">&#9670;&nbsp;</a></span>output_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mesh3d_class::output_off </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(*), intent(in)&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>.off形式で境界メッシュをファイルに出力 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">filename</td><td>出力ファイルの名前 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00246">246</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: filename</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    </div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keyword">open</span>(10,file=filename)</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(A)&#39;</span>) <span class="stringliteral">&quot;OFF&quot;</span></div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(3i7)&#39;</span>) self%np, self%ne, 0</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">do</span> i=1,self%np</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;       <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(3e24.16)&#39;</span>) self%p(1,i),self%p(2,i),self%p(3,i)</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    </div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne              </div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;       <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(i2,3i7)&#39;</span>) 3,self%nd(1,i)-1,self%nd(2,i)-1,self%nd(3,i)-1</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">close</span>(10)</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    </div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaa20a0b588549d680ea6ee924fc66153"></a>
@@ -222,10 +394,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00075">75</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00115">115</a> 行目に定義があります。</p>
 
 <p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">class</span>(mesh3d),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: filename</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">character(1000)</span> :: ctmp</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">integer</span> :: itmp, i</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">open</span>(10,file=filename,status=<span class="stringliteral">&quot;old&quot;</span>)</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">! 一行目は無視</span></div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">read</span>(10,*) ctmp</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">! 節点数，要素数，(辺の数)をread</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">read</span>(10,*) self%np, self%ne, itmp</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">! 各節点の座標をread</span></div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">allocate</span>(self%p(3,self%np))</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">do</span> i=1,self%np</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;       <span class="keyword">read</span>(10,*) self%p(1:3,i)</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">! 各要素の節点番号をread</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">allocate</span>(self%nd(3,self%ne))</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;       <span class="comment">! 1列目は節点の数</span></div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;       <span class="keyword">read</span>(10,*) itmp, self%nd(1:3,i)</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;       <span class="comment">! 三角形メッシュのみ対応</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;       <span class="keyword">call </span>assert(itmp == 3)</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">! .offの節点番号は0から始まるので，1足す</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    self%nd(:,:) = self%nd(:,:) + 1</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">close</span>(10)</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">call </span>self%init</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div></div><!-- fragment --><div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: filename</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">character(1000)</span> :: ctmp</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">integer</span> :: itmp, i</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">open</span>(10,file=filename,status=<span class="stringliteral">&quot;old&quot;</span>)</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">! 一行目は無視</span></div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">read</span>(10,*) ctmp</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">! 節点数，要素数，(辺の数)をread</span></div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">read</span>(10,*) self%np, self%ne, itmp</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">! 各節点の座標をread</span></div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">allocate</span>(self%p(3,self%np))</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">do</span> i=1,self%np</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;       <span class="keyword">read</span>(10,*) self%p(1:3,i)</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">! 各要素の節点番号をread</span></div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">allocate</span>(self%nd(3,self%ne))</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;       <span class="comment">! 1列目は節点の数</span></div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;       <span class="keyword">read</span>(10,*) itmp, self%nd(1:3,i)</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;       <span class="comment">! 三角形メッシュのみ対応</span></div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;       <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(itmp == 3)</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">! .offの節点番号は0から始まるので，1足す</span></div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    self%nd(:,:) = self%nd(:,:) + 1</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">close</span>(10)</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">call </span>self%init</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    </div><div class="ttc" id="namespacemisc_html_afbc51c769209391c77a92e8b5a0ac0f3"><div class="ttname"><a href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">misc::assert</a></div><div class="ttdeci">subroutine, public assert(flag, message)</div><div class="ttdef"><b>Definition:</b> <a href="misc_8f90_source.html#l00036">misc.f90:36</a></div></div>
+<div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemesh3d__class_aaa20a0b588549d680ea6ee924fc66153_cgraph.png" border="0" usemap="#namespacemesh3d__class_aaa20a0b588549d680ea6ee924fc66153_cgraph" alt=""/></div>
@@ -236,10 +410,58 @@ $(function() {
 
 </div>
 </div>
+<a id="a1f34c239fe3041e6974baea1e342a32b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f34c239fe3041e6974baea1e342a32b">&#9670;&nbsp;</a></span>shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mesh3d_class::shift </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>vec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>meshを並行移動 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">vec</td><td>平行移動のベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00199">199</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(inout)</span> :: self</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: vec(3)</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">! pのshift</span></div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">do</span> i=1,self%np</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;       self%p(:,i) = self%p(:,i) + vec(:)</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">! cのshift</span></div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">do</span> i=1,self%ne</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;       self%c(:,i) = self%c(:,i) + vec(:)</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">! centerのshift</span></div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    self%center(:) = self%center(:) + vec(:)</div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月22日(金) 18時52分20秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月25日(月) 13時55分58秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

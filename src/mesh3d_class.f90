@@ -23,6 +23,11 @@ module mesh3d_class
      real(8),allocatable :: an(:,:)
      !> 各要素の面積 (ne)
      real(8),allocatable :: ar(:)
+
+     !> 最小包含球の半径
+     real(8) :: radius
+     !> 最小包含球の中心座標
+     real(8) :: center(3)
    contains
      !> 初期化
      procedure :: init
@@ -32,7 +37,27 @@ module mesh3d_class
      procedure :: output_an
      !> 要素の向き (法線の方向) を逆転する
      procedure :: invert
+     !> このメッシュの最小包含球の半径と中心を計算する
+     procedure :: calc_enclosing_circle
+     !> meshを並行移動
+     procedure :: shift
+     !> meshをcenterを中心に拡大/縮小
+     procedure :: expand
+     !> .off形式で境界メッシュをファイルに出力
+     procedure :: output_off
   end type mesh3d
+
+  interface
+     ! libminiball
+     subroutine calc_miniball_wrapper(dim, n, points, center, radius) bind(c)
+       use iso_c_binding
+       integer(c_int),value :: dim
+       integer(c_int),value :: n
+       real(c_double) :: points(dim,n)
+       real(c_double) :: center(dim)
+       real(c_double) :: radius
+     end subroutine calc_miniball_wrapper
+  end interface
 
 contains
   !> \details ne, np, p, ndを与えた後，その他のメンバを初期化する
@@ -40,6 +65,7 @@ contains
     class(mesh3d),intent(inout) :: self
 
     integer :: i
+    real(8) :: ave, var
 
     call assert(allocated(self%p))
     call assert(allocated(self%nd))
@@ -64,6 +90,20 @@ contains
        ! 単位ベクトルにする
        self%an(:,i) = self%an(:,i) / (self%ar(i)*2.d0)       
     end do
+    
+    call self%calc_enclosing_circle(self%radius, self%center)
+
+    ! 要素面積の平均
+    ave = sum(self%ar) / self%ne
+    ! 要素面積の分散
+    var = sum((self%ar-ave)**2) / self%ne
+    
+    write(*,*) "# Number of elements: ", self%ne
+    write(*,*) "# Number of vertices: ", self%np
+    write(*,*) "# Minimum area of triangles: ", minval(self%ar)
+    write(*,*) "# Maximum area of triangles: ", maxval(self%ar)
+    write(*,*) "# CV of triangle areas: ", sqrt(var) / ave
+
     
   end subroutine init
 
@@ -139,5 +179,87 @@ contains
     ! 法線を反転
     self%an(:,:) = -self%an(:,:)
   end subroutine invert
+
+  !> このメッシュの最小包含球の半径と中心を計算する
+  !! \param self
+  !! \param radius 半径
+  !! \param center 中心座標  
+  subroutine calc_enclosing_circle(self, radius, center)
+    class(mesh3d),intent(in) :: self
+    real(8),intent(out) :: radius
+    real(8),intent(out) :: center(3)
+
+    call calc_miniball_wrapper(3, self%np, self%p, center, radius)
+  end subroutine calc_enclosing_circle
+
+  !> meshを並行移動
+  !! \param self
+  !! \param vec 平行移動のベクトル
+  subroutine shift(self, vec)
+    class(mesh3d),intent(inout) :: self
+    real(8),intent(in) :: vec(3)
+
+    integer :: i
+
+    ! pのshift
+    do i=1,self%np
+       self%p(:,i) = self%p(:,i) + vec(:)
+    end do
+
+    ! cのshift
+    do i=1,self%ne
+       self%c(:,i) = self%c(:,i) + vec(:)
+    end do
+
+    ! centerのshift
+    self%center(:) = self%center(:) + vec(:)
+  end subroutine shift
+
+  !> meshをcenterを中心に拡大/縮小
+  !! \param self
+  !! \param ratio 半径方向にratio倍に拡大
+  subroutine expand(self, ratio)
+    class(mesh3d),intent(inout) :: self
+    real(8),intent(in) :: ratio
+
+    integer :: i
+
+    ! pの移動
+    do i=1,self%np
+       self%p(:,i) = self%center(:) + ratio*(self%p(:,i)-self%center)
+    end do
+
+    ! cの移動
+    do i=1,self%ne
+       self%c(:,i) = self%center(:) + ratio*(self%c(:,i)-self%center)
+    end do
+
+    ! radiusの変更
+    self%radius = self%radius * ratio
+    
+  end subroutine expand
+
+  !> .off形式で境界メッシュをファイルに出力
+  !! \param self
+  !! \param filename 出力ファイルの名前
+  subroutine output_off(self, filename)
+    class(mesh3d),intent(in) :: self
+    character(*),intent(in) :: filename
+    
+    integer :: i
+
+    open(10,file=filename)
+    write(10,'(A)') "OFF"
+    write(10,'(3i7)') self%np, self%ne, 0
+    do i=1,self%np
+       write(10,'(3e24.16)') self%p(1,i),self%p(2,i),self%p(3,i)
+    end do
+    
+    do i=1,self%ne              
+       write(10,'(i2,3i7)') 3,self%nd(1,i)-1,self%nd(2,i)-1,self%nd(3,i)-1
+    end do
+    close(10)
+    
+  end subroutine output_off
 
 end module mesh3d_class

@@ -1,0 +1,4 @@
+インストール
+1. このディレクトリを/usr/local/src or ~/.local/src などにコピー
+2. make
+3. make install で../../libにlibminiball.soが作成されるので，ここにpathが通るようにしておく．

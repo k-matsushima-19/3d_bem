@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: TYPE bem3d_class::bem3d</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebem3d__class.html">bem3d_class</a></li><li class="navelem"><a class="el" href="structbem3d__class_1_1bem3d.html">bem3d</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="structbem3d__class_1_1bem3d-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">TYPE bem3d_class::bem3d</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>bemの抽象クラス  
+ <a href="structbem3d__class_1_1bem3d.html#details">[詳解]</a></p>
+<div class="dynheader">
+bem3d_class::bem3d の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="structbem3d__class_1_1bem3d__inherit__graph.png" border="0" usemap="#bem3d__class_1_1bem3d_inherit__map" alt="Inheritance graph"/></div>
+<map name="bem3d__class_1_1bem3d_inherit__map" id="bem3d__class_1_1bem3d_inherit__map">
+<area shape="rect" id="node2" href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html" title="3D&#45;Helmholtzを解くためのBEM " alt="" coords="5,80,168,121"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+bem3d_class::bem3d 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="structbem3d__class_1_1bem3d__coll__graph.png" border="0" usemap="#bem3d__class_1_1bem3d_coll__map" alt="Collaboration graph"/></div>
+<map name="bem3d__class_1_1bem3d_coll__map" id="bem3d__class_1_1bem3d_coll__map">
+<area shape="rect" id="node2" href="structmesh3d__class_1_1mesh3d.html" title="三角形メッシュ " alt="" coords="5,5,165,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a84a36b0ff9f291f8a10275f6a0fbc9dc"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#a84a36b0ff9f291f8a10275f6a0fbc9dc">lu_decompose</a></td></tr>
+<tr class="memdesc:a84a36b0ff9f291f8a10275f6a0fbc9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">係数行列amatをLU分解する  <a href="#a84a36b0ff9f291f8a10275f6a0fbc9dc">[詳解]</a><br /></td></tr>
+<tr class="separator:a84a36b0ff9f291f8a10275f6a0fbc9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49b248178cb9d2ec00b5647defd9a84"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#af49b248178cb9d2ec00b5647defd9a84">lu_solve</a></td></tr>
+<tr class="memdesc:af49b248178cb9d2ec00b5647defd9a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">LU分解した係数行列amatとbvecを用いて連立方程式を解く  <a href="#af49b248178cb9d2ec00b5647defd9a84">[詳解]</a><br /></td></tr>
+<tr class="separator:af49b248178cb9d2ec00b5647defd9a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a66761d24999a2b2ce2db1274d8b8b93b"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#a66761d24999a2b2ce2db1274d8b8b93b">mesh</a> =&gt; null()</td></tr>
+<tr class="memdesc:a66761d24999a2b2ce2db1274d8b8b93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">mesh  <a href="#a66761d24999a2b2ce2db1274d8b8b93b">[詳解]</a><br /></td></tr>
+<tr class="separator:a66761d24999a2b2ce2db1274d8b8b93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad416567867e892ff70fd8820c03ee441"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#ad416567867e892ff70fd8820c03ee441">size</a></td></tr>
+<tr class="memdesc:ad416567867e892ff70fd8820c03ee441"><td class="mdescLeft">&#160;</td><td class="mdescRight">係数行列のサイズ  <a href="#ad416567867e892ff70fd8820c03ee441">[詳解]</a><br /></td></tr>
+<tr class="separator:ad416567867e892ff70fd8820c03ee441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1998da0c56079b58e121d757decfe29"><td class="memItemLeft" align="right" valign="top">complex(8), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#af1998da0c56079b58e121d757decfe29">amat</a></td></tr>
+<tr class="memdesc:af1998da0c56079b58e121d757decfe29"><td class="mdescLeft">&#160;</td><td class="mdescRight">係数行列 (size,size)  <a href="#af1998da0c56079b58e121d757decfe29">[詳解]</a><br /></td></tr>
+<tr class="separator:af1998da0c56079b58e121d757decfe29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa66c8044b33bd175473ac92a72991e"><td class="memItemLeft" align="right" valign="top">complex(8), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#a2fa66c8044b33bd175473ac92a72991e">bvec</a></td></tr>
+<tr class="memdesc:a2fa66c8044b33bd175473ac92a72991e"><td class="mdescLeft">&#160;</td><td class="mdescRight">右辺ベクトル (size)  <a href="#a2fa66c8044b33bd175473ac92a72991e">[詳解]</a><br /></td></tr>
+<tr class="separator:a2fa66c8044b33bd175473ac92a72991e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43024c7687fe6c9631db345505f70bfd"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#a43024c7687fe6c9631db345505f70bfd">ipivot</a></td></tr>
+<tr class="memdesc:a43024c7687fe6c9631db345505f70bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ipiv (size)  <a href="#a43024c7687fe6c9631db345505f70bfd">[詳解]</a><br /></td></tr>
+<tr class="separator:a43024c7687fe6c9631db345505f70bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f992819040523ba986fe1487eb54e1b"><td class="memItemLeft" align="right" valign="top">character(20)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#a2f992819040523ba986fe1487eb54e1b">b_condition</a></td></tr>
+<tr class="memdesc:a2f992819040523ba986fe1487eb54e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界条件  <a href="#a2f992819040523ba986fe1487eb54e1b">[詳解]</a><br /></td></tr>
+<tr class="separator:a2f992819040523ba986fe1487eb54e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b75686ca6076d1c287c4bde7728c8e7"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbem3d__class_1_1bem3d.html#a9b75686ca6076d1c287c4bde7728c8e7">is_factorized_amat</a> = .false.</td></tr>
+<tr class="memdesc:a9b75686ca6076d1c287c4bde7728c8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">係数行列amatがLU分解されているか  <a href="#a9b75686ca6076d1c287c4bde7728c8e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b75686ca6076d1c287c4bde7728c8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>bemの抽象クラス </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00009">9</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">メンバ関数/サブルーチン詳解</h2>
+<a id="a84a36b0ff9f291f8a10275f6a0fbc9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84a36b0ff9f291f8a10275f6a0fbc9dc">&#9670;&nbsp;</a></span>lu_decompose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure bem3d_class::bem3d::lu_decompose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>係数行列amatをLU分解する </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af49b248178cb9d2ec00b5647defd9a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49b248178cb9d2ec00b5647defd9a84">&#9670;&nbsp;</a></span>lu_solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure bem3d_class::bem3d::lu_solve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LU分解した係数行列amatとbvecを用いて連立方程式を解く </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="af1998da0c56079b58e121d757decfe29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1998da0c56079b58e121d757decfe29">&#9670;&nbsp;</a></span>amat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8), dimension(:,:), allocatable bem3d_class::bem3d::amat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>係数行列 (size,size) </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00017">17</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;     <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: amat(:,:)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a2f992819040523ba986fe1487eb54e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f992819040523ba986fe1487eb54e1b">&#9670;&nbsp;</a></span>b_condition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">character(20) bem3d_class::bem3d::b_condition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>境界条件 </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00026">26</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;     <span class="keywordtype">character(20)</span> :: b_condition</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a2fa66c8044b33bd175473ac92a72991e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa66c8044b33bd175473ac92a72991e">&#9670;&nbsp;</a></span>bvec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8), dimension(:), allocatable bem3d_class::bem3d::bvec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右辺ベクトル (size) </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00020">20</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;     <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: bvec(:)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a43024c7687fe6c9631db345505f70bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43024c7687fe6c9631db345505f70bfd">&#9670;&nbsp;</a></span>ipivot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(:), allocatable bem3d_class::bem3d::ipivot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ipiv (size) </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00023">23</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;     <span class="keywordtype">integer</span>,<span class="keywordtype">allocatable</span> :: ipivot(:)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a9b75686ca6076d1c287c4bde7728c8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b75686ca6076d1c287c4bde7728c8e7">&#9670;&nbsp;</a></span>is_factorized_amat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical bem3d_class::bem3d::is_factorized_amat = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>係数行列amatがLU分解されているか </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00029">29</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;     <span class="keywordtype">logical</span> :: is_factorized_amat = .false.</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a66761d24999a2b2ce2db1274d8b8b93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66761d24999a2b2ce2db1274d8b8b93b">&#9670;&nbsp;</a></span>mesh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), pointer bem3d_class::bem3d::mesh =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>mesh </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00011">11</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;     <span class="keywordtype">type</span>(mesh3d),<span class="keywordtype">pointer</span> :: mesh =&gt; null()</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ad416567867e892ff70fd8820c03ee441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad416567867e892ff70fd8820c03ee441">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer bem3d_class::bem3d::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>係数行列のサイズ </p>
+
+<p class="definition"> <a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a> の <a class="el" href="bem3d__class_8f90_source.html#l00014">14</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     <span class="keywordtype">integer</span> :: size</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>次のファイルから型の詳解が抽出されました:<ul>
+<li><a class="el" href="bem3d__class_8f90_source.html">bem3d_class.f90</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月25日(月) 13時55分58秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -11,7 +11,7 @@ SUBDIRS =
 LIB_PATHS = 
 
 # Library names (右は左を必要としない順で並べる)
-LIB_NAMES = 
+LIB_NAMES = gsl gslcblas lapack blas miniball
 
 # OPENMPを使うか
 OPENMP = 1
