@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: convert.f90 ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_c89bd538986b5fa2f5874f9b3c9fae5c.html">hdd</a></li><li class="navelem"><a class="el" href="dir_0530d4d7188df132349cdbe2232239d9.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_b847784016724036b77217bbc510813b.html">program</a></li><li class="navelem"><a class="el" href="dir_dd104d35df4266e0cb1aab18a512d7bf.html">3d_bem</a></li><li class="navelem"><a class="el" href="dir_805b9b0f6839d60b79d59be97ba30bc4.html">scripts</a></li><li class="navelem"><a class="el" href="dir_ebe72a3a767fe7125f194a7cd38a7f79.html">sphere</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">convert.f90</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="convert_8f90.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">! merge.fが出力したファイルを.offに整形</span></div><div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="convert_8f90.html#a01dab93dc7262a79f855dc91bec2a0b3">    2</a></span>&#160;<span class="keyword">program</span> <a class="code" href="convert_8f90.html#a01dab93dc7262a79f855dc91bec2a0b3">convert</a></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">integer</span> :: ne, np, itmp, i</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">character(100)</span> :: filename</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">integer</span>,<span class="keywordtype">allocatable</span> :: nd(:,:)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">real(8)</span>,<span class="keywordtype">allocatable</span> :: p(:,:)</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">read</span>(*,<span class="stringliteral">&quot;(a)&quot;</span>) filename</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">open</span>(10,file=trim(adjustl(filename)), status=<span class="stringliteral">&quot;old&quot;</span>)</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">read</span>(10,*) ne, np, itmp</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">! nd</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">allocate</span>(nd(3,ne))</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">do</span> i=1,ne</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;     <span class="keyword">read</span>(10,*) itmp, nd(1:3,i), itmp, itmp</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordflow">  end do</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">! p</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">allocate</span>(p(3,np))</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">do</span> i=1,np</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;     <span class="keyword">read</span>(10,*) itmp, p(1:3,i)</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordflow">  end do</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">close</span>(10)</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">! 上書き</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">open</span>(10,file=trim(adjustl(filename)))</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(A)&#39;</span>) <span class="stringliteral">&quot;OFF&quot;</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(3i7)&#39;</span>) np, ne, 0</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">do</span> i=1,np</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;     <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(3e24.16)&#39;</span>) p(1,i),p(2,i),p(3,i)</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordflow">  end do</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">do</span> i=1,ne              </div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;     <span class="keyword">write</span>(10,<span class="stringliteral">&#39;(i2,3i7)&#39;</span>) 3,nd(1,i)-1,nd(2,i)-1,nd(3,i)-1</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordflow">  end do</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">close</span>(10)</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  </div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">end program </span><a class="code" href="convert_8f90.html#a01dab93dc7262a79f855dc91bec2a0b3">convert</a></div><div class="ttc" id="convert_8f90_html_a01dab93dc7262a79f855dc91bec2a0b3"><div class="ttname"><a href="convert_8f90.html#a01dab93dc7262a79f855dc91bec2a0b3">convert</a></div><div class="ttdeci">program convert</div><div class="ttdef"><b>Definition:</b> <a href="convert_8f90_source.html#l00002">convert.f90:2</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月25日(月) 20時06分18秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

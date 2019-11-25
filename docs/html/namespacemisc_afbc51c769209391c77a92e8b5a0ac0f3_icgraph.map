@@ -1,16 +1,15 @@
 <map id="misc::assert" name="misc::assert">
 <area shape="rect" id="node2" href="$namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3" title="0からnmax次までの第1種球Hankel関数 を計算 " alt="" coords="170,5,317,47"/>
-<area shape="rect" id="node5" href="$namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="172,71,315,112"/>
-<area shape="rect" id="node6" href="$namespacemath.html#a3edbb855fc60473a855f1b822b565ff4" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="170,136,317,177"/>
-<area shape="rect" id="node7" href="$namespacemath.html#a62db1b92e24620ae98f63943618e359e" title="三角形の面積座標からCartesian座標へ変換 " alt="" coords="176,201,311,243"/>
-<area shape="rect" id="node9" href="$namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e" title="三角形上のGauss積分の積分点の面積座標と対応する重みを返す " alt="" coords="168,267,319,308"/>
-<area shape="rect" id="node11" href="$namespacebem3d__helmholtz__class.html#a1bdf89b9f6d6584dfd3b716576b6b9f7" title="meshと各パラメータを渡してオブジェクトを初期化 " alt="" coords="162,332,325,373"/>
-<area shape="rect" id="node12" href="$namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="mesh3d_class::init" alt="" coords="178,398,309,425"/>
-<area shape="rect" id="node13" href="$namespacebem3d__class.html#a939df2433a6414faefe40d8aec982ed9" title="係数行列amatをLU分解する " alt="" coords="148,449,339,475"/>
-<area shape="rect" id="node14" href="$namespacebem3d__class.html#a417981f6d5c1c508b8f1bb1c35410946" title="LU分解した係数行列amatとbvecを用いて連立方程式を解く " alt="" coords="166,499,321,526"/>
-<area shape="rect" id="node15" href="$namespacemesh3d__class.html#aaa20a0b588549d680ea6ee924fc66153" title="mesh3d_class::read_off" alt="" coords="163,550,324,577"/>
+<area shape="rect" id="node4" href="$namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="172,71,315,112"/>
+<area shape="rect" id="node5" href="$namespacemath.html#a3edbb855fc60473a855f1b822b565ff4" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="170,136,317,177"/>
+<area shape="rect" id="node6" href="$namespacemath.html#a62db1b92e24620ae98f63943618e359e" title="三角形の面積座標からCartesian座標へ変換 " alt="" coords="176,201,311,243"/>
+<area shape="rect" id="node8" href="$namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e" title="三角形上のGauss積分の積分点の面積座標と対応する重みを返す " alt="" coords="168,267,319,308"/>
+<area shape="rect" id="node10" href="$namespacebem3d__helmholtz__class.html#a1bdf89b9f6d6584dfd3b716576b6b9f7" title="meshと各パラメータを渡してオブジェクトを初期化 " alt="" coords="162,332,325,373"/>
+<area shape="rect" id="node11" href="$namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="ne, np, p, ndを与えた後，その他のメンバを初期化する " alt="" coords="178,398,309,425"/>
+<area shape="rect" id="node12" href="$namespacebem3d__class.html#a939df2433a6414faefe40d8aec982ed9" title="係数行列amatをLU分解する " alt="" coords="148,449,339,475"/>
+<area shape="rect" id="node13" href="$namespacebem3d__class.html#a417981f6d5c1c508b8f1bb1c35410946" title="LU分解した係数行列amatとbvecを用いて連立方程式を解く " alt="" coords="166,499,321,526"/>
+<area shape="rect" id="node14" href="$namespacemesh3d__class.html#aaa20a0b588549d680ea6ee924fc66153" title="mesh3d_class::read_off" alt="" coords="163,550,324,577"/>
 <area shape="rect" id="node3" href="$namespaceexamples__helmholtz.html#a05e3d73b62db43ad6f55d3b6d4e4fe7a" title="球による平面波散乱の解析解を計算 " alt="" coords="404,39,545,80"/>
-<area shape="rect" id="node4" href="$main_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="mainのプログラム " alt="" coords="611,46,661,73"/>
-<area shape="rect" id="node8" href="$namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="387,201,563,243"/>
-<area shape="rect" id="node10" href="$namespacelayerpotential3d__helmholtz__class.html#aa07b262341a2b42eb7dce37c04467bab" title="初期化 " alt="" coords="387,267,563,308"/>
+<area shape="rect" id="node7" href="$namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="387,201,563,243"/>
+<area shape="rect" id="node9" href="$namespacelayerpotential3d__helmholtz__class.html#aa07b262341a2b42eb7dce37c04467bab" title="初期化 " alt="" coords="387,267,563,308"/>
 </map>

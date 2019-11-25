@@ -67,7 +67,8 @@ contains
     allocate(self%amat(self%size,self%size))
     self%amat(:,:) = zero
 
-    if(self%b_condition == "neumann") then       
+    if(self%b_condition == "neumann") then
+       !$omp parallel do collapse(2) private(i,j,S,D,Ds,N)
        do j=1,self%mesh%ne
           do i=1,self%mesh%ne
              ! layer potentialを計算
@@ -84,7 +85,8 @@ contains
              self%amat(i,j) = D
           end do
        end do
-
+       !$omp end parallel do
+       
        ! 対角に1/2を足す
        do i=1,self%mesh%ne
           self%amat(i,i) = self%amat(i,i) + 0.5d0

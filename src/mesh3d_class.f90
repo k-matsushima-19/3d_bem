@@ -29,6 +29,8 @@ module mesh3d_class
      !> 最小包含球の中心座標
      real(8) :: center(3)
    contains
+     !> finalizer
+     procedure :: destructor
      !> 初期化
      procedure :: init
      !> .offファイルを読み込む
@@ -60,7 +62,19 @@ module mesh3d_class
   end interface
 
 contains
-  !> \details ne, np, p, ndを与えた後，その他のメンバを初期化する
+  !> finalizer
+  !! \param self
+  elemental subroutine destructor(self)
+    class(mesh3d),intent(inout) :: self
+
+    if(allocated(self%p)) deallocate(self%p)
+    if(allocated(self%nd)) deallocate(self%nd)
+    if(allocated(self%c)) deallocate(self%c)
+    if(allocated(self%an)) deallocate(self%an)
+    if(allocated(self%ar)) deallocate(self%ar)
+  end subroutine destructor
+  
+  !> ne, np, p, ndを与えた後，その他のメンバを初期化する
   subroutine init(self)
     class(mesh3d),intent(inout) :: self
 
@@ -90,21 +104,21 @@ contains
        ! 単位ベクトルにする
        self%an(:,i) = self%an(:,i) / (self%ar(i)*2.d0)       
     end do
-    
+
     call self%calc_enclosing_circle(self%radius, self%center)
 
     ! 要素面積の平均
     ave = sum(self%ar) / self%ne
     ! 要素面積の分散
     var = sum((self%ar-ave)**2) / self%ne
-    
+
     write(*,*) "# Number of elements: ", self%ne
     write(*,*) "# Number of vertices: ", self%np
     write(*,*) "# Minimum area of triangles: ", minval(self%ar)
     write(*,*) "# Maximum area of triangles: ", maxval(self%ar)
     write(*,*) "# CV of triangle areas: ", sqrt(var) / ave
 
-    
+
   end subroutine init
 
   !> \details .off (Object File Format) ファイルを読み込む
@@ -142,7 +156,7 @@ contains
     close(10)
 
     call self%init
-    
+
   end subroutine read_off
 
   !> 外向き単位法線ベクトルをファイルに出力する
@@ -236,7 +250,7 @@ contains
 
     ! radiusの変更
     self%radius = self%radius * ratio
-    
+
   end subroutine expand
 
   !> .off形式で境界メッシュをファイルに出力
@@ -245,7 +259,7 @@ contains
   subroutine output_off(self, filename)
     class(mesh3d),intent(in) :: self
     character(*),intent(in) :: filename
-    
+
     integer :: i
 
     open(10,file=filename)
@@ -254,12 +268,12 @@ contains
     do i=1,self%np
        write(10,'(3e24.16)') self%p(1,i),self%p(2,i),self%p(3,i)
     end do
-    
+
     do i=1,self%ne              
        write(10,'(i2,3i7)') 3,self%nd(1,i)-1,self%nd(2,i)-1,self%nd(3,i)-1
     end do
     close(10)
-    
+
   end subroutine output_off
 
 end module mesh3d_class

@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: kyu.f ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_c89bd538986b5fa2f5874f9b3c9fae5c.html">hdd</a></li><li class="navelem"><a class="el" href="dir_0530d4d7188df132349cdbe2232239d9.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_b847784016724036b77217bbc510813b.html">program</a></li><li class="navelem"><a class="el" href="dir_dd104d35df4266e0cb1aab18a512d7bf.html">3d_bem</a></li><li class="navelem"><a class="el" href="dir_805b9b0f6839d60b79d59be97ba30bc4.html">scripts</a></li><li class="navelem"><a class="el" href="dir_ebe72a3a767fe7125f194a7cd38a7f79.html">sphere</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">kyu.f ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="kyu_8f_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:a00613e4fb4487fb86befca01ad6a02c9"><td class="memItemLeft" align="right" valign="top">program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#a00613e4fb4487fb86befca01ad6a02c9">kyu</a></td></tr>
+<tr class="separator:a00613e4fb4487fb86befca01ad6a02c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64d84bc9161bb4384820076c9c2a61d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#ae64d84bc9161bb4384820076c9c2a61d">mkelem</a> (rad, id, ie, ih, iflag)</td></tr>
+<tr class="separator:ae64d84bc9161bb4384820076c9c2a61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7cfe59419829601a0d6017d620f97e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#a6a7cfe59419829601a0d6017d620f97e">mknode</a> (rad, id, in, nod, x, icase)</td></tr>
+<tr class="separator:a6a7cfe59419829601a0d6017d620f97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6b169a9625bcb8d13972b8cb2e2342"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#a4c6b169a9625bcb8d13972b8cb2e2342">henkan</a> (x, y, z, rad)</td></tr>
+<tr class="separator:a4c6b169a9625bcb8d13972b8cb2e2342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695bee42632dd133ba4538b56a8d1446"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#a695bee42632dd133ba4538b56a8d1446">lddelta20</a> (nod, x)</td></tr>
+<tr class="separator:a695bee42632dd133ba4538b56a8d1446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76eb1d2c4148ce1f79d4af729a630f3a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#a76eb1d2c4148ce1f79d4af729a630f3a">wrtpara</a> (id, rad, iflag)</td></tr>
+<tr class="separator:a76eb1d2c4148ce1f79d4af729a630f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7473bc0aea95c37afdafbc9c75e3d16b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#a7473bc0aea95c37afdafbc9c75e3d16b">mknode2</a> (rad, id, in, nod, x, icase, center)</td></tr>
+<tr class="separator:a7473bc0aea95c37afdafbc9c75e3d16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a70a0b763a0dae91e236bda7a43000"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000">getedge</a> (nmax, rad, n, s, e, v)</td></tr>
+<tr class="separator:ac6a70a0b763a0dae91e236bda7a43000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数/サブルーチン詳解</h2>
+<a id="ac6a70a0b763a0dae91e236bda7a43000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a70a0b763a0dae91e236bda7a43000">&#9670;&nbsp;</a></span>getedge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine getedge </td>
+          <td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>nmax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(3)&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(3)&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(3)&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00341">341</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="kyu_8f_source.html#l00310">mknode2()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">c***********************************************************************</span></div><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      <span class="keywordtype">integer</span> nmax,n</div><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <span class="keywordtype">real*8</span> rad,s(3),e(3),v(3)</div><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      <span class="keywordtype">integer</span> i</div><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <span class="keywordtype">real*8</span> ds,de,dn,vs(3),ve(3),vn(3),vp(3),angle,rot,cr,sr,eps</div><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      parameter(eps=1.0d-12)</div><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keywordflow">if</span>(nmax.eq.0)<span class="keywordflow">then</span>         <span class="comment">! s=e=v</span></div><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;         <span class="keywordflow">do</span> i=1,3</div><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            v(i)=s(i)</div><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordflow">else</span></div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;         ds=dsqrt(s(1)**2+s(2)**2+s(3)**2)</div><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;         de=dsqrt(e(1)**2+e(2)**2+e(3)**2)</div><div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;         <span class="keywordflow">do</span> i=1,3</div><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            vs(i)=s(i)/ds</div><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            ve(i)=e(i)/de</div><div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;         vn(1)=vs(2)*ve(3)-vs(3)*ve(2)</div><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;         vn(2)=vs(3)*ve(1)-vs(1)*ve(3)</div><div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;         vn(3)=vs(1)*ve(2)-vs(2)*ve(1)</div><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;         dn=dsqrt(vn(1)**2+vn(2)**2+vn(3)**2)</div><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;         <span class="keywordflow">do</span> i=1,3</div><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            vn(i)=vn(i)/dn</div><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;         vp(1)=vn(2)*vs(3)-vn(3)*vs(2)</div><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;         vp(2)=vn(3)*vs(1)-vn(1)*vs(3)</div><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;         vp(3)=vn(1)*vs(2)-vn(2)*vs(1)</div><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;         angle=dacos(vs(1)*ve(1)+vs(2)*ve(2)+vs(3)*ve(3))</div><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;         rot=angle*dble(n)/dble(nmax)</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;         cr=dcos(rot)</div><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;         sr=dsin(rot)</div><div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;         <span class="keywordflow">do</span> i=1,3</div><div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            v(i)=rad*(cr*vs(i)+sr*vp(i))</div><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keywordflow">      endif</span></div><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      <span class="keywordflow">return</span></div></div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_ac6a70a0b763a0dae91e236bda7a43000_icgraph.png" border="0" usemap="#kyu_8f_ac6a70a0b763a0dae91e236bda7a43000_icgraph" alt=""/></div>
+<map name="kyu_8f_ac6a70a0b763a0dae91e236bda7a43000_icgraph" id="kyu_8f_ac6a70a0b763a0dae91e236bda7a43000_icgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a7473bc0aea95c37afdafbc9c75e3d16b" title="mknode2" alt="" coords="121,5,196,32"/>
+<area shape="rect" id="node3" href="kyu_8f.html#a00613e4fb4487fb86befca01ad6a02c9" title="kyu" alt="" coords="244,5,287,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c6b169a9625bcb8d13972b8cb2e2342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6b169a9625bcb8d13972b8cb2e2342">&#9670;&nbsp;</a></span>henkan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine henkan </td>
+          <td>(</td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>rad</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00157">157</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="kyu_8f_source.html#l00118">mknode()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">c***********************************************************************</span></div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">real*8</span> x,y,z,rad</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordtype">real*8</span> tmp</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      tmp=dsqrt(dabs(x**2+y**2+z**2))</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      x=x/tmp*rad</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      y=y/tmp*rad</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      z=z/tmp*rad</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">c     </span></div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordflow">return</span></div></div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_a4c6b169a9625bcb8d13972b8cb2e2342_icgraph.png" border="0" usemap="#kyu_8f_a4c6b169a9625bcb8d13972b8cb2e2342_icgraph" alt=""/></div>
+<map name="kyu_8f_a4c6b169a9625bcb8d13972b8cb2e2342_icgraph" id="kyu_8f_a4c6b169a9625bcb8d13972b8cb2e2342_icgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a6a7cfe59419829601a0d6017d620f97e" title="mknode" alt="" coords="117,5,185,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a00613e4fb4487fb86befca01ad6a02c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00613e4fb4487fb86befca01ad6a02c9">&#9670;&nbsp;</a></span>kyu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">program kyu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00018">18</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="kyu_8f_source.html#l00173">lddelta20()</a>, <a class="el" href="kyu_8f_source.html#l00063">mkelem()</a>, <a class="el" href="kyu_8f_source.html#l00310">mknode2()</a>, <a class="el" href="kyu_8f_source.html#l00289">wrtpara()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_a00613e4fb4487fb86befca01ad6a02c9_cgraph.png" border="0" usemap="#kyu_8f_a00613e4fb4487fb86befca01ad6a02c9_cgraph" alt=""/></div>
+<map name="kyu_8f_a00613e4fb4487fb86befca01ad6a02c9_cgraph" id="kyu_8f_a00613e4fb4487fb86befca01ad6a02c9_cgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a695bee42632dd133ba4538b56a8d1446" title="lddelta20" alt="" coords="96,5,171,32"/>
+<area shape="rect" id="node3" href="kyu_8f.html#ae64d84bc9161bb4384820076c9c2a61d" title="mkelem" alt="" coords="99,56,167,83"/>
+<area shape="rect" id="node4" href="kyu_8f.html#a7473bc0aea95c37afdafbc9c75e3d16b" title="mknode2" alt="" coords="96,107,171,133"/>
+<area shape="rect" id="node6" href="kyu_8f.html#a76eb1d2c4148ce1f79d4af729a630f3a" title="wrtpara" alt="" coords="101,157,166,184"/>
+<area shape="rect" id="node5" href="kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000" title="getedge" alt="" coords="219,107,287,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a695bee42632dd133ba4538b56a8d1446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695bee42632dd133ba4538b56a8d1446">&#9670;&nbsp;</a></span>lddelta20()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine lddelta20 </td>
+          <td>(</td>
+          <td class="paramtype">integer, dimension(3,20)&#160;</td>
+          <td class="paramname"><em>nod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(3,12)&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00173">173</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="kyu_8f_source.html#l00018">kyu()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">c***********************************************************************</span></div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">* Refer to /usr/local/Geomview/data/geom/polyhedra/icosahedron </span></div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <span class="keywordtype">integer</span> nod(3,20)</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordtype">real*8</span> x(3,12)</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">*     </span></div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordtype">integer</span> i,j</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      x(1, 1)=  0.0000000e+00</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      x(2, 1)=  0.0000000e+00</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      x(3, 1)=  0.2000000e+01</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      x(1, 2)=  0.1788854e+01</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      x(2, 2)=  0.0000000e+00</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      x(3, 2)=  0.8944270e+00</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      x(1, 3)=  0.5527860e+00</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      x(2, 3)=  0.1701302e+01</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      x(3, 3)=  0.8944270e+00</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      x(1, 4)= -0.1447214e+01</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      x(2, 4)=  0.1051462e+01</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      x(3, 4)=  0.8944270e+00</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      x(1, 5)= -0.1447214e+01</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      x(2, 5)= -0.1051462e+01</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      x(3, 5)=  0.8944270e+00</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      x(1, 6)=  0.5527860e+00</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      x(2, 6)= -0.1701302e+01</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      x(3, 6)=  0.8944270e+00</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      x(1, 7)=  0.1447214e+01</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      x(2, 7)=  0.1051462e+01</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      x(3, 7)= -0.8944270e+00</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      x(1, 8)= -0.5527860e+00</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      x(2, 8)=  0.1701302e+01</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      x(3, 8)= -0.8944270e+00</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      x(1, 9)= -0.1788854e+01</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      x(2, 9)=  0.0000000e+00</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      x(3, 9)= -0.8944270e+00</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      x(1,10)= -0.5527860e+00</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      x(2,10)= -0.1701302e+01</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      x(3,10)= -0.8944270e+00</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      x(1,11)=  0.1447214e+01</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      x(2,11)= -0.1051462e+01</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      x(3,11)= -0.8944270e+00</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      x(1,12)=  0.0000000e+00</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      x(2,12)=  0.0000000e+00</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      x(3,12)= -0.2000000e+01</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keywordflow">do</span> i=1,12</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;         <span class="keywordflow">do</span> j=1,3</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            x(j,i)=x(j,i)*0.50d0</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keywordflow">      enddo</span></div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      nod(1, 1)= 3</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      nod(2, 1)= 1</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      nod(3, 1)= 2</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      nod(1, 2)= 4</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      nod(2, 2)= 1</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      nod(3, 2)= 3</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      nod(1, 3)= 5</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      nod(2, 3)= 1</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      nod(3, 3)= 4</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      nod(1, 4)= 6</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      nod(2, 4)= 1</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      nod(3, 4)= 5</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      nod(1, 5)= 2</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      nod(2, 5)= 1</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      nod(3, 5)= 6</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      nod(1, 6)= 3</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      nod(2, 6)= 2</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      nod(3, 6)= 7</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      nod(1, 7)= 8</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      nod(2, 7)= 3</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      nod(3, 7)= 7</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      nod(1, 8)= 4</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      nod(2, 8)= 3</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      nod(3, 8)= 8</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      nod(1, 9)= 9</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      nod(2, 9)= 4</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      nod(3, 9)= 8</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      nod(1,10)= 5</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      nod(2,10)= 4</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      nod(3,10)= 9</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      nod(1,11)=10</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      nod(2,11)= 5</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      nod(3,11)= 9</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      nod(1,12)= 6</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      nod(2,12)= 5</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      nod(3,12)=10</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      nod(1,13)=11</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      nod(2,13)= 6</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      nod(3,13)=10</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      nod(1,14)= 7</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      nod(2,14)= 2</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      nod(3,14)=11</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      nod(1,15)= 2</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      nod(2,15)= 6</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      nod(3,15)=11</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      nod(1,16)= 7</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      nod(2,16)=12</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      nod(3,16)= 8</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      nod(1,17)= 8</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      nod(2,17)=12</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      nod(3,17)= 9</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      nod(1,18)= 9</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      nod(2,18)=12</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      nod(3,18)=10</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      nod(1,19)=10</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      nod(2,19)=12</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      nod(3,19)=11</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      nod(1,20)=11</div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      nod(2,20)=12</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      nod(3,20)= 7</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">return</span></div></div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_a695bee42632dd133ba4538b56a8d1446_icgraph.png" border="0" usemap="#kyu_8f_a695bee42632dd133ba4538b56a8d1446_icgraph" alt=""/></div>
+<map name="kyu_8f_a695bee42632dd133ba4538b56a8d1446_icgraph" id="kyu_8f_a695bee42632dd133ba4538b56a8d1446_icgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a00613e4fb4487fb86befca01ad6a02c9" title="kyu" alt="" coords="128,5,171,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae64d84bc9161bb4384820076c9c2a61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64d84bc9161bb4384820076c9c2a61d">&#9670;&nbsp;</a></span>mkelem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mkelem </td>
+          <td>(</td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>ie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>ih</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>iflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00063">63</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="kyu_8f_source.html#l00018">kyu()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">c***********************************************************************</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordtype">integer</span> id,ie,ih,iflag</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordtype">real*8</span> rad</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordtype">integer</span> i,j,k,l</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordtype">real*8</span> tmp(3)</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">do</span> i=1,id</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         <span class="keywordflow">do</span> j=1,i</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span>(iflag.eq.1)<span class="keywordflow">then</span>  <span class="comment">! INTERIOR</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;               <span class="keyword">write</span>(*,30)ie,</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;     &amp;              (ih  )+(j-1), <span class="comment">! INNER</span></div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;     &amp;              (ih+i)+(j-1),</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;     &amp;              (ih+i)+(j  ),</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">*050606     &amp;              1,1,2</span></div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;     &amp;              1,2</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">else</span>                <span class="comment">! EXTERIOR</span></div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;               <span class="keyword">write</span>(*,30)ie,</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;     &amp;              (ih  )+(j-1),</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;     &amp;              (ih+i)+(j  ),</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;     &amp;              (ih+i)+(j-1),</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">*050606     &amp;              1,1,2</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;     &amp;              1,2</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordflow">            endif</span></div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            ie=ie+1</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span>(j.ne.i)<span class="keywordflow">then</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;               <span class="keywordflow">if</span>(iflag.eq.1)<span class="keywordflow">then</span> <span class="comment">! OUTWARD</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                  <span class="keyword">write</span>(*,30)ie,</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;     &amp;                 (ih  )+(j-1),</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;     &amp;                 (ih+i)+(j  ),</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;     &amp;                 (ih  )+(j  ),</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">*050606     &amp;                 1,1,2</span></div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;     &amp;                 1,2</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;               <span class="keywordflow">else</span>             <span class="comment">! INWARD</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                  <span class="keyword">write</span>(*,30)ie,</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;     &amp;                 (ih  )+(j-1),</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;     &amp;                 (ih  )+(j  ),</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;     &amp;                 (ih+i)+(j  ),</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">*050606     &amp;                 1,1,2</span></div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;     &amp;                 1,2</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordflow">               endif</span></div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;               ie=ie+1</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keywordflow">            endif</span></div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;         ih=ih+i</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordflow">      enddo</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      ih=ih+id+1</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; 30   <span class="keyword">format</span>(10i10)</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">return</span></div></div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_ae64d84bc9161bb4384820076c9c2a61d_icgraph.png" border="0" usemap="#kyu_8f_ae64d84bc9161bb4384820076c9c2a61d_icgraph" alt=""/></div>
+<map name="kyu_8f_ae64d84bc9161bb4384820076c9c2a61d_icgraph" id="kyu_8f_ae64d84bc9161bb4384820076c9c2a61d_icgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a00613e4fb4487fb86befca01ad6a02c9" title="kyu" alt="" coords="121,5,164,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a7cfe59419829601a0d6017d620f97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7cfe59419829601a0d6017d620f97e">&#9670;&nbsp;</a></span>mknode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mknode </td>
+          <td>(</td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, dimension(3,20)&#160;</td>
+          <td class="paramname"><em>nod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(3,12)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>icase</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00118">118</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="kyu_8f_source.html#l00157">henkan()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">c***********************************************************************</span></div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordtype">integer</span> id,in,icase,nod(3,20)</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordtype">real*8</span> rad,x(3,12)</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordtype">integer</span> i,j,k</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordtype">real*8</span> vec12(3),vec23(3),tmp1,tmp2,hen,p(3)</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keywordflow">do</span> i=1,3</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;         vec12(i)=x(i,nod(2,icase))-x(i,nod(1,icase))</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;         vec23(i)=x(i,nod(3,icase))-x(i,nod(2,icase))</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordflow">      enddo</span></div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      tmp1=dsqrt(dabs(vec12(1)**2+vec12(2)**2+vec12(3)**2))</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      tmp2=dsqrt(dabs(vec23(1)**2+vec23(2)**2+vec23(3)**2))</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keywordflow">do</span> i=1,3</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;         vec12(i)=vec12(i)/tmp1</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;         vec23(i)=vec23(i)/tmp2</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keywordflow">      enddo</span></div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      hen=tmp1/dble(id)</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keywordflow">do</span> i=0,id</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;         <span class="keywordflow">do</span> j=0,i</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">do</span> k=1,3</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;               p(k)=x(k,nod(1,icase))+dble(i)*hen*vec12(k)</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;     &amp;           +dble(j)*hen*vec23(k)</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keywordflow">            enddo</span></div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keyword">call </span><a class="code" href="kyu_8f.html#a4c6b169a9625bcb8d13972b8cb2e2342">henkan</a>(p(1),p(2),p(3),rad)</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keyword">write</span>(*,50)in,(p(k),k=1,3)</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            in=in+1</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordflow">      enddo</span></div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">*050205 50   format(i7,3e15.7)</span></div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; 50   <span class="keyword">format</span>(i8,3e24.15e3)</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">return</span></div><div class="ttc" id="kyu_8f_html_a4c6b169a9625bcb8d13972b8cb2e2342"><div class="ttname"><a href="kyu_8f.html#a4c6b169a9625bcb8d13972b8cb2e2342">henkan</a></div><div class="ttdeci">subroutine henkan(x, y, z, rad)</div><div class="ttdef"><b>Definition:</b> <a href="kyu_8f_source.html#l00157">kyu.f:157</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_a6a7cfe59419829601a0d6017d620f97e_cgraph.png" border="0" usemap="#kyu_8f_a6a7cfe59419829601a0d6017d620f97e_cgraph" alt=""/></div>
+<map name="kyu_8f_a6a7cfe59419829601a0d6017d620f97e_cgraph" id="kyu_8f_a6a7cfe59419829601a0d6017d620f97e_cgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a4c6b169a9625bcb8d13972b8cb2e2342" title="henkan" alt="" coords="121,5,185,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7473bc0aea95c37afdafbc9c75e3d16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7473bc0aea95c37afdafbc9c75e3d16b">&#9670;&nbsp;</a></span>mknode2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mknode2 </td>
+          <td>(</td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, dimension(3,20)&#160;</td>
+          <td class="paramname"><em>nod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(3,12)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>icase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(3)&#160;</td>
+          <td class="paramname"><em>center</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00310">310</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="kyu_8f_source.html#l00341">getedge()</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="kyu_8f_source.html#l00018">kyu()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">c***********************************************************************</span></div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <span class="keywordtype">integer</span> id,in,icase,nod(3,20)</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      <span class="keywordtype">real*8</span> rad,x(3,12),center(3)</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      <span class="keywordtype">integer</span> i,j,k</div><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      <span class="keywordtype">real*8</span> v1(3),v2(3),v3(3),u1(3),u2(3),p(3)</div><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordflow">do</span> i=1,3</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;         v1(i)=x(i,nod(1,icase))</div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;         v2(i)=x(i,nod(2,icase))</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;         v3(i)=x(i,nod(3,icase))</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keywordflow">      enddo</span></div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="keywordflow">do</span> i=0,id</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;         <span class="keyword">call </span><a class="code" href="kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000">getedge</a>(id,rad,i,v1,v2,u1)</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;         <span class="keyword">call </span><a class="code" href="kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000">getedge</a>(id,rad,i,v1,v3,u2)</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;         <span class="keywordflow">do</span> j=0,i</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="keyword">call </span><a class="code" href="kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000">getedge</a>(i,rad,j,u1,u2,p)</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keyword">write</span>(*,50)in,(p(k)+center(k),k=1,3)</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            in=in+1</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keywordflow">         enddo</span></div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="keywordflow">      enddo</span></div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">*050205 50   format(i7,3e15.7)</span></div><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; 50   <span class="keyword">format</span>(i8,3e24.15e3)</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordflow">return</span></div><div class="ttc" id="kyu_8f_html_ac6a70a0b763a0dae91e236bda7a43000"><div class="ttname"><a href="kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000">getedge</a></div><div class="ttdeci">subroutine getedge(nmax, rad, n, s, e, v)</div><div class="ttdef"><b>Definition:</b> <a href="kyu_8f_source.html#l00341">kyu.f:341</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_cgraph.png" border="0" usemap="#kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_cgraph" alt=""/></div>
+<map name="kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_cgraph" id="kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_cgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000" title="getedge" alt="" coords="128,5,196,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_icgraph.png" border="0" usemap="#kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_icgraph" alt=""/></div>
+<map name="kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_icgraph" id="kyu_8f_a7473bc0aea95c37afdafbc9c75e3d16b_icgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a00613e4fb4487fb86befca01ad6a02c9" title="kyu" alt="" coords="128,5,171,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76eb1d2c4148ce1f79d4af729a630f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76eb1d2c4148ce1f79d4af729a630f3a">&#9670;&nbsp;</a></span>wrtpara()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine wrtpara </td>
+          <td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8&#160;</td>
+          <td class="paramname"><em>rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>iflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="kyu_8f_source.html">kyu.f</a> の <a class="el" href="kyu_8f_source.html#l00289">289</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="kyu_8f_source.html#l00018">kyu()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">c***********************************************************************</span></div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <span class="keywordtype">integer</span> id,iflag</div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <span class="keywordtype">real*8</span> rad</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">c$$$      write(*,10)</span></div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">c$$$      write(*,20)&#39;id&#39;,id</span></div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">c$$$      write(*,30)&#39;rad&#39;,rad</span></div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">c$$$      write(*,20)&#39;iflag&#39;,iflag</span></div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">*050205      write(*,20)&#39;iu&#39;,iu</span></div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">*050205      write(*,20)&#39;iq&#39;,iq</span></div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">*040618 10   format(&#39;# created by kyu2.f&#39;)</span></div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; 10   <span class="keyword">format</span>(<span class="stringliteral">&#39;# created by kyu.f&#39;</span>)</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; 20   <span class="keyword">format</span>(<span class="stringliteral">&#39;# &#39;</span>,a8,<span class="stringliteral">&#39;=&#39;</span>,i8)</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; 30   <span class="keyword">format</span>(<span class="stringliteral">&#39;# &#39;</span>,a8,<span class="stringliteral">&#39;=&#39;</span>,e15.7)</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">c</span></div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      <span class="keywordflow">return</span></div></div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="kyu_8f_a76eb1d2c4148ce1f79d4af729a630f3a_icgraph.png" border="0" usemap="#kyu_8f_a76eb1d2c4148ce1f79d4af729a630f3a_icgraph" alt=""/></div>
+<map name="kyu_8f_a76eb1d2c4148ce1f79d4af729a630f3a_icgraph" id="kyu_8f_a76eb1d2c4148ce1f79d4af729a630f3a_icgraph">
+<area shape="rect" id="node2" href="kyu_8f.html#a00613e4fb4487fb86befca01ad6a02c9" title="kyu" alt="" coords="119,5,161,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月25日(月) 20時06分18秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

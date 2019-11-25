@@ -1,7 +1,6 @@
 <map id="math::vector_length" name="math::vector_length">
 <area shape="rect" id="node2" href="$namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="191,5,367,47"/>
 <area shape="rect" id="node3" href="$namespacemath.html#ae5da5aafa9f0b315cd1d34a2a28d6be1" title="デカルト座標から球面座標を計算 " alt="" coords="213,71,344,112"/>
-<area shape="rect" id="node6" href="$namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="mesh3d_class::init" alt="" coords="213,137,344,163"/>
+<area shape="rect" id="node5" href="$namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="ne, np, p, ndを与えた後，その他のメンバを初期化する " alt="" coords="213,137,344,163"/>
 <area shape="rect" id="node4" href="$namespaceexamples__helmholtz.html#a05e3d73b62db43ad6f55d3b6d4e4fe7a" title="球による平面波散乱の解析解を計算 " alt="" coords="415,71,556,112"/>
-<area shape="rect" id="node5" href="$main_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="mainのプログラム " alt="" coords="604,78,655,105"/>
 </map>

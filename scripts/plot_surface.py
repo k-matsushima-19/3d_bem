@@ -9,7 +9,7 @@ import numpy as np
 import sys
 
 # 参考: https://scipython.com/book/chapter-8-scipy/examples/visualizing-the-spherical-harmonics/
-def plot_surface(fig, ax, file_stl, file_sol):
+def plot_surface(fig, ax, file_stl, file_sol, mode="real"):
 
     data = mesh.Mesh.from_file(file_stl)
 
@@ -27,7 +27,13 @@ def plot_surface(fig, ax, file_stl, file_sol):
     fcolors = centers[:,0]
     data = np.genfromtxt(file_sol)
     u = data[:,3] + 1j*data[:,4]
-    fcolors = np.real(u)
+
+    if mode == "real":
+        fcolors = np.real(u)
+    elif mode == "imag":
+        fcolors = np.imag(u)
+    elif mode == "abs":
+        fcolors = np.abs(u)
 
     # [-1,1]に正規化
     fmax, fmin = fcolors.max(), fcolors.min()
@@ -56,19 +62,24 @@ def plot_surface(fig, ax, file_stl, file_sol):
     cb = fig.colorbar(scalarMap, shrink=0.8)
 
 if __name__ == "__main__":
-    
-    fig = plt.figure(figsize=(9,10))
-    ax = mplot3d.Axes3D(fig)
 
-    # plot_surface(fig, ax, "sphere.stl", "bndry.dat")
+    iwindow = 0
+    for mode in ("real", "imag"):
+        iwindow += 1
+        fig = plt.figure(iwindow,figsize=(9,10))
+        ax = mplot3d.Axes3D(fig)
 
-    plot_surface(fig, ax, sys.argv[1], sys.argv[2])
+        # plot_surface(fig, ax, "sphere.stl", "bndry.dat")
 
-    ax.tick_params(pad=10)
-    ax.tick_params(labelsize=15)
-    ax.set_xlabel(r"$x_1$", fontsize=20, labelpad=15)
-    ax.set_ylabel(r"$x_2$", fontsize=20, labelpad=15)
-    ax.set_zlabel(r"$x_3$", fontsize=20, labelpad=15)
+        plot_surface(fig, ax, sys.argv[1], sys.argv[2], mode=mode)
+
+        ax.tick_params(pad=10)
+        ax.tick_params(labelsize=15)
+        ax.set_xlabel(r"$x_1$", fontsize=20, labelpad=15)
+        ax.set_ylabel(r"$x_2$", fontsize=20, labelpad=15)
+        ax.set_zlabel(r"$x_3$", fontsize=20, labelpad=15)
+
+        
     
     plt.show()    
 
