@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: インターフェース math::gsl_sf_bessel_jl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemath.html">math</a></li><li class="navelem"><a class="el" href="interfacemath_1_1gsl__sf__bessel__jl.html">gsl_sf_bessel_jl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="interfacemath_1_1gsl__sf__bessel__jl-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">インターフェース math::gsl_sf_bessel_jl</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1b4e1d2a97a03fe2461ced587d35f0f2"><td class="memItemLeft" align="right" valign="top">real(c_double) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__jl.html#a1b4e1d2a97a03fe2461ced587d35f0f2">gsl_sf_bessel_jl</a> (l, x)</td></tr>
+<tr class="separator:a1b4e1d2a97a03fe2461ced587d35f0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00042">42</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a1b4e1d2a97a03fe2461ced587d35f0f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b4e1d2a97a03fe2461ced587d35f0f2">&#9670;&nbsp;</a></span>gsl_sf_bessel_jl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(c_double) function math::gsl_sf_bessel_jl::gsl_sf_bessel_jl </td>
+          <td>(</td>
+          <td class="paramtype">integer(c_int), value&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(c_double), value&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="math_8f90_source.html">math.f90</a> の <a class="el" href="math_8f90_source.html#l00043">43</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;       <span class="keywordtype">use </span>iso_c_binding</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;       <span class="keywordtype">integer(c_int)</span>,<span class="keywordtype">value</span> :: l</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;       <span class="keywordtype">real(c_double)</span>,<span class="keywordtype">value</span> :: x</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;       <span class="keywordtype">real(c_double)</span> :: out</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>次のファイルからインターフェースの詳解が抽出されました:<ul>
+<li><a class="el" href="math_8f90_source.html">math.f90</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -4,7 +4,66 @@ module examples_helmholtz
 
 contains
   !> 球による平面波散乱の解析解を計算
-  subroutine ana_sphere
+  subroutine compute_smatrix_ana
+    use misc
+    use file_io
+    use math
+    use mesh3d_class
+    use solution_helmholtz_class
+    use smatrix_helmholtz_class
+
+    real(8) :: w
+    real(8) :: c
+    real(8) :: k
+    
+    integer :: nmax
+
+    type(mesh3d),allocatable :: mesh
+    character(:),allocatable :: fn_mesh
+
+    type(solution_helmholtz),allocatable :: sol
+    type(smatrix_helmholtz),allocatable :: smat
+
+    complex(8),allocatable :: A(:)
+
+    real(8) :: pvec(3)
+    
+    !
+    ! read input
+    !
+    open(10, file="input.conf")
+    call read_config(10, "fn_mesh", fn_mesh, "elm_init.off # メッシュのファイル名")
+    call read_config(10, "w", w, "3.0 # angular freq.")
+    call read_config(10, "c", c, "1.2 # phase velocity")
+    call read_config(10, "nmax", nmax, "+20 # maximum index of spherical funcs >= 0")
+    close(10)
+
+    ! 球のメッシュを読み込み
+    allocate(mesh)
+    call mesh%read_off(fn_mesh)
+    call mesh%invert
+
+    allocate(smat)
+    ! call smat%init_sphere(mesh, "neumann", w, [c,c], nmax)
+    call smat%init(mesh, "neumann", w, [c,c], nmax)
+
+    call smat%output_S("smatrix.dat")
+
+    ! 例として，[0.d0, 1.d0, 0.d0]方向の平面波が進行するときの解を計算
+    allocate(A(smat%size))
+    pvec = [0.d0, 1.d0, 0.d0]
+    call smat%calc_A_planewave(pvec, one, A)
+    allocate(sol)
+    call smat%calc_sol(A, sol)
+    
+    call sol%output_bndry("bndry.dat")
+    call smat%sols(loct(0,0))%output_bndry("bndry_0_0.dat")
+    call smat%sols(loct(2,1))%output_bndry("bndry_2_1.dat")
+
+  end subroutine compute_smatrix_ana
+  
+  !> 球による平面波散乱の解析解を計算
+  subroutine ana_sphere_planewave
     use misc
     use file_io
     use math
@@ -17,7 +76,7 @@ contains
     real(8) :: pvec(3)
 
     integer :: n, m
-    integer :: n_max, size, index
+    integer :: nmax, size, index
     complex(8),allocatable :: A(:), B(:)
     complex(8),allocatable :: Ys(:)
     real(8),allocatable :: besj(:)
@@ -42,19 +101,19 @@ contains
     call read_config(10, "fn_mesh", fn_mesh, "elm_init.off # メッシュのファイル名")
     call read_config(10, "w", w, "3.0 # angular freq.")
     call read_config(10, "c", c, "1.2 # phase velocity")
-    call read_config(10, "n_max", n_max, "+20 # maximum index of spherical funcs >= 0")
+    call read_config(10, "nmax", nmax, "+20 # maximum index of spherical funcs >= 0")
     close(10)
 
     k = w / c
-    pvec = [zero, one, zero]
+    pvec = [0.d0, 1.d0, 0.d0]
 
     ! 球のメッシュを読み込み
     allocate(mesh)
     call mesh%read_off(fn_mesh)
     call mesh%invert
 
-    ! size = sum_0^n_max sum_{m=-n}^n
-    size = (n_max+1)**2
+    ! size = sum_0^nmax sum_{m=-n}^n
+    size = (nmax+1)**2
 
     !
     ! Aを計算
@@ -62,11 +121,11 @@ contains
     allocate(A(size))
     ! 球面調和関数Y(pvec)を計算
     allocate(Ys(size))
-    call sph(n_max, pvec, Ys)
+    call sph(nmax, pvec, Ys)
     
-    do n=0,n_max
+    do n=0,nmax
        do m=-n,n
-          index = loct_sph(n,m)
+          index = loct(n,m)
           
           A(index) = ione**n*(2*n+1)*conjg(Ys(index))
        end do
@@ -81,16 +140,16 @@ contains
     ! Bを計算
     !
     ! 球Bessel,Hankel関数の計算
-    allocate(besj(0:n_max+1))
-    call bessel_sph_jn_array(n_max+1, k*rad, besj)
-    allocate(besh(0:n_max+1))
-    call bessel_sph_hn_array(n_max+1, k*rad, besh)
+    allocate(besj(0:nmax+1))
+    call bessel_sph_jn_array(nmax+1, k*rad, besj)
+    allocate(besh(0:nmax+1))
+    call bessel_sph_hn_array(nmax+1, k*rad, besh)
 
     ! Neumann条件からBを求める
     allocate(B(size))
-    do n=0,n_max
+    do n=0,nmax
        do m=-n,n
-          index = loct_sph(n,m)
+          index = loct(n,m)
 
           B(index) = -&
                (n/(k*rad)*besj(n) - besj(n+1)) / &
@@ -107,9 +166,9 @@ contains
     ! 境界上の解を計算
     !
     allocate(sol)
-    call sol%init(mesh)
+    call sol%init(mesh, w, c)
 
-    allocate(besh(0:n_max))    
+    allocate(besh(0:nmax))    
     allocate(Ys(size))
     
     do i=1,mesh%ne
@@ -119,16 +178,16 @@ contains
        call Cartesian_to_spherical(x, r, theta, phi)
 
        ! Hankel関数の計算
-       call bessel_sph_hn_array(n_max, k*r, besh)
+       call bessel_sph_hn_array(nmax, k*r, besh)
 
        ! 球面調和関数Y(x)を計算
-       call sph(n_max, x, Ys)
+       call sph(nmax, x, Ys)
 
        ! 散乱波
        sol%u_bndry(i,:) = zero
-       do n=0,n_max
+       do n=0,nmax
           do m=-n,n
-             index = loct_sph(n,m)
+             index = loct(n,m)
 
              sol%u_bndry(i,1) = sol%u_bndry(i,1) + B(index)*besh(n)*Ys(index)
           end do
@@ -153,48 +212,115 @@ contains
     ! write(*,*) u
 
     ! ! 球面調和関数Y(x)を計算
-    ! call sph(n_max, x, Ys)
+    ! call sph(nmax, x, Ys)
     ! ! 球Bessel関数の計算
-    ! allocate(besj(0:n_max))
-    ! call bessel_sph_jn_array(n_max, k*rad, besj)
+    ! allocate(besj(0:nmax))
+    ! call bessel_sph_jn_array(nmax, k*rad, besj)
     ! u = zero
-    ! do n=0,n_max
+    ! do n=0,nmax
     !    do m=-n,n
-    !       index = loct_sph(n,m)
+    !       index = loct(n,m)
           
     !       u = u + A(index)*besj(n)*Ys(index)
     !    end do
     ! end do
     ! write(*,*) u
     
-  end subroutine ana_sphere
+  end subroutine ana_sphere_planewave
 
-  subroutine solve_helmholtz3d
+  !> \f$ I_n^m(x) \f$入射のHelmholtz方程式の散乱問題をBEMで解く．
+  subroutine solve_helmholtz3d_spherical
     use math
+    use file_io
+    use mesh3d_class
+    use incwave3d_helmholtz_spherical_class
+    use bem3d_helmholtz_class
+    use solution_helmholtz_class
+    implicit none
+
+    real(8) :: w
+    real(8) :: c
+
+    type(mesh3d),allocatable :: mesh
+    type(incwave3d_helmholtz_spherical),allocatable :: incw
+    type(bem3d_helmholtz),allocatable :: bem
+    type(solution_helmholtz),allocatable :: sol
+
+    character(:),allocatable :: fn_mesh
+
+    integer :: n, m
+    
+    !
+    ! read input
+    !
+    open(10, file="input.conf")
+    call read_config(10, "fn_mesh", fn_mesh, "elm_init.off # メッシュのファイル名")
+    call read_config(10, "w", w, "3.0 # angular freq.")
+    call read_config(10, "c", c, "1.2 # phase velocity")
+    call read_config(10, "n", n, "3 # order of I")
+    call read_config(10, "m", m, "-1 # order of I")
+    close(10)
+
+    allocate(mesh)
+    call mesh%read_off(fn_mesh)
+
+    call mesh%invert
+    call mesh%output_an("normal.dat")
+
+    allocate(bem)
+    call bem%init(mesh, "neumann", w, [c,c])
+
+    ! 係数行列
+    write(*,*) "# Constructing amat"
+    call bem%gen_amat
+    write(*,*) "# LU factorising"
+    call bem%lu_decompose
+
+    ! 右辺ベクトル
+    allocate(incw)
+    call incw%init(w, c, one, n, m, mesh%center)
+    call bem%gen_bvec(incw)
+
+    ! 解く
+    write(*,*) "# LU solving"
+    call bem%lu_solve
+
+    allocate(sol)
+    call bem%gen_solution(sol)
+    call sol%output_bndry("bndry.dat")
+  end subroutine solve_helmholtz3d_spherical
+
+  !> 平面波入射のHelmholtz方程式の散乱問題をBEMで解く．
+  subroutine solve_helmholtz3d_planewave
+    use math
+    use file_io
     use mesh3d_class
     use incwave3d_helmholtz_planewave_class
     use bem3d_helmholtz_class
     use solution_helmholtz_class
     implicit none
 
-    real(8),parameter :: w = 3.0d0
-    real(8),parameter :: c = 1.2d0
+    real(8) :: w
+    real(8) :: c
 
     type(mesh3d),allocatable :: mesh
     type(incwave3d_helmholtz_planewave),allocatable :: incw
     type(bem3d_helmholtz),allocatable :: bem
     type(solution_helmholtz),allocatable :: sol
 
-    ! allocate(mesh)
-    ! call mesh%read_off("sphere.off.old")
-    ! call mesh%shift(-[6.6154999999999973d0, -313.21600000000001d0, 165.90299999999999d0])
-    ! call mesh%expand(1.d0 / 170.79050000000001d0)
-    ! call mesh%output_off("sphere.off")
-
-    ! stop
+    character(:),allocatable :: fn_mesh
+    
+    !
+    ! read input
+    !
+    open(10, file="input.conf")
+    call read_config(10, "fn_mesh", fn_mesh, "elm_init.off # メッシュのファイル名")
+    call read_config(10, "w", w, "3.0 # angular freq.")
+    call read_config(10, "c", c, "1.2 # phase velocity")
+    close(10)
 
     allocate(mesh)
-    call mesh%read_off("sphere.off")
+    call mesh%read_off(fn_mesh)
 
     call mesh%invert
     call mesh%output_an("normal.dat")
@@ -220,6 +346,6 @@ contains
     allocate(sol)
     call bem%gen_solution(sol)
     call sol%output_bndry("bndry.dat")
-    call sol%output_bndry_geomview("bndry.off")
-  end subroutine solve_helmholtz3d
+  end subroutine solve_helmholtz3d_planewave
+  
 end module examples_helmholtz

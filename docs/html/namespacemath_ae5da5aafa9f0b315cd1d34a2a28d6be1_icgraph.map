@@ -1,3 +1,4 @@
 <map id="math::cartesian_to_spherical" name="math::cartesian_to_spherical">
-<area shape="rect" id="node2" href="$namespaceexamples__helmholtz.html#a05e3d73b62db43ad6f55d3b6d4e4fe7a" title="球による平面波散乱の解析解を計算 " alt="" coords="184,5,325,47"/>
+<area shape="rect" id="node2" href="$namespaceexamples__helmholtz.html#af1bc7510d26480af38fd366f60dde31e" title="球による平面波散乱の解析解を計算 " alt="" coords="184,5,351,47"/>
+<area shape="rect" id="node3" href="$namespacemath.html#ab041e4120511217efc3b83843cc42798" title="math::calc_y_theta" alt="" coords="201,71,334,98"/>
 </map>

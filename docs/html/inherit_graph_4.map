@@ -1,3 +1,5 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$structlayerpotential3d__helmholtz__class_1_1layerpotential3d__helmholtz.html" title="3D&#45;HelmholtzのBEMの影響係数行列の成分を計算するためのclass " alt="" coords="5,5,181,61"/>
+<area shape="rect" id="node1" href="$structincwave3d__helmholtz__class_1_1incwave3d__helmholtz.html" title="incwave3d_helmholtz\l_class::incwave3d_helmholtz" alt="" coords="5,53,199,94"/>
+<area shape="rect" id="node2" href="$structincwave3d__helmholtz__planewave__class_1_1incwave3d__helmholtz__planewave.html" title="incwave3d_helmholtz\l_planewave_class::incwave3d\l_helmholtz_planewave" alt="" coords="247,5,445,61"/>
+<area shape="rect" id="node3" href="$structincwave3d__helmholtz__spherical__class_1_1incwave3d__helmholtz__spherical.html" title="incwave3d_helmholtz\l_spherical_class::incwave3d\l_helmholtz_spherical" alt="" coords="251,85,441,141"/>
 </map>

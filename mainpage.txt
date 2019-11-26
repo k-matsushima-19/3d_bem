@@ -5,4 +5,11 @@
 \par LAPACK & BLAS
 sudo apt install liblapack-dev
 
+\par GNU Scientific Library (GSL)
+sudo apt install libgsl-dev
+
+\par libminiball
+cd lib/miniball && make
+できたlibminiball.soをpathが通った場所に置く．
+
 */

@@ -62,6 +62,10 @@ $(function() {
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__yl__array.html">math::gsl_sf_bessel_yl_array</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__jl.html">math::gsl_sf_bessel_jl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__yl.html">math::gsl_sf_bessel_yl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 モジュール</h2></td></tr>
@@ -96,12 +100,18 @@ $(function() {
 <tr class="memitem:ae5da5aafa9f0b315cd1d34a2a28d6be1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ae5da5aafa9f0b315cd1d34a2a28d6be1">math::cartesian_to_spherical</a> (x, r, theta, phi)</td></tr>
 <tr class="memdesc:ae5da5aafa9f0b315cd1d34a2a28d6be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デカルト座標から球面座標を計算  <a href="namespacemath.html#ae5da5aafa9f0b315cd1d34a2a28d6be1">[詳解]</a><br /></td></tr>
 <tr class="separator:ae5da5aafa9f0b315cd1d34a2a28d6be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1d54d1a69dddc480079e6516014ef6b"><td class="memItemLeft" align="right" valign="top">integer function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aa1d54d1a69dddc480079e6516014ef6b">math::loct_sph</a> (n, m)</td></tr>
-<tr class="memdesc:aa1d54d1a69dddc480079e6516014ef6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">球面調和関数 <img class="formulaInl" alt="$ Y_n^m(x) $" src="form_17.png"/>のインデックス <img class="formulaInl" alt="$ m,n $" src="form_18.png"/>を1から始まる1つのindexに置き換える  <a href="namespacemath.html#aa1d54d1a69dddc480079e6516014ef6b">[詳解]</a><br /></td></tr>
-<tr class="separator:aa1d54d1a69dddc480079e6516014ef6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0287fb28fe23fa3333c08b3ec4b4d9f7"><td class="memItemLeft" align="right" valign="top">integer function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">math::loct</a> (n, m)</td></tr>
+<tr class="memdesc:a0287fb28fe23fa3333c08b3ec4b4d9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">球面調和関数 <img class="formulaInl" alt="$ Y_n^m(x) $" src="form_17.png"/>のインデックス <img class="formulaInl" alt="$ m,n $" src="form_18.png"/>を1から始まる1つのindexに置き換える  <a href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">[詳解]</a><br /></td></tr>
+<tr class="separator:a0287fb28fe23fa3333c08b3ec4b4d9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ce1e76924fad0dbc73becee4a44182"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182">math::sph</a> (n, x, ynm)</td></tr>
-<tr class="memdesc:a37ce1e76924fad0dbc73becee4a44182"><td class="mdescLeft">&#160;</td><td class="mdescRight">球面調和関数 <img class="formulaInl" alt="$ x\in R^3\mapsto Y_n^m(x)=Y_n^m(x/|x|) $" src="form_21.png"/>を <img class="formulaInl" alt="$ n=0 $" src="form_19.png"/>から与えられた <img class="formulaInl" alt="$ n $" src="form_20.png"/>まで計算する。ynm(loct_sph(n,m))に格納される  <a href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a37ce1e76924fad0dbc73becee4a44182"><td class="mdescLeft">&#160;</td><td class="mdescRight">球面調和関数 <img class="formulaInl" alt="$ x\in R^3\mapsto Y_n^m(x)=Y_n^m(x/|x|) $" src="form_21.png"/>を <img class="formulaInl" alt="$ n=0 $" src="form_19.png"/>から与えられた <img class="formulaInl" alt="$ n $" src="form_20.png"/>まで計算する。ynm(loct(n,m))に格納される  <a href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182">[詳解]</a><br /></td></tr>
 <tr class="separator:a37ce1e76924fad0dbc73becee4a44182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b78ab37f8073a1abd48257f0ce73be"><td class="memItemLeft" align="right" valign="top">real(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ac1b78ab37f8073a1abd48257f0ce73be">math::bessel_sph_jn</a> (n, x)</td></tr>
+<tr class="memdesc:ac1b78ab37f8073a1abd48257f0ce73be"><td class="mdescLeft">&#160;</td><td class="mdescRight">n次の球Bessel関数 <img class="formulaInl" alt="$ j_n(x) $" src="form_24.png"/>を計算  <a href="namespacemath.html#ac1b78ab37f8073a1abd48257f0ce73be">[詳解]</a><br /></td></tr>
+<tr class="separator:ac1b78ab37f8073a1abd48257f0ce73be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16c99a71bb8afe972c6b0bf2d33d574"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ae16c99a71bb8afe972c6b0bf2d33d574">math::bessel_sph_hn</a> (n, x)</td></tr>
+<tr class="memdesc:ae16c99a71bb8afe972c6b0bf2d33d574"><td class="mdescLeft">&#160;</td><td class="mdescRight">n次の球Hankel関数 <img class="formulaInl" alt="$ h_n^{(1)}(x) $" src="form_26.png"/>を計算  <a href="namespacemath.html#ae16c99a71bb8afe972c6b0bf2d33d574">[詳解]</a><br /></td></tr>
+<tr class="separator:ae16c99a71bb8afe972c6b0bf2d33d574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e70af4e8a43e82f8c8855ef1de8f17a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a">math::bessel_sph_jn_array</a> (nmax, x, out)</td></tr>
 <tr class="memdesc:a6e70af4e8a43e82f8c8855ef1de8f17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">0からnmax次までの球Bessel関数 <img class="formulaInl" alt="$ j_n(x) $" src="form_24.png"/>を計算  <a href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a">[詳解]</a><br /></td></tr>
 <tr class="separator:a6e70af4e8a43e82f8c8855ef1de8f17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,6 +121,17 @@ $(function() {
 <tr class="memitem:a6ee114647e3e47b4d8d473730aa14ef3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3">math::bessel_sph_hn_array</a> (nmax, x, out)</td></tr>
 <tr class="memdesc:a6ee114647e3e47b4d8d473730aa14ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">0からnmax次までの第1種球Hankel関数 <img class="formulaInl" alt="$ h_n^{(1)}(x) $" src="form_26.png"/>を計算  <a href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3">[詳解]</a><br /></td></tr>
 <tr class="separator:a6ee114647e3e47b4d8d473730aa14ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab041e4120511217efc3b83843cc42798"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ab041e4120511217efc3b83843cc42798">math::calc_y_theta</a> (n, m, x)</td></tr>
+<tr class="separator:ab041e4120511217efc3b83843cc42798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1ff6da21b91faf43af5bbd19353b63"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63">math::calc_inm</a> (k, x, nmax, out)</td></tr>
+<tr class="memdesc:aeb1ff6da21b91faf43af5bbd19353b63"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ I_n^m(x)=j_n(k|x|)Y_n^m(x/|x|) $" src="form_29.png"/>の <img class="formulaInl" alt="$ n=0,\ldots,n_\mathrm{max}$" src="form_31.png"/>を計算  <a href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63">[詳解]</a><br /></td></tr>
+<tr class="separator:aeb1ff6da21b91faf43af5bbd19353b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf8f49356a86e70de5b17f784390b26"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aaaf8f49356a86e70de5b17f784390b26">math::calc_inm_derivative</a> (k, x, nmax, out)</td></tr>
+<tr class="memdesc:aaaf8f49356a86e70de5b17f784390b26"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ I_n^m(x)=j_n(k|x|)Y_n^m(x/|x|) $" src="form_29.png"/>の <img class="formulaInl" alt="$ x_i $" src="form_33.png"/>微分を <img class="formulaInl" alt="$ n=0,\ldots,n_\mathrm{max}$" src="form_31.png"/>について計算  <a href="namespacemath.html#aaaf8f49356a86e70de5b17f784390b26">[詳解]</a><br /></td></tr>
+<tr class="separator:aaaf8f49356a86e70de5b17f784390b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c6d9d380516f028b781392ae1d7b26"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26">math::calc_onm</a> (k, x, nmax, out)</td></tr>
+<tr class="memdesc:ac5c6d9d380516f028b781392ae1d7b26"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ O_n^m(x)=h^{(1)}_n(k|x|)Y_n^m(x/|x|) $" src="form_39.png"/>の <img class="formulaInl" alt="$ n=0,\ldots,n_\mathrm{max}$" src="form_31.png"/>を計算  <a href="namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26">[詳解]</a><br /></td></tr>
+<tr class="separator:ac5c6d9d380516f028b781392ae1d7b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
@@ -126,7 +147,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月25日(月) 20時06分18秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

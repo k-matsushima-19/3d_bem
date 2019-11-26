@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: smatrix_helmholtz_classモジュール</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ型</a> &#124;
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">smatrix_helmholtz_classモジュール</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>3D-HelmholtzのS行列  
+<a href="#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D-HelmholtzのS行列  <a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:aeebbc4329ffbb9acea5eb8cd3536e09e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#aeebbc4329ffbb9acea5eb8cd3536e09e">init</a> (self, mesh, b_condition, w, cs, nmax)</td></tr>
+<tr class="memdesc:aeebbc4329ffbb9acea5eb8cd3536e09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">BEMを用いてS行列を作る  <a href="#aeebbc4329ffbb9acea5eb8cd3536e09e">[詳解]</a><br /></td></tr>
+<tr class="separator:aeebbc4329ffbb9acea5eb8cd3536e09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b7ebc52236363235b43b16fd61e1fb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#ae6b7ebc52236363235b43b16fd61e1fb">init_sphere</a> (self, mesh, b_condition, w, cs, nmax)</td></tr>
+<tr class="memdesc:ae6b7ebc52236363235b43b16fd61e1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">散乱体が球の場合について，解析解を用いてS行列を作る  <a href="#ae6b7ebc52236363235b43b16fd61e1fb">[詳解]</a><br /></td></tr>
+<tr class="separator:ae6b7ebc52236363235b43b16fd61e1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8080b72be872b8e7dd0b34ad46322fd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#ae8080b72be872b8e7dd0b34ad46322fd">calc_sol</a> (self, A, sol)</td></tr>
+<tr class="memdesc:ae8080b72be872b8e7dd0b34ad46322fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">incoming coefficients Aを与えたときの解solを計算する  <a href="#ae8080b72be872b8e7dd0b34ad46322fd">[詳解]</a><br /></td></tr>
+<tr class="separator:ae8080b72be872b8e7dd0b34ad46322fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0f929f1a757fe1a60e1ddcd500de78"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#a5c0f929f1a757fe1a60e1ddcd500de78">calc_a_planewave</a> (self, pvec, amp, A)</td></tr>
+<tr class="memdesc:a5c0f929f1a757fe1a60e1ddcd500de78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ p\in S^2 $" src="form_40.png"/>方向に進む平面波を表すincoming coefficients Aを計算  <a href="#a5c0f929f1a757fe1a60e1ddcd500de78">[詳解]</a><br /></td></tr>
+<tr class="separator:a5c0f929f1a757fe1a60e1ddcd500de78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e71ca6f601f411534fa0fa253a4b60"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#ac6e71ca6f601f411534fa0fa253a4b60">output_s</a> (self, filename)</td></tr>
+<tr class="memdesc:ac6e71ca6f601f411534fa0fa253a4b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sの成分をファイルに出力  <a href="#ac6e71ca6f601f411534fa0fa253a4b60">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6e71ca6f601f411534fa0fa253a4b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>3D-HelmholtzのS行列 </p>
+</div><h2 class="groupheader">関数/サブルーチン詳解</h2>
+<a id="a5c0f929f1a757fe1a60e1ddcd500de78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0f929f1a757fe1a60e1ddcd500de78">&#9670;&nbsp;</a></span>calc_a_planewave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine smatrix_helmholtz_class::calc_a_planewave </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>pvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex(8), intent(in)&#160;</td>
+          <td class="paramname"><em>amp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex(8), dimension(self%size), intent(out)&#160;</td>
+          <td class="paramname"><em>A</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><img class="formulaInl" alt="$ p\in S^2 $" src="form_40.png"/>方向に進む平面波を表すincoming coefficients Aを計算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">pvec</td><td>入射波の進行方向 <img class="formulaInl" alt="$ p\in S^2 $" src="form_40.png"/> </td></tr>
+    <tr><td class="paramname">amp</td><td>入射波の複素振幅 </td></tr>
+    <tr><td class="paramname">A</td><td>incoming coefficients </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00258">258</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="math_8f90_source.html#l00007">math::ione</a>, <a class="el" href="math_8f90_source.html#l00212">math::loct()</a>, <a class="el" href="math_8f90_source.html#l00227">math::sph()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: pvec(3)</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: amp</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(out)</span> :: a(self%size)</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">integer</span> :: n, m</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: ys(:)</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">! 球面調和関数Y(pvec)を計算</span></div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">allocate</span>(ys(self%size))</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182">sph</a>(self%nmax, pvec, ys)</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">do</span> n=0,self%nmax</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;       <span class="keywordflow">do</span> m=-n,n</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;          a(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m)) = <a class="code" href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">ione</a>**n*(2*n+1)*conjg(ys(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m)))</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    a = a * exp(<a class="code" href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">ione</a>*self%k*<a class="code" href="interfacemath_1_1rdot__product.html">rdot_product</a>(pvec,self%mesh%center))</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">deallocate</span>(ys)</div><div class="ttc" id="namespacemath_html_a37ce1e76924fad0dbc73becee4a44182"><div class="ttname"><a href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182">math::sph</a></div><div class="ttdeci">subroutine sph(n, x, ynm)</div><div class="ttdoc">球面調和関数 を から与えられた まで計算する。ynm(loct(n,m))に格納される </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00227">math.f90:227</a></div></div>
+<div class="ttc" id="structsmatrix__helmholtz__class_1_1smatrix__helmholtz_html"><div class="ttname"><a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz_class::smatrix_helmholtz</a></div><div class="ttdoc">3D-HelmholtzのS行列 </div><div class="ttdef"><b>Definition:</b> <a href="smatrix__helmholtz__class_8f90_source.html#l00013">smatrix_helmholtz_class.f90:13</a></div></div>
+<div class="ttc" id="interfacemath_1_1rdot__product_html"><div class="ttname"><a href="interfacemath_1_1rdot__product.html">math::rdot_product</a></div><div class="ttdoc">内積でない (共役を取らない) ドット積 </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00012">math.f90:12</a></div></div>
+<div class="ttc" id="namespacemath_html_abcc8438bee3c1535812c6db4870f5ea2"><div class="ttname"><a href="namespacemath.html#abcc8438bee3c1535812c6db4870f5ea2">math::ione</a></div><div class="ttdeci">complex(8), parameter ione</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00007">math.f90:7</a></div></div>
+<div class="ttc" id="namespacemath_html_a0287fb28fe23fa3333c08b3ec4b4d9f7"><div class="ttname"><a href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">math::loct</a></div><div class="ttdeci">integer function loct(n, m)</div><div class="ttdoc">球面調和関数 のインデックス を1から始まる1つのindexに置き換える </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00212">math.f90:212</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacesmatrix__helmholtz__class_a5c0f929f1a757fe1a60e1ddcd500de78_cgraph.png" border="0" usemap="#namespacesmatrix__helmholtz__class_a5c0f929f1a757fe1a60e1ddcd500de78_cgraph" alt=""/></div>
+<map name="namespacesmatrix__helmholtz__class_a5c0f929f1a757fe1a60e1ddcd500de78_cgraph" id="namespacesmatrix__helmholtz__class_a5c0f929f1a757fe1a60e1ddcd500de78_cgraph">
+<area shape="rect" id="node2" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7" title="球面調和関数 のインデックス を1から始まる1つのindexに置き換える " alt="" coords="348,13,428,39"/>
+<area shape="rect" id="node4" href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182" title="球面調和関数 を から与えられた まで計算する。ynm(loct(n,m))に格納される " alt="" coords="220,38,300,65"/>
+<area shape="rect" id="node3" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="476,13,571,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae8080b72be872b8e7dd0b34ad46322fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8080b72be872b8e7dd0b34ad46322fd">&#9670;&nbsp;</a></span>calc_sol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine smatrix_helmholtz_class::calc_sol </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex(8), dimension(self%size), intent(in)&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>sol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>incoming coefficients Aを与えたときの解solを計算する </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00236">236</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="math_8f90_source.html#l00212">math::loct()</a>, <a class="el" href="math_8f90_source.html#l00006">math::zero</a>.</p>
+<div class="fragment"><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">intent(in)</span> :: a(self%size)</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>),<span class="keywordtype">intent(out)</span> :: sol</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">integer</span> :: n, m</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">call </span>sol%init(self%mesh, self%w, self%cs(1))</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    sol%u_bndry(:,:) = <a class="code" href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">zero</a></div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">do</span> n=0,self%nmax</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;       <span class="keywordflow">do</span> m=-n,n</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;          sol%u_bndry(:,:) = sol%u_bndry(:,:) + a(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))*self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%u_bndry(:,:)</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keywordflow">    end do</span></div><div class="ttc" id="structsmatrix__helmholtz__class_1_1smatrix__helmholtz_html"><div class="ttname"><a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz_class::smatrix_helmholtz</a></div><div class="ttdoc">3D-HelmholtzのS行列 </div><div class="ttdef"><b>Definition:</b> <a href="smatrix__helmholtz__class_8f90_source.html#l00013">smatrix_helmholtz_class.f90:13</a></div></div>
+<div class="ttc" id="namespacemath_html_a0287fb28fe23fa3333c08b3ec4b4d9f7"><div class="ttname"><a href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">math::loct</a></div><div class="ttdeci">integer function loct(n, m)</div><div class="ttdoc">球面調和関数 のインデックス を1から始まる1つのindexに置き換える </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00212">math.f90:212</a></div></div>
+<div class="ttc" id="namespacemath_html_a159c8779fbff58efb934b1f3ba4fcb26"><div class="ttname"><a href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">math::zero</a></div><div class="ttdeci">complex(8), parameter zero</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00006">math.f90:6</a></div></div>
+<div class="ttc" id="structsolution__helmholtz__class_1_1solution__helmholtz_html"><div class="ttname"><a href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz_class::solution_helmholtz</a></div><div class="ttdef"><b>Definition:</b> <a href="solution__helmholtz__class_8f90_source.html#l00008">solution_helmholtz_class.f90:8</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacesmatrix__helmholtz__class_ae8080b72be872b8e7dd0b34ad46322fd_cgraph.png" border="0" usemap="#namespacesmatrix__helmholtz__class_ae8080b72be872b8e7dd0b34ad46322fd_cgraph" alt=""/></div>
+<map name="namespacesmatrix__helmholtz__class_ae8080b72be872b8e7dd0b34ad46322fd_cgraph" id="namespacesmatrix__helmholtz__class_ae8080b72be872b8e7dd0b34ad46322fd_cgraph">
+<area shape="rect" id="node2" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7" title="球面調和関数 のインデックス を1から始まる1つのindexに置き換える " alt="" coords="220,13,300,39"/>
+<area shape="rect" id="node3" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="348,13,443,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeebbc4329ffbb9acea5eb8cd3536e09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebbc4329ffbb9acea5eb8cd3536e09e">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine smatrix_helmholtz_class::init </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), intent(inout), target&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(*), intent(in)&#160;</td>
+          <td class="paramname"><em>b_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(2), intent(in)&#160;</td>
+          <td class="paramname"><em>cs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nmax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BEMを用いてS行列を作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">mesh</td><td>境界mesh </td></tr>
+    <tr><td class="paramname">b_condition</td><td>境界条件 "neumann" </td></tr>
+    <tr><td class="paramname">w</td><td>角周波数 </td></tr>
+    <tr><td class="paramname">cs</td><td>各領域の位相速度 1:外部 2:内部 </td></tr>
+    <tr><td class="paramname">nmax</td><td>次数nの最大値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00061">61</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>, <a class="el" href="math_8f90_source.html#l00212">math::loct()</a>, <a class="el" href="math_8f90_source.html#l00008">math::one</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>),<span class="keywordtype">intent(out)</span> :: self</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(inout)</span>,<span class="keywordtype">target</span> :: mesh</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: b_condition</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: w</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: cs(2)</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">integer</span>,<span class="keywordtype">intent(in)</span> :: nmax</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html">bem3d_helmholtz</a>),<span class="keywordtype">allocatable</span> :: bem</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">integer</span> :: m, n</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structincwave3d__helmholtz__spherical__class_1_1incwave3d__helmholtz__spherical.html">incwave3d_helmholtz_spherical</a>),<span class="keywordtype">allocatable</span> :: incw</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    self%mesh =&gt; mesh</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    self%b_condition = b_condition</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    self%w = w</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    self%cs = cs</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    self%k = self%w / self%cs(1)</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    self%nmax = nmax</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    self%size = (self%nmax+1)**2</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">! Neumann条件のみ対応</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(self%b_condition == <span class="stringliteral">&quot;neumann&quot;</span>)</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">!</span></div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">! BEM</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">!</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">allocate</span>(bem)</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">call </span>bem%init(self%mesh, self%b_condition, self%w, self%cs)</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">! 係数行列</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# Constructing amat&quot;</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">call </span>bem%gen_amat</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# LU factorising&quot;</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">call </span>bem%lu_decompose</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">! 各n,mについて右辺ベクトルを作り，解いて，その解を積分する</span></div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">allocate</span>(incw)</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">allocate</span>(self%sols(self%size))</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">allocate</span>(self%S(self%size,self%size))</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">do</span> n=0,self%nmax</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;       <span class="keywordflow">do</span> m=-n,n</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;          <span class="comment">! 入射波</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;          <span class="keyword">call </span>incw%init(self%w, self%cs(1), <a class="code" href="namespacemath.html#afe1f4e890be47662a63e4df1961aab53">one</a>, n, m, self%mesh%center)</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;          <span class="comment">! 右辺ベクトル</span></div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;          <span class="keyword">call </span>bem%gen_bvec(incw)</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;          </div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          <span class="comment">! 解く</span></div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;# LU solving&quot;</span>, <a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m), <span class="stringliteral">&quot;/&quot;</span>, self%size</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          <span class="keyword">call </span>bem%lu_solve</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          <span class="comment">! 解をself%solsの対応する場所に保持する</span></div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          <span class="keyword">call </span>bem%gen_solution(self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m)))</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;          <span class="comment">! この解を境界積分してoutgoing coefficientsを計算する</span></div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;          <span class="keyword">call </span>self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%calc_B(self%nmax, self%S(:,<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m)))</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div><div class="ttc" id="namespacemath_html_afe1f4e890be47662a63e4df1961aab53"><div class="ttname"><a href="namespacemath.html#afe1f4e890be47662a63e4df1961aab53">math::one</a></div><div class="ttdeci">complex(8), parameter one</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00008">math.f90:8</a></div></div>
+<div class="ttc" id="structbem3d__helmholtz__class_1_1bem3d__helmholtz_html"><div class="ttname"><a href="structbem3d__helmholtz__class_1_1bem3d__helmholtz.html">bem3d_helmholtz_class::bem3d_helmholtz</a></div><div class="ttdoc">3D-Helmholtzを解くためのBEM </div><div class="ttdef"><b>Definition:</b> <a href="bem3d__helmholtz__class_8f90_source.html#l00014">bem3d_helmholtz_class.f90:14</a></div></div>
+<div class="ttc" id="structsmatrix__helmholtz__class_1_1smatrix__helmholtz_html"><div class="ttname"><a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz_class::smatrix_helmholtz</a></div><div class="ttdoc">3D-HelmholtzのS行列 </div><div class="ttdef"><b>Definition:</b> <a href="smatrix__helmholtz__class_8f90_source.html#l00013">smatrix_helmholtz_class.f90:13</a></div></div>
+<div class="ttc" id="structincwave3d__helmholtz__spherical__class_1_1incwave3d__helmholtz__spherical_html"><div class="ttname"><a href="structincwave3d__helmholtz__spherical__class_1_1incwave3d__helmholtz__spherical.html">incwave3d_helmholtz_spherical_class::incwave3d_helmholtz_spherical</a></div><div class="ttdef"><b>Definition:</b> <a href="incwave3d__helmholtz__spherical__class_8f90_source.html#l00009">incwave3d_helmholtz_spherical_class.f90:9</a></div></div>
+<div class="ttc" id="namespacemath_html_a0287fb28fe23fa3333c08b3ec4b4d9f7"><div class="ttname"><a href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">math::loct</a></div><div class="ttdeci">integer function loct(n, m)</div><div class="ttdoc">球面調和関数 のインデックス を1から始まる1つのindexに置き換える </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00212">math.f90:212</a></div></div>
+<div class="ttc" id="namespacemisc_html_afbc51c769209391c77a92e8b5a0ac0f3"><div class="ttname"><a href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">misc::assert</a></div><div class="ttdeci">subroutine, public assert(flag, message)</div><div class="ttdef"><b>Definition:</b> <a href="misc_8f90_source.html#l00036">misc.f90:36</a></div></div>
+<div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacesmatrix__helmholtz__class_aeebbc4329ffbb9acea5eb8cd3536e09e_cgraph.png" border="0" usemap="#namespacesmatrix__helmholtz__class_aeebbc4329ffbb9acea5eb8cd3536e09e_cgraph" alt=""/></div>
+<map name="namespacesmatrix__helmholtz__class_aeebbc4329ffbb9acea5eb8cd3536e09e_cgraph" id="namespacesmatrix__helmholtz__class_aeebbc4329ffbb9acea5eb8cd3536e09e_cgraph">
+<area shape="rect" id="node2" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="348,13,443,39"/>
+<area shape="rect" id="node3" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7" title="球面調和関数 のインデックス を1から始まる1つのindexに置き換える " alt="" coords="220,38,300,65"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6b7ebc52236363235b43b16fd61e1fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b7ebc52236363235b43b16fd61e1fb">&#9670;&nbsp;</a></span>init_sphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine smatrix_helmholtz_class::init_sphere </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), intent(inout), target&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(*), intent(in)&#160;</td>
+          <td class="paramname"><em>b_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(2), intent(in)&#160;</td>
+          <td class="paramname"><em>cs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nmax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>散乱体が球の場合について，解析解を用いてS行列を作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">mesh</td><td>球の境界mesh </td></tr>
+    <tr><td class="paramname">b_condition</td><td>境界条件 "neumann" </td></tr>
+    <tr><td class="paramname">w</td><td>角周波数 </td></tr>
+    <tr><td class="paramname">cs</td><td>各領域の位相速度 1:外部 2:内部 </td></tr>
+    <tr><td class="paramname">nmax</td><td>次数nの最大値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00132">132</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="misc_8f90_source.html#l00036">misc::assert()</a>, <a class="el" href="math_8f90_source.html#l00328">math::bessel_sph_hn_array()</a>, <a class="el" href="math_8f90_source.html#l00296">math::bessel_sph_jn_array()</a>, <a class="el" href="math_8f90_source.html#l00377">math::calc_inm()</a>, <a class="el" href="math_8f90_source.html#l00506">math::calc_onm()</a>, <a class="el" href="math_8f90_source.html#l00212">math::loct()</a>, <a class="el" href="math_8f90_source.html#l00008">math::one</a>, <a class="el" href="math_8f90_source.html#l00006">math::zero</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>),<span class="keywordtype">intent(out)</span> :: self</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">intent(inout)</span>,<span class="keywordtype">target</span> :: mesh</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: b_condition</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: w</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: cs(2)</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">integer</span>,<span class="keywordtype">intent(in)</span> :: nmax</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">real(8)</span> :: rad</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">integer</span> :: n, m, k, l</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">integer</span> :: i</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">real(8)</span>,<span class="keywordtype">allocatable</span> :: besj(:)</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: besh(:)</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: a(:), b(:)</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: inm(:), onm(:)</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">real(8)</span> :: x(3)</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    </div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    self%mesh =&gt; mesh</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    self%b_condition = b_condition</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    self%w = w</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    self%cs = cs</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    self%k = self%w / self%cs(1)</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    self%nmax = nmax</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    self%size = (self%nmax+1)**2</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">! Neumann条件のみ対応</span></div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">assert</a>(self%b_condition == <span class="stringliteral">&quot;neumann&quot;</span>)</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">! 球の半径</span></div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    rad = mesh%radius</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">! 球Bessel,Hankel関数の計算</span></div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">allocate</span>(besj(0:self%nmax+1))</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a">bessel_sph_jn_array</a>(self%nmax+1, self%k*rad, besj)</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">allocate</span>(besh(0:self%nmax+1))</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3">bessel_sph_hn_array</a>(self%nmax+1, self%k*rad, besh)</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    </div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">! Sの成分を計算</span></div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">allocate</span>(self%S(self%size,self%size))</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    self%S(:,:) = <a class="code" href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">zero</a></div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">do</span> n=0,self%nmax</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;       <span class="keywordflow">do</span> m=-n,n</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;          self%S(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m), <a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m)) = -&amp;</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;               (n/(self%k*rad)*besj(n) - besj(n+1)) / &amp;</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;               (n/(self%k*rad)*besh(n) - besh(n+1))</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="comment">!</span></div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">! 解を計算</span></div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">!</span></div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">allocate</span>(self%sols(self%size))</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">allocate</span>(a(self%size), b(self%size))</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">allocate</span>(inm(self%size), onm(self%size))</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">do</span> n=0,self%nmax</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;       <span class="keywordflow">do</span> m=-n,n          </div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          <span class="comment">! incoming coefficients Aは(n,m)だけ1で，他は0</span></div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          a(:) = <a class="code" href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">zero</a></div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;          a(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m)) = <a class="code" href="namespacemath.html#afe1f4e890be47662a63e4df1961aab53">one</a></div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;          <span class="comment">! outgoing coefficients B = S*A</span></div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;          b = matmul(self%S,a)</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;          <span class="comment">! 初期化</span></div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;          <span class="keyword">call </span>self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%init(self%mesh, self%w, self%cs(1))</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;          self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%u_bndry(:,:) = <a class="code" href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">zero</a></div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;          <span class="comment">! 各点iで入射波と散乱波を足す</span></div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;          <span class="keywordflow">do</span> i=1,self%mesh%ne</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;             x(:) = mesh%c(:,i)</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;             </div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;             <span class="comment">! IとOを計算</span></div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;             <span class="keyword">call </span><a class="code" href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63">calc_inm</a>(self%k, x-self%mesh%center, self%nmax, inm)</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;             <span class="keyword">call </span><a class="code" href="namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26">calc_onm</a>(self%k, x-self%mesh%center, self%nmax, onm)</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;             <span class="comment">! 入射波</span></div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;             <span class="keywordflow">do</span> k=0,self%nmax</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">do</span> l=-k,k</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                   <span class="comment">! u</span></div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                   self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%u_bndry(i,1) = self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%u_bndry(i,1) + a(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(k,l))*inm(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(k,l))</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keywordflow">                end do</span></div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordflow">             end do</span></div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;             <span class="comment">! 散乱波</span></div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;             <span class="keywordflow">do</span> k=0,self%nmax</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <span class="keywordflow">do</span> l=-k,k</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                   <span class="comment">! u</span></div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                   self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%u_bndry(i,1) = self%sols(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))%u_bndry(i,1) + b(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(k,l))*onm(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(k,l))</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keywordflow">                end do</span></div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keywordflow">             end do</span></div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordflow">          end do</span></div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;          </div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keywordflow">    end do</span>    </div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    </div><div class="ttc" id="namespacemath_html_a6e70af4e8a43e82f8c8855ef1de8f17a"><div class="ttname"><a href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a">math::bessel_sph_jn_array</a></div><div class="ttdeci">subroutine bessel_sph_jn_array(nmax, x, out)</div><div class="ttdoc">0からnmax次までの球Bessel関数 を計算 </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00296">math.f90:296</a></div></div>
+<div class="ttc" id="namespacemath_html_afe1f4e890be47662a63e4df1961aab53"><div class="ttname"><a href="namespacemath.html#afe1f4e890be47662a63e4df1961aab53">math::one</a></div><div class="ttdeci">complex(8), parameter one</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00008">math.f90:8</a></div></div>
+<div class="ttc" id="structsmatrix__helmholtz__class_1_1smatrix__helmholtz_html"><div class="ttname"><a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz_class::smatrix_helmholtz</a></div><div class="ttdoc">3D-HelmholtzのS行列 </div><div class="ttdef"><b>Definition:</b> <a href="smatrix__helmholtz__class_8f90_source.html#l00013">smatrix_helmholtz_class.f90:13</a></div></div>
+<div class="ttc" id="namespacemath_html_ac5c6d9d380516f028b781392ae1d7b26"><div class="ttname"><a href="namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26">math::calc_onm</a></div><div class="ttdeci">subroutine calc_onm(k, x, nmax, out)</div><div class="ttdoc">の を計算 </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00506">math.f90:506</a></div></div>
+<div class="ttc" id="namespacemath_html_a0287fb28fe23fa3333c08b3ec4b4d9f7"><div class="ttname"><a href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">math::loct</a></div><div class="ttdeci">integer function loct(n, m)</div><div class="ttdoc">球面調和関数 のインデックス を1から始まる1つのindexに置き換える </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00212">math.f90:212</a></div></div>
+<div class="ttc" id="namespacemath_html_aeb1ff6da21b91faf43af5bbd19353b63"><div class="ttname"><a href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63">math::calc_inm</a></div><div class="ttdeci">subroutine calc_inm(k, x, nmax, out)</div><div class="ttdoc">の を計算 </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00377">math.f90:377</a></div></div>
+<div class="ttc" id="namespacemisc_html_afbc51c769209391c77a92e8b5a0ac0f3"><div class="ttname"><a href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3">misc::assert</a></div><div class="ttdeci">subroutine, public assert(flag, message)</div><div class="ttdef"><b>Definition:</b> <a href="misc_8f90_source.html#l00036">misc.f90:36</a></div></div>
+<div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+<div class="ttc" id="namespacemath_html_a6ee114647e3e47b4d8d473730aa14ef3"><div class="ttname"><a href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3">math::bessel_sph_hn_array</a></div><div class="ttdeci">subroutine bessel_sph_hn_array(nmax, x, out)</div><div class="ttdoc">0からnmax次までの第1種球Hankel関数 を計算 </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00328">math.f90:328</a></div></div>
+<div class="ttc" id="namespacemath_html_a159c8779fbff58efb934b1f3ba4fcb26"><div class="ttname"><a href="namespacemath.html#a159c8779fbff58efb934b1f3ba4fcb26">math::zero</a></div><div class="ttdeci">complex(8), parameter zero</div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00006">math.f90:6</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacesmatrix__helmholtz__class_ae6b7ebc52236363235b43b16fd61e1fb_cgraph.png" border="0" usemap="#namespacesmatrix__helmholtz__class_ae6b7ebc52236363235b43b16fd61e1fb_cgraph" alt=""/></div>
+<map name="namespacesmatrix__helmholtz__class_ae6b7ebc52236363235b43b16fd61e1fb_cgraph" id="namespacesmatrix__helmholtz__class_ae6b7ebc52236363235b43b16fd61e1fb_cgraph">
+<area shape="rect" id="node2" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="705,61,800,87"/>
+<area shape="rect" id="node3" href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3" title="0からnmax次までの第1種球Hankel関数 を計算 " alt="" coords="383,24,529,65"/>
+<area shape="rect" id="node4" href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="385,89,527,131"/>
+<area shape="rect" id="node5" href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63" title="の を計算 " alt="" coords="222,206,333,233"/>
+<area shape="rect" id="node6" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7" title="球面調和関数 のインデックス を1から始まる1つのindexに置き換える " alt="" coords="577,206,657,233"/>
+<area shape="rect" id="node9" href="namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26" title="の を計算 " alt="" coords="220,155,335,182"/>
+<area shape="rect" id="node7" href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182" title="球面調和関数 を から与えられた まで計算する。ynm(loct(n,m))に格納される " alt="" coords="416,206,496,233"/>
+<area shape="rect" id="node8" href="namespacemath.html#a4ca08d0d90451de708df601a56fc3d5a" title="ベクトルの長さ " alt="" coords="387,257,525,283"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac6e71ca6f601f411534fa0fa253a4b60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e71ca6f601f411534fa0fa253a4b60">&#9670;&nbsp;</a></span>output_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine smatrix_helmholtz_class::output_s </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(*), intent(in)&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sの成分をファイルに出力 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00282">282</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="math_8f90_source.html#l00212">math::loct()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a>),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span> :: filename</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">integer</span> :: n, m</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">integer</span> :: k, l</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">open</span>(10,file=filename,status=<span class="stringliteral">&quot;replace&quot;</span>)</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">! 外部領域の波数</span></div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">write</span>(10,*) self%k</div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">! nmax</span></div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">write</span>(10,*) self%nmax</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">do</span> k=0,self%nmax</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;       <span class="keywordflow">do</span> l=-k,k</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;          <span class="keywordflow">do</span> n=0,self%nmax</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;             <span class="keywordflow">do</span> m=-n,n</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keyword">write</span>(10,<span class="stringliteral">&quot;(4i4,2e24.16)&quot;</span>) k, l, n, m, self%S(<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(k,l),<a class="code" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">loct</a>(n,m))</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keywordflow">             end do</span></div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keywordflow">          end do</span></div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;          <span class="comment">! 空行を入れる</span></div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;          <span class="keyword">write</span>(10,*) <span class="stringliteral">&quot;&quot;</span></div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keywordflow">       end do</span></div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keywordflow">    end do</span></div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">close</span>(10)</div><div class="ttc" id="structsmatrix__helmholtz__class_1_1smatrix__helmholtz_html"><div class="ttname"><a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz_class::smatrix_helmholtz</a></div><div class="ttdoc">3D-HelmholtzのS行列 </div><div class="ttdef"><b>Definition:</b> <a href="smatrix__helmholtz__class_8f90_source.html#l00013">smatrix_helmholtz_class.f90:13</a></div></div>
+<div class="ttc" id="namespacemath_html_a0287fb28fe23fa3333c08b3ec4b4d9f7"><div class="ttname"><a href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7">math::loct</a></div><div class="ttdeci">integer function loct(n, m)</div><div class="ttdoc">球面調和関数 のインデックス を1から始まる1つのindexに置き換える </div><div class="ttdef"><b>Definition:</b> <a href="math_8f90_source.html#l00212">math.f90:212</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacesmatrix__helmholtz__class_ac6e71ca6f601f411534fa0fa253a4b60_cgraph.png" border="0" usemap="#namespacesmatrix__helmholtz__class_ac6e71ca6f601f411534fa0fa253a4b60_cgraph" alt=""/></div>
+<map name="namespacesmatrix__helmholtz__class_ac6e71ca6f601f411534fa0fa253a4b60_cgraph" id="namespacesmatrix__helmholtz__class_ac6e71ca6f601f411534fa0fa253a4b60_cgraph">
+<area shape="rect" id="node2" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7" title="球面調和関数 のインデックス を1から始まる1つのindexに置き換える " alt="" coords="220,13,300,39"/>
+<area shape="rect" id="node3" href="namespacemisc.html#afbc51c769209391c77a92e8b5a0ac0f3" title="misc::assert" alt="" coords="348,13,443,39"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

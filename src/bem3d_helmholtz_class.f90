@@ -5,8 +5,10 @@ module bem3d_helmholtz_class
   use mesh3d_class
   use bem3d_class
   use layerpotential3d_helmholtz_class
-  use incwave3d_helmholtz_planewave_class
+  use incwave3d_helmholtz_class
   use solution_helmholtz_class
+  implicit none
+  private
 
   !> 3D-Helmholtzを解くためのBEM
   type,public,extends(bem3d) :: bem3d_helmholtz
@@ -99,11 +101,12 @@ contains
   !! \param incw 入射波
   subroutine gen_bvec(self, incw)
     class(bem3d_helmholtz),intent(inout) :: self
-    type(incwave3d_helmholtz_planewave),intent(in) :: incw
+    class(incwave3d_helmholtz),intent(in) :: incw
 
     integer :: i
     complex(8) :: u
 
+    if(allocated(self%bvec)) deallocate(self%bvec)
     allocate(self%bvec(self%size))
 
     if(self%b_condition == "neumann") then
@@ -123,7 +126,7 @@ contains
     class(bem3d_helmholtz),intent(in) :: self
     type(solution_helmholtz),intent(out) :: sol
 
-    call sol%init(self%mesh)
+    call sol%init(self%mesh, self%w, self%cs(1))
 
     if(self%b_condition == "neumann") then
        sol%u_bndry(:,1) = self%bvec(:)

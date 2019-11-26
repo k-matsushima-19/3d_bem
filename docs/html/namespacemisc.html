@@ -96,25 +96,42 @@ $(function() {
 
 <p class="definition"> <a class="el" href="misc_8f90_source.html">misc.f90</a> の <a class="el" href="misc_8f90_source.html#l00036">36</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="math_8f90_source.html#l00280">math::bessel_sph_hn_array()</a>, <a class="el" href="math_8f90_source.html#l00248">math::bessel_sph_jn_array()</a>, <a class="el" href="math_8f90_source.html#l00264">math::bessel_sph_yn_array()</a>, <a class="el" href="math_8f90_source.html#l00103">math::convert_area_to_cartesian()</a>, <a class="el" href="math_8f90_source.html#l00071">math::generate_gauss_triangle()</a>, <a class="el" href="bem3d__helmholtz__class_8f90_source.html#l00036">bem3d_helmholtz_class::init()</a>, <a class="el" href="mesh3d__class_8f90_source.html#l00079">mesh3d_class::init()</a>, <a class="el" href="bem3d__class_8f90_source.html#l00042">bem3d_class::lu_decompose()</a>, <a class="el" href="bem3d__class_8f90_source.html#l00058">bem3d_class::lu_solve()</a>, <a class="el" href="mesh3d__class_8f90_source.html#l00129">mesh3d_class::read_off()</a>.</p>
+<p class="reference">参照元 <a class="el" href="math_8f90_source.html#l00328">math::bessel_sph_hn_array()</a>, <a class="el" href="math_8f90_source.html#l00296">math::bessel_sph_jn_array()</a>, <a class="el" href="math_8f90_source.html#l00312">math::bessel_sph_yn_array()</a>, <a class="el" href="math_8f90_source.html#l00121">math::convert_area_to_cartesian()</a>, <a class="el" href="math_8f90_source.html#l00089">math::generate_gauss_triangle()</a>, <a class="el" href="bem3d__helmholtz__class_8f90_source.html#l00038">bem3d_helmholtz_class::init()</a>, <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00061">smatrix_helmholtz_class::init()</a>, <a class="el" href="mesh3d__class_8f90_source.html#l00079">mesh3d_class::init()</a>, <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00132">smatrix_helmholtz_class::init_sphere()</a>, <a class="el" href="math_8f90_source.html#l00212">math::loct()</a>, <a class="el" href="bem3d__class_8f90_source.html#l00042">bem3d_class::lu_decompose()</a>, <a class="el" href="bem3d__class_8f90_source.html#l00058">bem3d_class::lu_solve()</a>, <a class="el" href="mesh3d__class_8f90_source.html#l00129">mesh3d_class::read_off()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">logical</span>,<span class="keywordtype">intent(in)</span> :: flag</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">character(*)</span>,<span class="keywordtype">intent(in)</span>,<span class="keywordtype">optional</span> :: message</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span>(.not. flag) <span class="keywordflow">then</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;       <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;Assertion failed&quot;</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;       <span class="keywordflow">if</span>(<span class="keyword">present</span>(message)) <span class="keyword">write</span>(*,*) message</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;         </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifdef IFORT</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span>       <span class="keyword">call </span>tracebackqq</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span>       </div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;       <span class="keyword">call </span>abort</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordflow">    end if</span></div></div><!-- fragment --><div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemisc_afbc51c769209391c77a92e8b5a0ac0f3_icgraph.png" border="0" usemap="#namespacemisc_afbc51c769209391c77a92e8b5a0ac0f3_icgraph" alt=""/></div>
 <map name="namespacemisc_afbc51c769209391c77a92e8b5a0ac0f3_icgraph" id="namespacemisc_afbc51c769209391c77a92e8b5a0ac0f3_icgraph">
-<area shape="rect" id="node2" href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3" title="0からnmax次までの第1種球Hankel関数 を計算 " alt="" coords="170,5,317,47"/>
-<area shape="rect" id="node4" href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="172,71,315,112"/>
-<area shape="rect" id="node5" href="namespacemath.html#a3edbb855fc60473a855f1b822b565ff4" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="170,136,317,177"/>
-<area shape="rect" id="node6" href="namespacemath.html#a62db1b92e24620ae98f63943618e359e" title="三角形の面積座標からCartesian座標へ変換 " alt="" coords="176,201,311,243"/>
-<area shape="rect" id="node8" href="namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e" title="三角形上のGauss積分の積分点の面積座標と対応する重みを返す " alt="" coords="168,267,319,308"/>
-<area shape="rect" id="node10" href="namespacebem3d__helmholtz__class.html#a1bdf89b9f6d6584dfd3b716576b6b9f7" title="meshと各パラメータを渡してオブジェクトを初期化 " alt="" coords="162,332,325,373"/>
-<area shape="rect" id="node11" href="namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="ne, np, p, ndを与えた後，その他のメンバを初期化する " alt="" coords="178,398,309,425"/>
-<area shape="rect" id="node12" href="namespacebem3d__class.html#a939df2433a6414faefe40d8aec982ed9" title="係数行列amatをLU分解する " alt="" coords="148,449,339,475"/>
-<area shape="rect" id="node13" href="namespacebem3d__class.html#a417981f6d5c1c508b8f1bb1c35410946" title="LU分解した係数行列amatとbvecを用いて連立方程式を解く " alt="" coords="166,499,321,526"/>
-<area shape="rect" id="node14" href="namespacemesh3d__class.html#aaa20a0b588549d680ea6ee924fc66153" title="mesh3d_class::read_off" alt="" coords="163,550,324,577"/>
-<area shape="rect" id="node3" href="namespaceexamples__helmholtz.html#a05e3d73b62db43ad6f55d3b6d4e4fe7a" title="球による平面波散乱の解析解を計算 " alt="" coords="404,39,545,80"/>
-<area shape="rect" id="node7" href="namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="387,201,563,243"/>
-<area shape="rect" id="node9" href="namespacelayerpotential3d__helmholtz__class.html#aa07b262341a2b42eb7dce37c04467bab" title="初期化 " alt="" coords="387,267,563,308"/>
+<area shape="rect" id="node2" href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3" title="0からnmax次までの第1種球Hankel関数 を計算 " alt="" coords="401,48,548,89"/>
+<area shape="rect" id="node5" href="namespacesmatrix__helmholtz__class.html#ae6b7ebc52236363235b43b16fd61e1fb" title="散乱体が球の場合について，解析解を用いてS行列を作る " alt="" coords="829,164,996,205"/>
+<area shape="rect" id="node6" href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="403,113,546,155"/>
+<area shape="rect" id="node12" href="namespacemath.html#a3edbb855fc60473a855f1b822b565ff4" title="0からnmax次までの球Bessel関数 を計算 " alt="" coords="170,1055,317,1096"/>
+<area shape="rect" id="node13" href="namespacemath.html#a62db1b92e24620ae98f63943618e359e" title="三角形の面積座標からCartesian座標へ変換 " alt="" coords="176,989,311,1031"/>
+<area shape="rect" id="node15" href="namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e" title="三角形上のGauss積分の積分点の面積座標と対応する重みを返す " alt="" coords="168,1120,319,1161"/>
+<area shape="rect" id="node18" href="namespacebem3d__helmholtz__class.html#a1bdf89b9f6d6584dfd3b716576b6b9f7" title="meshと各パラメータを渡してオブジェクトを初期化 " alt="" coords="162,1185,325,1227"/>
+<area shape="rect" id="node19" href="namespacesmatrix__helmholtz__class.html#aeebbc4329ffbb9acea5eb8cd3536e09e" title="BEMを用いてS行列を作る " alt="" coords="391,937,558,979"/>
+<area shape="rect" id="node20" href="namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="ne, np, p, ndを与えた後，その他のメンバを初期化する " alt="" coords="178,1251,309,1278"/>
+<area shape="rect" id="node21" href="namespacemath.html#a0287fb28fe23fa3333c08b3ec4b4d9f7" title="球面調和関数 のインデックス を1から始まる1つのindexに置き換える " alt="" coords="203,579,283,606"/>
+<area shape="rect" id="node29" href="namespacebem3d__class.html#a939df2433a6414faefe40d8aec982ed9" title="係数行列amatをLU分解する " alt="" coords="148,1302,339,1329"/>
+<area shape="rect" id="node30" href="namespacebem3d__class.html#a417981f6d5c1c508b8f1bb1c35410946" title="LU分解した係数行列amatとbvecを用いて連立方程式を解く " alt="" coords="166,1353,321,1379"/>
+<area shape="rect" id="node31" href="namespacemesh3d__class.html#aaa20a0b588549d680ea6ee924fc66153" title="mesh3d_class::read_off" alt="" coords="163,1403,324,1430"/>
+<area shape="rect" id="node3" href="namespaceexamples__helmholtz.html#af1bc7510d26480af38fd366f60dde31e" title="球による平面波散乱の解析解を計算 " alt="" coords="611,164,777,205"/>
+<area shape="rect" id="node4" href="namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26" title="の を計算 " alt="" coords="637,230,751,257"/>
+<area shape="rect" id="node7" href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63" title="の を計算 " alt="" coords="639,343,749,370"/>
+<area shape="rect" id="node8" href="namespaceincwave3d__helmholtz__spherical__class.html#a7698529580f6d301e3f9674ed6e323a5" title="点xでの入射波の値を計算 " alt="" coords="837,497,988,539"/>
+<area shape="rect" id="node9" href="namespacemath.html#aaaf8f49356a86e70de5b17f784390b26" title="の 微分を について計算 " alt="" coords="825,835,1000,862"/>
+<area shape="rect" id="node10" href="namespacesolution__helmholtz__class.html#a4b295b474edd0847dadc88f6d8c4103b" title="境界の解を積分してmeshcenterを原点とするoutgoing coefficientsを計算 " alt="" coords="1058,879,1189,920"/>
+<area shape="rect" id="node11" href="namespaceincwave3d__helmholtz__spherical__class.html#a7e3436fa8f5f4136c5f4c646644d30ad" title="点xでの入射波の勾配の値を計算 " alt="" coords="1048,785,1199,841"/>
+<area shape="rect" id="node14" href="namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="387,1055,563,1096"/>
+<area shape="rect" id="node16" href="namespacelayerpotential3d__helmholtz__class.html#aa07b262341a2b42eb7dce37c04467bab" title="初期化 " alt="" coords="387,1120,563,1161"/>
+<area shape="rect" id="node17" href="namespacesolution__helmholtz__class.html#af28be2d6f13daad2944651304ebd4005" title="初期化 " alt="" coords="409,1185,540,1227"/>
+<area shape="rect" id="node22" href="namespacesmatrix__helmholtz__class.html#a5c0f929f1a757fe1a60e1ddcd500de78" title="方向に進む平面波を表すincoming coefficients Aを計算 " alt="" coords="611,525,777,567"/>
+<area shape="rect" id="node23" href="namespacesmatrix__helmholtz__class.html#ae8080b72be872b8e7dd0b34ad46322fd" title="incoming coefficients Aを与えたときの解solを計算する " alt="" coords="391,484,558,525"/>
+<area shape="rect" id="node24" href="namespacemath.html#ab041e4120511217efc3b83843cc42798" title="math::calc_y_theta" alt="" coords="627,419,761,446"/>
+<area shape="rect" id="node25" href="namespaceexamples__helmholtz.html#af425f6bfc1ffb8f6ae1c3bc287f33513" title="球による平面波散乱の解析解を計算 " alt="" coords="395,601,554,643"/>
+<area shape="rect" id="node27" href="namespacesmatrix__helmholtz__class.html#ac6e71ca6f601f411534fa0fa253a4b60" title="Sの成分をファイルに出力 " alt="" coords="391,719,558,760"/>
+<area shape="rect" id="node28" href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182" title="球面調和関数 を から与えられた まで計算する。ynm(loct(n,m))に格納される " alt="" coords="435,382,515,409"/>
+<area shape="rect" id="node26" href="main_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="mainのプログラム " alt="" coords="669,609,719,635"/>
 </map>
 </div>
 
@@ -217,7 +234,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月25日(月) 20時06分18秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

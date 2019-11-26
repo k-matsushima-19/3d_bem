@@ -17,7 +17,7 @@ LIB_NAMES = gsl gslcblas lapack blas miniball
 OPENMP = 1
 
 # 最適化をon
-OPT = 1
+#OPT = 1
 
 # Fortran
 FC = gfortran

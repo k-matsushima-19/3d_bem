@@ -60,6 +60,9 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4b1f34aa7aac794538621eb3c41bec92"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#a4b1f34aa7aac794538621eb3c41bec92">destructor</a></td></tr>
+<tr class="memdesc:a4b1f34aa7aac794538621eb3c41bec92"><td class="mdescLeft">&#160;</td><td class="mdescRight">finalizer  <a href="#a4b1f34aa7aac794538621eb3c41bec92">[詳解]</a><br /></td></tr>
+<tr class="separator:a4b1f34aa7aac794538621eb3c41bec92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeea2bf1df40cf0031e26e832015b46e4"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#aeea2bf1df40cf0031e26e832015b46e4">init</a></td></tr>
 <tr class="memdesc:aeea2bf1df40cf0031e26e832015b46e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="#aeea2bf1df40cf0031e26e832015b46e4">[詳解]</a><br /></td></tr>
 <tr class="separator:aeea2bf1df40cf0031e26e832015b46e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -69,6 +72,9 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 <tr class="memitem:ae1ea289e0b020cbdda6192970404533f"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#ae1ea289e0b020cbdda6192970404533f">output_bndry_geomview</a></td></tr>
 <tr class="memdesc:ae1ea289e0b020cbdda6192970404533f"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界の解をファイルに出力 (geomviewで表示用)  <a href="#ae1ea289e0b020cbdda6192970404533f">[詳解]</a><br /></td></tr>
 <tr class="separator:ae1ea289e0b020cbdda6192970404533f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac459200d8e014a8241f93c69a9583498"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#ac459200d8e014a8241f93c69a9583498">calc_b</a></td></tr>
+<tr class="memdesc:ac459200d8e014a8241f93c69a9583498"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界の解を積分してoutgoing coefficientsを計算  <a href="#ac459200d8e014a8241f93c69a9583498">[詳解]</a><br /></td></tr>
+<tr class="separator:ac459200d8e014a8241f93c69a9583498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -78,11 +84,71 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 <tr class="memitem:a5e319b3ed791b5bff79007938c8bd76b"><td class="memItemLeft" align="right" valign="top">complex(8), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#a5e319b3ed791b5bff79007938c8bd76b">u_bndry</a></td></tr>
 <tr class="memdesc:a5e319b3ed791b5bff79007938c8bd76b"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界上の解 (:,1): u, (:,2): q  <a href="#a5e319b3ed791b5bff79007938c8bd76b">[詳解]</a><br /></td></tr>
 <tr class="separator:a5e319b3ed791b5bff79007938c8bd76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b3c976da081b08b99ef458c512c582"><td class="memItemLeft" align="right" valign="top">real(8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#a60b3c976da081b08b99ef458c512c582">w</a></td></tr>
+<tr class="memdesc:a60b3c976da081b08b99ef458c512c582"><td class="mdescLeft">&#160;</td><td class="mdescRight">角周波数  <a href="#a60b3c976da081b08b99ef458c512c582">[詳解]</a><br /></td></tr>
+<tr class="separator:a60b3c976da081b08b99ef458c512c582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb97b3c6af0d1e88ec1a17d5bfaba773"><td class="memItemLeft" align="right" valign="top">real(8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#afb97b3c6af0d1e88ec1a17d5bfaba773">c</a></td></tr>
+<tr class="memdesc:afb97b3c6af0d1e88ec1a17d5bfaba773"><td class="mdescLeft">&#160;</td><td class="mdescRight">位相速度  <a href="#afb97b3c6af0d1e88ec1a17d5bfaba773">[詳解]</a><br /></td></tr>
+<tr class="separator:afb97b3c6af0d1e88ec1a17d5bfaba773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2494d45097a2858eadf85f71c01431"><td class="memItemLeft" align="right" valign="top">real(8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#acd2494d45097a2858eadf85f71c01431">k</a></td></tr>
+<tr class="memdesc:acd2494d45097a2858eadf85f71c01431"><td class="mdescLeft">&#160;</td><td class="mdescRight">波数  <a href="#acd2494d45097a2858eadf85f71c01431">[詳解]</a><br /></td></tr>
+<tr class="separator:acd2494d45097a2858eadf85f71c01431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27270c6cab7540ce82effdca52540a0c"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#a27270c6cab7540ce82effdca52540a0c">ng_tri</a></td></tr>
+<tr class="memdesc:a27270c6cab7540ce82effdca52540a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形上のGauss積分の積分点の数  <a href="#a27270c6cab7540ce82effdca52540a0c">[詳解]</a><br /></td></tr>
+<tr class="separator:a27270c6cab7540ce82effdca52540a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a284025741b40d05599384ae77054510c"><td class="memItemLeft" align="right" valign="top">real(8), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#a284025741b40d05599384ae77054510c">gauss_tri_xi</a></td></tr>
+<tr class="memdesc:a284025741b40d05599384ae77054510c"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形上のGauss積分の積分点の面積座標 (3,ng_tri)  <a href="#a284025741b40d05599384ae77054510c">[詳解]</a><br /></td></tr>
+<tr class="separator:a284025741b40d05599384ae77054510c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0a20a13db6e320e9b0197c1732b15f"><td class="memItemLeft" align="right" valign="top">real(8), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html#aef0a20a13db6e320e9b0197c1732b15f">gauss_tri_w</a></td></tr>
+<tr class="memdesc:aef0a20a13db6e320e9b0197c1732b15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形上のGauss積分の積分点の重み (ng_tri)  <a href="#aef0a20a13db6e320e9b0197c1732b15f">[詳解]</a><br /></td></tr>
+<tr class="separator:aef0a20a13db6e320e9b0197c1732b15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock">
 <p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00008">8</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">メンバ関数/サブルーチン詳解</h2>
+<a id="ac459200d8e014a8241f93c69a9583498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac459200d8e014a8241f93c69a9583498">&#9670;&nbsp;</a></span>calc_b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure solution_helmholtz_class::solution_helmholtz::calc_b </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>境界の解を積分してoutgoing coefficientsを計算 </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4b1f34aa7aac794538621eb3c41bec92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b1f34aa7aac794538621eb3c41bec92">&#9670;&nbsp;</a></span>destructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure solution_helmholtz_class::solution_helmholtz::destructor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>finalizer </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="aeea2bf1df40cf0031e26e832015b46e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeea2bf1df40cf0031e26e832015b46e4">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -100,7 +166,7 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 
 <p>初期化 </p>
 
-<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00015">15</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00031">31</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -121,7 +187,7 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 
 <p>境界の解を出力 </p>
 
-<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00017">17</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -142,11 +208,83 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 
 <p>境界の解をファイルに出力 (geomviewで表示用) </p>
 
-<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00019">19</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00035">35</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
+<a id="afb97b3c6af0d1e88ec1a17d5bfaba773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb97b3c6af0d1e88ec1a17d5bfaba773">&#9670;&nbsp;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) solution_helmholtz_class::solution_helmholtz::c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>位相速度 </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00017">17</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;     <span class="keywordtype">real(8)</span> :: c</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aef0a20a13db6e320e9b0197c1732b15f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0a20a13db6e320e9b0197c1732b15f">&#9670;&nbsp;</a></span>gauss_tri_w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8), dimension(:), allocatable solution_helmholtz_class::solution_helmholtz::gauss_tri_w</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>三角形上のGauss積分の積分点の重み (ng_tri) </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00026">26</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;     <span class="keywordtype">real(8)</span>,<span class="keywordtype">allocatable</span> :: gauss_tri_w(:)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a284025741b40d05599384ae77054510c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a284025741b40d05599384ae77054510c">&#9670;&nbsp;</a></span>gauss_tri_xi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8), dimension(:,:), allocatable solution_helmholtz_class::solution_helmholtz::gauss_tri_xi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>三角形上のGauss積分の積分点の面積座標 (3,ng_tri) </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00024">24</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;     <span class="keywordtype">real(8)</span>,<span class="keywordtype">allocatable</span> :: gauss_tri_xi(:,:)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="acd2494d45097a2858eadf85f71c01431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2494d45097a2858eadf85f71c01431">&#9670;&nbsp;</a></span>k</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) solution_helmholtz_class::solution_helmholtz::k</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>波数 </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00019">19</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;     <span class="keywordtype">real(8)</span> :: k</div></div><!-- fragment -->
+</div>
+</div>
 <a id="af40cca1a1a2907c4bcd9e6cdd8beea41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af40cca1a1a2907c4bcd9e6cdd8beea41">&#9670;&nbsp;</a></span>mesh</h2>
 
@@ -164,6 +302,24 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 <p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00010">10</a> 行目に定義があります。</p>
 <div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;     <span class="keywordtype">type</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">pointer</span> :: mesh =&gt; null()</div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a27270c6cab7540ce82effdca52540a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27270c6cab7540ce82effdca52540a0c">&#9670;&nbsp;</a></span>ng_tri</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer solution_helmholtz_class::solution_helmholtz::ng_tri</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>三角形上のGauss積分の積分点の数 </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;     <span class="keywordtype">integer</span> :: ng_tri</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a5e319b3ed791b5bff79007938c8bd76b"></a>
@@ -184,13 +340,31 @@ solution_helmholtz_class::solution_helmholtz 連携図</div>
 <div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;     <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: u_bndry(:,:)</div></div><!-- fragment -->
 </div>
 </div>
+<a id="a60b3c976da081b08b99ef458c512c582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b3c976da081b08b99ef458c512c582">&#9670;&nbsp;</a></span>w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) solution_helmholtz_class::solution_helmholtz::w</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>角周波数 </p>
+
+<p class="definition"> <a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a> の <a class="el" href="solution__helmholtz__class_8f90_source.html#l00015">15</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     <span class="keywordtype">real(8)</span> :: w</div></div><!-- fragment -->
+</div>
+</div>
 <hr/>次のファイルから型の詳解が抽出されました:<ul>
 <li><a class="el" href="solution__helmholtz__class_8f90_source.html">solution_helmholtz_class.f90</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月25日(月) 20時06分18秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

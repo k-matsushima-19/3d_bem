@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: math.f90 ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_c89bd538986b5fa2f5874f9b3c9fae5c.html">hdd</a></li><li class="navelem"><a class="el" href="dir_0530d4d7188df132349cdbe2232239d9.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_b847784016724036b77217bbc510813b.html">program</a></li><li class="navelem"><a class="el" href="dir_dd104d35df4266e0cb1aab18a512d7bf.html">3d_bem</a></li><li class="navelem"><a class="el" href="dir_78966df297f612de942ccd1286bc88ce.html">src.orig</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ型</a> &#124;
+<a href="#namespaces">モジュール</a> &#124;
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">orig/math.f90 ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="orig_2math_8f90_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1rdot__product.html">math::rdot_product</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">内積でない (共役を取らない) ドット積  <a href="interfacemath_1_1rdot__product.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__jl__array.html">math::gsl_sf_bessel_jl_array</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__yl__array.html">math::gsl_sf_bessel_yl_array</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__jl.html">math::gsl_sf_bessel_jl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemath_1_1gsl__sf__bessel__yl.html">math::gsl_sf_bessel_yl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+モジュール</h2></td></tr>
+<tr class="memitem:namespacemath"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html">math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:a7067d0000671bceadcbc035efb64d1cd"><td class="memItemLeft" align="right" valign="top">real(8) function, dimension(3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a7067d0000671bceadcbc035efb64d1cd">math::vector_product</a> (vec1, vec2)</td></tr>
+<tr class="memdesc:a7067d0000671bceadcbc035efb64d1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの外積  <a href="namespacemath.html#a7067d0000671bceadcbc035efb64d1cd">[詳解]</a><br /></td></tr>
+<tr class="separator:a7067d0000671bceadcbc035efb64d1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca08d0d90451de708df601a56fc3d5a"><td class="memItemLeft" align="right" valign="top">real(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a4ca08d0d90451de708df601a56fc3d5a">math::vector_length</a> (vec)</td></tr>
+<tr class="memdesc:a4ca08d0d90451de708df601a56fc3d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの長さ  <a href="namespacemath.html#a4ca08d0d90451de708df601a56fc3d5a">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ca08d0d90451de708df601a56fc3d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa75ccce9740302b8e238a9a10e76f33e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e">math::generate_gauss_triangle</a> (ng, gauss_xi, gauss_w)</td></tr>
+<tr class="memdesc:aa75ccce9740302b8e238a9a10e76f33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形上のGauss積分の積分点の面積座標と対応する重みを返す  <a href="namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e">[詳解]</a><br /></td></tr>
+<tr class="separator:aa75ccce9740302b8e238a9a10e76f33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62db1b92e24620ae98f63943618e359e"><td class="memItemLeft" align="right" valign="top">real(8) function, dimension(3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a62db1b92e24620ae98f63943618e359e">math::convert_area_to_cartesian</a> (x1, x2, x3, a)</td></tr>
+<tr class="memdesc:a62db1b92e24620ae98f63943618e359e"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形の面積座標からCartesian座標へ変換  <a href="namespacemath.html#a62db1b92e24620ae98f63943618e359e">[詳解]</a><br /></td></tr>
+<tr class="separator:a62db1b92e24620ae98f63943618e359e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89648d008ff93d4db020fa847ead39f9"><td class="memItemLeft" align="right" valign="top">complex(8) function, private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a89648d008ff93d4db020fa847ead39f9">math::rdot_product1</a> (a, b)</td></tr>
+<tr class="separator:a89648d008ff93d4db020fa847ead39f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc430c4d0c5cf08c259ab948cfce5764"><td class="memItemLeft" align="right" valign="top">complex(8) function, private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#acc430c4d0c5cf08c259ab948cfce5764">math::rdot_product2</a> (a, b)</td></tr>
+<tr class="separator:acc430c4d0c5cf08c259ab948cfce5764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa065579d753be1dff2990fb98fbd83bf"><td class="memItemLeft" align="right" valign="top">complex(8) function, private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aa065579d753be1dff2990fb98fbd83bf">math::rdot_product3</a> (a, b)</td></tr>
+<tr class="separator:aa065579d753be1dff2990fb98fbd83bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356cadd19a7f47ff3b78cfca1216b64e"><td class="memItemLeft" align="right" valign="top">complex(8) function, private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a356cadd19a7f47ff3b78cfca1216b64e">math::rdot_product4</a> (a, b)</td></tr>
+<tr class="separator:a356cadd19a7f47ff3b78cfca1216b64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875b4f87bc83692b825acd0a1bdcbd09"><td class="memItemLeft" align="right" valign="top">real(8) function, dimension(3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a875b4f87bc83692b825acd0a1bdcbd09">math::spherical_to_cartesian</a> (r, theta, phi)</td></tr>
+<tr class="memdesc:a875b4f87bc83692b825acd0a1bdcbd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">球面座標からデカルト座標を計算  <a href="namespacemath.html#a875b4f87bc83692b825acd0a1bdcbd09">[詳解]</a><br /></td></tr>
+<tr class="separator:a875b4f87bc83692b825acd0a1bdcbd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5da5aafa9f0b315cd1d34a2a28d6be1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ae5da5aafa9f0b315cd1d34a2a28d6be1">math::cartesian_to_spherical</a> (x, r, theta, phi)</td></tr>
+<tr class="memdesc:ae5da5aafa9f0b315cd1d34a2a28d6be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デカルト座標から球面座標を計算  <a href="namespacemath.html#ae5da5aafa9f0b315cd1d34a2a28d6be1">[詳解]</a><br /></td></tr>
+<tr class="separator:ae5da5aafa9f0b315cd1d34a2a28d6be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d54d1a69dddc480079e6516014ef6b"><td class="memItemLeft" align="right" valign="top">integer function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aa1d54d1a69dddc480079e6516014ef6b">math::loct_sph</a> (n, m)</td></tr>
+<tr class="memdesc:aa1d54d1a69dddc480079e6516014ef6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">球面調和関数 <img class="formulaInl" alt="$ Y_n^m(x) $" src="form_17.png"/>のインデックス <img class="formulaInl" alt="$ m,n $" src="form_18.png"/>を1から始まる1つのindexに置き換える  <a href="namespacemath.html#aa1d54d1a69dddc480079e6516014ef6b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa1d54d1a69dddc480079e6516014ef6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ce1e76924fad0dbc73becee4a44182"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182">math::sph</a> (n, x, ynm)</td></tr>
+<tr class="memdesc:a37ce1e76924fad0dbc73becee4a44182"><td class="mdescLeft">&#160;</td><td class="mdescRight">球面調和関数 <img class="formulaInl" alt="$ x\in R^3\mapsto Y_n^m(x)=Y_n^m(x/|x|) $" src="form_21.png"/>を <img class="formulaInl" alt="$ n=0 $" src="form_19.png"/>から与えられた <img class="formulaInl" alt="$ n $" src="form_20.png"/>まで計算する。ynm(loct(n,m))に格納される  <a href="namespacemath.html#a37ce1e76924fad0dbc73becee4a44182">[詳解]</a><br /></td></tr>
+<tr class="separator:a37ce1e76924fad0dbc73becee4a44182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b78ab37f8073a1abd48257f0ce73be"><td class="memItemLeft" align="right" valign="top">real(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ac1b78ab37f8073a1abd48257f0ce73be">math::bessel_sph_jn</a> (n, x)</td></tr>
+<tr class="memdesc:ac1b78ab37f8073a1abd48257f0ce73be"><td class="mdescLeft">&#160;</td><td class="mdescRight">n次の球Bessel関数 <img class="formulaInl" alt="$ j_n(x) $" src="form_24.png"/>を計算  <a href="namespacemath.html#ac1b78ab37f8073a1abd48257f0ce73be">[詳解]</a><br /></td></tr>
+<tr class="separator:ac1b78ab37f8073a1abd48257f0ce73be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16c99a71bb8afe972c6b0bf2d33d574"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ae16c99a71bb8afe972c6b0bf2d33d574">math::bessel_sph_hn</a> (n, x)</td></tr>
+<tr class="memdesc:ae16c99a71bb8afe972c6b0bf2d33d574"><td class="mdescLeft">&#160;</td><td class="mdescRight">n次の球Hankel関数 <img class="formulaInl" alt="$ h_n^{(1)}(x) $" src="form_26.png"/>を計算  <a href="namespacemath.html#ae16c99a71bb8afe972c6b0bf2d33d574">[詳解]</a><br /></td></tr>
+<tr class="separator:ae16c99a71bb8afe972c6b0bf2d33d574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e70af4e8a43e82f8c8855ef1de8f17a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a">math::bessel_sph_jn_array</a> (nmax, x, out)</td></tr>
+<tr class="memdesc:a6e70af4e8a43e82f8c8855ef1de8f17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">0からnmax次までの球Bessel関数 <img class="formulaInl" alt="$ j_n(x) $" src="form_24.png"/>を計算  <a href="namespacemath.html#a6e70af4e8a43e82f8c8855ef1de8f17a">[詳解]</a><br /></td></tr>
+<tr class="separator:a6e70af4e8a43e82f8c8855ef1de8f17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3edbb855fc60473a855f1b822b565ff4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a3edbb855fc60473a855f1b822b565ff4">math::bessel_sph_yn_array</a> (nmax, x, out)</td></tr>
+<tr class="memdesc:a3edbb855fc60473a855f1b822b565ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">0からnmax次までの球Bessel関数 <img class="formulaInl" alt="$ y_n(x) $" src="form_25.png"/>を計算  <a href="namespacemath.html#a3edbb855fc60473a855f1b822b565ff4">[詳解]</a><br /></td></tr>
+<tr class="separator:a3edbb855fc60473a855f1b822b565ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee114647e3e47b4d8d473730aa14ef3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3">math::bessel_sph_hn_array</a> (nmax, x, out)</td></tr>
+<tr class="memdesc:a6ee114647e3e47b4d8d473730aa14ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">0からnmax次までの第1種球Hankel関数 <img class="formulaInl" alt="$ h_n^{(1)}(x) $" src="form_26.png"/>を計算  <a href="namespacemath.html#a6ee114647e3e47b4d8d473730aa14ef3">[詳解]</a><br /></td></tr>
+<tr class="separator:a6ee114647e3e47b4d8d473730aa14ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab041e4120511217efc3b83843cc42798"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#ab041e4120511217efc3b83843cc42798">math::calc_y_theta</a> (n, m, x)</td></tr>
+<tr class="separator:ab041e4120511217efc3b83843cc42798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1ff6da21b91faf43af5bbd19353b63"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63">math::calc_inm</a> (k, x, nmax, out)</td></tr>
+<tr class="memdesc:aeb1ff6da21b91faf43af5bbd19353b63"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ I_n^m(x)=j_n(k|x|)Y_n^m(x/|x|) $" src="form_29.png"/>の <img class="formulaInl" alt="$ n=0,\ldots,n_\mathrm{max}$" src="form_31.png"/>を計算  <a href="namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63">[詳解]</a><br /></td></tr>
+<tr class="separator:aeb1ff6da21b91faf43af5bbd19353b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf8f49356a86e70de5b17f784390b26"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemath.html#aaaf8f49356a86e70de5b17f784390b26">math::calc_inm_derivative</a> (k, x, nmax, out)</td></tr>
+<tr class="memdesc:aaaf8f49356a86e70de5b17f784390b26"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ I_n^m(x)=j_n(k|x|)Y_n^m(x/|x|) $" src="form_29.png"/>の <img class="formulaInl" alt="$ x_i $" src="form_33.png"/>微分を <img class="formulaInl" alt="$ n=0,\ldots,n_\mathrm{max}$" src="form_31.png"/>について計算  <a href="namespacemath.html#aaaf8f49356a86e70de5b17f784390b26">[詳解]</a><br /></td></tr>
+<tr class="separator:aaaf8f49356a86e70de5b17f784390b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月26日(火) 19時51分30秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -36,11 +36,29 @@ module math
        real(c_double) :: result_array(0:lmax)
        integer(c_int) :: out
      end function gsl_sf_bessel_yl_array
+
+     ! gsl/gsl_sf_bessel.h
+     ! double gsl_sf_bessel_jl(int l, double x)
+     function gsl_sf_bessel_jl(l, x) result(out) bind(c,name="gsl_sf_bessel_jl")
+       use iso_c_binding
+       integer(c_int),value :: l
+       real(c_double),value :: x
+       real(c_double) :: out
+     end function gsl_sf_bessel_jl
+
+     ! gsl/gsl_sf_bessel.h
+     ! double gsl_sf_bessel_yl(int l, double x)
+     function gsl_sf_bessel_yl(l, x) result(out) bind(c,name="gsl_sf_bessel_yl")
+       use iso_c_binding
+       integer(c_int),value :: l
+       real(c_double),value :: x
+       real(c_double) :: out
+     end function gsl_sf_bessel_yl
   end interface
   
 contains
   !> ベクトルの外積
-  !! \param vec1 3次元ベクトル\f$ a \f$
+  !! \param vec1 3次元ベクトル \f$ a \f$
   !! \param vec2 3次元ベクトル\f$ b \f$
   !! \return \f$a \times b\f$
   function vector_product(vec1, vec2) result(out)
@@ -190,12 +208,18 @@ contains
   !> 球面調和関数\f$ Y_n^m(x) \f$のインデックス\f$ m,n \f$を1から始まる1つのindexに置き換える
   !! \param n 球面調和関数のインデックス
   !! \param m 球面調和関数のインデックス
-  integer function loct_sph(n,m)
+  integer function loct(n,m)
     integer,intent(in) :: n, m
-    loct_sph=n*n+n+1+m
-  end function loct_sph
+
+#ifdef DEBUG
+    ! n>= 0 and -n <= m <= n
+    call assert(n >= 0 .and. -n <= m .and. m <= n)
+#endif
+    
+    loct=n*n+n+1+m
+  end function loct
   
-  !> 球面調和関数\f$ x\in R^3\mapsto Y_n^m(x)=Y_n^m(x/|x|) \f$を\f$ n=0 \f$から与えられた\f$ n \f$まで計算する。ynm(loct_sph(n,m))に格納される
+  !> 球面調和関数\f$ x\in R^3\mapsto Y_n^m(x)=Y_n^m(x/|x|) \f$を\f$ n=0 \f$から与えられた\f$ n \f$まで計算する。ynm(loct(n,m))に格納される
   !! \param n インデックスの最大値 \f$ \geq 0 \f$
   !! \param x 球面調和関数の引数 (単位ベクトルでなくても良い)
   !! \param ynm 結果の配列 (長さ(n+1)**2)
@@ -216,29 +240,53 @@ contains
 
     cc=cmplx(v(1),v(2),kind(1.d0))
 
-    ynm(loct_sph(0,0))=1d0
+    ynm(loct(0,0))=1d0
 
     do m=0,n-1
-       ynm(loct_sph(m+1,m+1))=cc*ynm(loct_sph(m,m))*sqrt((2d0*m+1d0)/(2d0*m+2d0))
+       ynm(loct(m+1,m+1))=cc*ynm(loct(m,m))*sqrt((2d0*m+1d0)/(2d0*m+2d0))
     enddo
 
 
     do m=0,n-1
-       ynm(loct_sph(m+1,m))=ynm(loct_sph(m,m))*v(3)*sqrt(2d0*m+1d0)
+       ynm(loct(m+1,m))=ynm(loct(m,m))*v(3)*sqrt(2d0*m+1d0)
        do i=m+2,n
           ctmp=sqrt(1d0*(i+m)*(i-m))
-          ynm(loct_sph(i,m))=(v(3)*(2d0*i-1d0)*ynm(loct_sph(i-1,m))-ynm(loct_sph(i-2,m))*sqrt(1d0*(i-1+m)*(i-1-m)))/ctmp
+          ynm(loct(i,m))=(v(3)*(2d0*i-1d0)*ynm(loct(i-1,m))-ynm(loct(i-2,m))*sqrt(1d0*(i-1+m)*(i-1-m)))/ctmp
        enddo
     enddo
 
     do k=-1,-n,-1
        do j=-k,n
-          ynm(loct_sph(j,k))=(-1.0)**(-k)*conjg(ynm(loct_sph(j,-k)))
+          ynm(loct(j,k))=(-1.0)**(-k)*conjg(ynm(loct(j,-k)))
        enddo
     enddo
 
     return
   end subroutine sph
+
+  !> n次の球Bessel関数\f$ j_n(x) \f$を計算
+  !! \param n 次数 \f$ \geq 0 \f$
+  !! \param x 引数
+  !! \return \f$ j_n(x) \f$
+  real(8) function bessel_sph_jn(n, x) result(out)
+    integer,intent(in) :: n
+    real(8),intent(in) :: x
+
+    out = gsl_sf_bessel_jl(n, x)
+    
+  end function bessel_sph_jn
+
+  !> n次の球Hankel関数\f$ h_n^{(1)}(x) \f$を計算
+  !! \param n 次数 \f$ \geq 0 \f$
+  !! \param x 引数
+  !! \return \f$ h_n^{(1)}(x) \f$
+  complex(8) function bessel_sph_hn(n, x) result(out)
+    integer,intent(in) :: n
+    real(8),intent(in) :: x
+
+    out = dcmplx(gsl_sf_bessel_jl(n, x),gsl_sf_bessel_yl(n, x))
+    
+  end function bessel_sph_hn
 
   !> 0からnmax次までの球Bessel関数\f$ j_n(x) \f$を計算
   !! \param nmax 次数の最大値 \f$ \geq 0 \f$
@@ -293,4 +341,195 @@ contains
     out = dcmplx(j,y)
   end subroutine bessel_sph_hn_array
 
+  ! 球面調和関数Yのtheta微分
+  complex(8) function calc_Y_theta(n, m, x)
+    integer,intent(in) :: n, m
+    real(8),intent(in) :: x(3)
+
+    real(8) :: r, theta, phi
+    complex(8) :: Y_n_m, Y_n_m1
+    complex(8),allocatable :: Ys(:)
+
+    call cartesian_to_spherical(x, r, theta, phi)
+
+    ! 球面調和関数 Y_n^m
+    allocate(Ys((n+1)**2))
+    call sph(n, x, Ys)
+    Y_n_m = Ys(loct(n,m))
+    deallocate(Ys)
+
+    ! 球面調和関数 Y_n^{m+1}
+    allocate(Ys((n+2)**2))
+    call sph(n+1, x, Ys)
+    Y_n_m1 = Ys(loct(n,m+1))
+    deallocate(Ys)
+
+    calc_Y_theta = m/tan(theta)*Y_n_m - sqrt(1.d0*(n-m)*(n+m+1))*exp(-ione*phi)*Y_n_m1
+    
+  end function calc_Y_theta
+
+  !> \f$ I_n^m(x)=j_n(k|x|)Y_n^m(x/|x|) \f$の\f$ n=0,\ldots,n_\mathrm{max}\f$を計算
+  !! \param k 波数
+  !! \param x 3次元座標
+  !! \param nmax 次数の最大値
+  !! \param out 結果の配列．out(loct(n,m))で(n,m)次の値を参照．
+  subroutine calc_Inm(k, x, nmax, out)
+    real(8),intent(in) :: k
+    real(8),intent(in) :: x(3)
+    integer,intent(in) :: nmax
+    complex(8),intent(out) :: out((nmax+1)**2)
+
+    complex(8),allocatable :: ynm(:)
+    real(8),allocatable :: jn(:)
+
+    integer :: n, m
+
+    ! 球面調和関数 Y_n^m
+    allocate(ynm((nmax+1)**2))
+    call sph(nmax, x, ynm)
+
+    ! 球Bessel
+    allocate(jn(0:nmax))
+    call bessel_sph_jn_array(nmax, k*vector_length(x), jn)
+    
+    do n=0,nmax
+       do m=-n,n
+          out(loct(n,m)) = jn(n)*ynm(loct(n,m))
+       end do
+    end do
+    
+    deallocate(ynm)
+    deallocate(jn)
+    
+  end subroutine calc_Inm
+
+  !> \f$ I_n^m(x)=j_n(k|x|)Y_n^m(x/|x|) \f$の\f$ x_i \f$微分を\f$ n=0,\ldots,n_\mathrm{max}\f$について計算
+  !! \param k 波数
+  !! \param x 3次元座標
+  !! \param nmax 次数の最大値
+  !! \param out 結果の配列．out(i,loct(n,m))で(n,m)次の\f$ x_i \f$微分の値を参照．
+  subroutine calc_Inm_derivative(k, x, nmax, out)
+    real(8),intent(in) :: k
+    real(8),intent(in) :: x(3)
+    integer,intent(in) :: nmax
+    complex(8),intent(out) :: out(3,(nmax+1)**2)
+
+    complex(8),allocatable :: Inm(:)
+    integer :: n, m
+    
+    ! I_n^mをn=0,...,nmax+1まで計算
+    allocate(Inm((nmax+1+1)**2))
+    call calc_Inm(k, x, nmax+1, Inm)
+
+    ! x_1微分
+    do n=0,nmax
+       do m=-n,n
+          out(1,loct(n,m)) = &
+               -sqrt(1.d0*(n+m+1)*(n+m+2)) * Inm(loct(n+1,m+1)) &
+               +sqrt(1.d0*(n-m+1)*(n-m+2)) * Inm(loct(n+1,m-1))
+          
+          if(m /= n .and. m /= n-1) then
+             out(1,loct(n,m)) = out(1,loct(n,m)) -sqrt(1.d0*(n-m-1)*(n-m))   * Inm(loct(n-1,m+1))
+          end if
+
+          if(m /= -n .and. m /= -n+1) then
+             out(1,loct(n,m)) = out(1,loct(n,m)) +sqrt(1.d0*(n+m-1)*(n+m))   * Inm(loct(n-1,m-1))
+          end if
+
+          out(1,loct(n,m)) = out(1,loct(n,m)) * k/(2*(2*n+1))
+
+          ! これと同じ
+          ! out(loct(n,m)) = k/(2*(2*n+1)) * (&
+          !         -sqrt(1.d0*(n-m-1)*(n-m))   * Inm(loct(n-1,m+1)) &
+          !         -sqrt(1.d0*(n+m+1)*(n+m+2)) * Inm(loct(n+1,m+1)) &
+          !         +sqrt(1.d0*(n+m-1)*(n+m))   * Inm(loct(n-1,m-1)) &
+          !         +sqrt(1.d0*(n-m+1)*(n-m+2)) * Inm(loct(n+1,m-1)) &
+          !         )
+       end do
+    end do
+
+    ! x_2微分
+    do n=0,nmax
+       do m=-n,n
+          out(2,loct(n,m)) = &
+               +sqrt(1.d0*(n+m+1)*(n+m+2)) * Inm(loct(n+1,m+1)) &
+               +sqrt(1.d0*(n-m+1)*(n-m+2)) * Inm(loct(n+1,m-1))
+          
+          if(m /= n .and. m /= n-1) then
+             out(2,loct(n,m)) = out(2,loct(n,m)) +sqrt(1.d0*(n-m-1)*(n-m))   * Inm(loct(n-1,m+1))
+          end if
+
+          if(m /= -n .and. m /= -n+1) then
+             out(2,loct(n,m)) = out(2,loct(n,m)) +sqrt(1.d0*(n+m-1)*(n+m))   * Inm(loct(n-1,m-1))
+          end if
+
+          out(2,loct(n,m)) = out(2,loct(n,m)) * ione*k/(2*(2*n+1))
+
+          ! これと同じ
+          ! out(loct(n,m)) = ione*k/(2*(2*n+1)) * (&
+          !         +sqrt(1.d0*(n-m-1)*(n-m))   * Inm(loct(n-1,m+1)) &
+          !         +sqrt(1.d0*(n+m+1)*(n+m+2)) * Inm(loct(n+1,m+1)) &
+          !         +sqrt(1.d0*(n+m-1)*(n+m))   * Inm(loct(n-1,m-1)) &
+          !         +sqrt(1.d0*(n-m+1)*(n-m+2)) * Inm(loct(n+1,m-1)) &
+          !         )
+       end do
+    end do
+
+    ! x_3微分
+    do n=0,nmax
+       do m=-n,n
+          out(3,loct(n,m)) = &
+               -sqrt(1.d0*(n+m+1)*(n-m+1)) * Inm(loct(n+1,m))
+          
+          if(m /= n .and. m /= -n) then
+             out(3,loct(n,m)) = out(3,loct(n,m)) +sqrt(1.d0*(n+m)*(n-m))   * Inm(loct(n-1,m))
+          end if
+
+          out(3,loct(n,m)) = out(3,loct(n,m)) * k/(2*n+1)
+
+          ! これと同じ
+          ! out(loct(n,m)) = k/(2*n+1) * (&
+          !         +sqrt(1.d0*(n+m)*(n-m))   * Inm(loct(n-1,m)) &
+          !         -sqrt(1.d0*(n+m+1)*(n-m+1)) * Inm(loct(n+1,m)) &
+          !         )
+       end do
+    end do
+    
+  end subroutine calc_Inm_derivative
+
+  !> \f$ O_n^m(x)=h^{(1)}_n(k|x|)Y_n^m(x/|x|) \f$の\f$ n=0,\ldots,n_\mathrm{max}\f$を計算
+  !! \param k 波数
+  !! \param x 3次元座標
+  !! \param nmax 次数の最大値
+  !! \param out 結果の配列．out(loct(n,m))で(n,m)次の値を参照．
+  subroutine calc_Onm(k, x, nmax, out)
+    real(8),intent(in) :: k
+    real(8),intent(in) :: x(3)
+    integer,intent(in) :: nmax
+    complex(8),intent(out) :: out((nmax+1)**2)
+
+    complex(8),allocatable :: ynm(:)
+    complex(8),allocatable :: hn(:)
+
+    integer :: n, m
+
+    ! 球面調和関数 Y_n^m
+    allocate(ynm((nmax+1)**2))
+    call sph(nmax, x, ynm)
+
+    ! 球Bessel
+    allocate(hn(0:nmax))
+    call bessel_sph_hn_array(nmax, k*vector_length(x), hn)
+    
+    do n=0,nmax
+       do m=-n,n
+          out(loct(n,m)) = hn(n)*ynm(loct(n,m))
+       end do
+    end do
+    
+    deallocate(ynm)
+    deallocate(hn)
+    
+  end subroutine calc_Onm
+  
 end module math

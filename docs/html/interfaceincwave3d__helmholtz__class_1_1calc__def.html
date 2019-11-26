@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: インターフェース incwave3d_helmholtz_class::calc_def</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceincwave3d__helmholtz__class.html">incwave3d_helmholtz_class</a></li><li class="navelem"><a class="el" href="interfaceincwave3d__helmholtz__class_1_1calc__def.html">calc_def</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="interfaceincwave3d__helmholtz__class_1_1calc__def-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">インターフェース incwave3d_helmholtz_class::calc_def</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad8c793d27107749c8b937ca6b602361e"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceincwave3d__helmholtz__class_1_1calc__def.html#ad8c793d27107749c8b937ca6b602361e">calc_def</a> (self, x)</td></tr>
+<tr class="separator:ad8c793d27107749c8b937ca6b602361e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="incwave3d__helmholtz__class_8f90_source.html">incwave3d_helmholtz_class.f90</a> の <a class="el" href="incwave3d__helmholtz__class_8f90_source.html#l00022">22</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ad8c793d27107749c8b937ca6b602361e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c793d27107749c8b937ca6b602361e">&#9670;&nbsp;</a></span>calc_def()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8) function incwave3d_helmholtz_class::calc_def::calc_def </td>
+          <td>(</td>
+          <td class="paramtype">class(<a class="el" href="structincwave3d__helmholtz__class_1_1incwave3d__helmholtz.html">incwave3d_helmholtz</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(8), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="incwave3d__helmholtz__class_8f90_source.html">incwave3d_helmholtz_class.f90</a> の <a class="el" href="incwave3d__helmholtz__class_8f90_source.html#l00023">23</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;       <span class="keywordtype">import </span>incwave3d_helmholtz </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;       <span class="keywordtype">class</span>(incwave3d_helmholtz),<span class="keywordtype">intent(in)</span> :: self</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;       <span class="keywordtype">real(8)</span>,<span class="keywordtype">intent(in)</span> :: x(3)</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;       <span class="keywordtype">complex(8)</span> :: calc_def</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>次のファイルからインターフェースの詳解が抽出されました:<ul>
+<li><a class="el" href="incwave3d__helmholtz__class_8f90_source.html">incwave3d_helmholtz_class.f90</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

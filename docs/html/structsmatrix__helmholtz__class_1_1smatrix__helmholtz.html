@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: TYPE smatrix_helmholtz_class::smatrix_helmholtz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacesmatrix__helmholtz__class.html">smatrix_helmholtz_class</a></li><li class="navelem"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">TYPE smatrix_helmholtz_class::smatrix_helmholtz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>3D-HelmholtzのS行列  
+ <a href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#details">[詳解]</a></p>
+<div class="dynheader">
+smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="structsmatrix__helmholtz__class_1_1smatrix__helmholtz__coll__graph.png" border="0" usemap="#smatrix__helmholtz__class_1_1smatrix__helmholtz_coll__map" alt="Collaboration graph"/></div>
+<map name="smatrix__helmholtz__class_1_1smatrix__helmholtz_coll__map" id="smatrix__helmholtz__class_1_1smatrix__helmholtz_coll__map">
+<area shape="rect" id="node2" href="structmesh3d__class_1_1mesh3d.html" title="三角形メッシュ " alt="" coords="9,5,169,32"/>
+<area shape="rect" id="node3" href="structsolution__helmholtz__class_1_1solution__helmholtz.html" title="solution_helmholtz\l_class::solution_helmholtz" alt="" coords="129,95,305,136"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6f455d70de49e5923f7911e31d005cdd"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a6f455d70de49e5923f7911e31d005cdd">init</a></td></tr>
+<tr class="memdesc:a6f455d70de49e5923f7911e31d005cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">BEMを用いてS行列を作る  <a href="#a6f455d70de49e5923f7911e31d005cdd">[詳解]</a><br /></td></tr>
+<tr class="separator:a6f455d70de49e5923f7911e31d005cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0270c6392d98199267d33749e31cf28d"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a0270c6392d98199267d33749e31cf28d">init_sphere</a></td></tr>
+<tr class="memdesc:a0270c6392d98199267d33749e31cf28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">散乱体が球の場合について，解析解を用いてS行列を作る  <a href="#a0270c6392d98199267d33749e31cf28d">[詳解]</a><br /></td></tr>
+<tr class="separator:a0270c6392d98199267d33749e31cf28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49199bb7bdeb677126070e427462d81a"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a49199bb7bdeb677126070e427462d81a">calc_sol</a></td></tr>
+<tr class="memdesc:a49199bb7bdeb677126070e427462d81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">incoming coefficients Aを与えたときの解solを計算する  <a href="#a49199bb7bdeb677126070e427462d81a">[詳解]</a><br /></td></tr>
+<tr class="separator:a49199bb7bdeb677126070e427462d81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d25404c8ff96b73c367ddd5ab348c8b"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a2d25404c8ff96b73c367ddd5ab348c8b">calc_a_planewave</a></td></tr>
+<tr class="memdesc:a2d25404c8ff96b73c367ddd5ab348c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ p\in S^2 $" src="form_40.png"/>方向に進む平面波を表すincoming coefficients Aを計算  <a href="#a2d25404c8ff96b73c367ddd5ab348c8b">[詳解]</a><br /></td></tr>
+<tr class="separator:a2d25404c8ff96b73c367ddd5ab348c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1791864dc2a670edd0d32ee6e6e062e"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#aa1791864dc2a670edd0d32ee6e6e062e">output_s</a></td></tr>
+<tr class="memdesc:aa1791864dc2a670edd0d32ee6e6e062e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sの成分をファイルに出力  <a href="#aa1791864dc2a670edd0d32ee6e6e062e">[詳解]</a><br /></td></tr>
+<tr class="separator:aa1791864dc2a670edd0d32ee6e6e062e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a508e37fb872281de28c2649e9deff368"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a508e37fb872281de28c2649e9deff368">mesh</a> =&gt; null()</td></tr>
+<tr class="memdesc:a508e37fb872281de28c2649e9deff368"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界メッシュ  <a href="#a508e37fb872281de28c2649e9deff368">[詳解]</a><br /></td></tr>
+<tr class="separator:a508e37fb872281de28c2649e9deff368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7594faa683c6ecf61f098ed535ce61d5"><td class="memItemLeft" align="right" valign="top">real(8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a7594faa683c6ecf61f098ed535ce61d5">w</a></td></tr>
+<tr class="memdesc:a7594faa683c6ecf61f098ed535ce61d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">角周波数  <a href="#a7594faa683c6ecf61f098ed535ce61d5">[詳解]</a><br /></td></tr>
+<tr class="separator:a7594faa683c6ecf61f098ed535ce61d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17d1bec0dea47867d542795d68beeec"><td class="memItemLeft" align="right" valign="top">real(8), dimension(2)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#ae17d1bec0dea47867d542795d68beeec">cs</a></td></tr>
+<tr class="memdesc:ae17d1bec0dea47867d542795d68beeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">位相速度 1:外部 2:内部  <a href="#ae17d1bec0dea47867d542795d68beeec">[詳解]</a><br /></td></tr>
+<tr class="separator:ae17d1bec0dea47867d542795d68beeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5305ce899b693e62301fc7934232f1d5"><td class="memItemLeft" align="right" valign="top">real(8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a5305ce899b693e62301fc7934232f1d5">k</a></td></tr>
+<tr class="memdesc:a5305ce899b693e62301fc7934232f1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部領域 (領域1) の波数  <a href="#a5305ce899b693e62301fc7934232f1d5">[詳解]</a><br /></td></tr>
+<tr class="separator:a5305ce899b693e62301fc7934232f1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001a52a07aff33d479bae5f46670d268"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a001a52a07aff33d479bae5f46670d268">nmax</a></td></tr>
+<tr class="memdesc:a001a52a07aff33d479bae5f46670d268"><td class="mdescLeft">&#160;</td><td class="mdescRight">次数nの最大値  <a href="#a001a52a07aff33d479bae5f46670d268">[詳解]</a><br /></td></tr>
+<tr class="separator:a001a52a07aff33d479bae5f46670d268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b993f6c5c782e7be8e58071a9a2b326"><td class="memItemLeft" align="right" valign="top">character(20)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a5b993f6c5c782e7be8e58071a9a2b326">b_condition</a></td></tr>
+<tr class="memdesc:a5b993f6c5c782e7be8e58071a9a2b326"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界条件  <a href="#a5b993f6c5c782e7be8e58071a9a2b326">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b993f6c5c782e7be8e58071a9a2b326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2fe432d421cf0a37b6f5c477284ba7"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a0c2fe432d421cf0a37b6f5c477284ba7">size</a></td></tr>
+<tr class="memdesc:a0c2fe432d421cf0a37b6f5c477284ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">S行列のサイズ  <a href="#a0c2fe432d421cf0a37b6f5c477284ba7">[詳解]</a><br /></td></tr>
+<tr class="separator:a0c2fe432d421cf0a37b6f5c477284ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde8270cf9d5a55070fac09c37b34829"><td class="memItemLeft" align="right" valign="top">complex(8), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#afde8270cf9d5a55070fac09c37b34829">s</a></td></tr>
+<tr class="memdesc:afde8270cf9d5a55070fac09c37b34829"><td class="mdescLeft">&#160;</td><td class="mdescRight">S行列 <img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/> (1:size,1:size)  <a href="#afde8270cf9d5a55070fac09c37b34829">[詳解]</a><br /></td></tr>
+<tr class="separator:afde8270cf9d5a55070fac09c37b34829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1610d79243793f360fae2d0c2ef07a0"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#ab1610d79243793f360fae2d0c2ef07a0">sols</a></td></tr>
+<tr class="memdesc:ab1610d79243793f360fae2d0c2ef07a0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/>の(n,m)に対応する解 (1:size)  <a href="#ab1610d79243793f360fae2d0c2ef07a0">[詳解]</a><br /></td></tr>
+<tr class="separator:ab1610d79243793f360fae2d0c2ef07a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>3D-HelmholtzのS行列 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00013">13</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">メンバ関数/サブルーチン詳解</h2>
+<a id="a2d25404c8ff96b73c367ddd5ab348c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d25404c8ff96b73c367ddd5ab348c8b">&#9670;&nbsp;</a></span>calc_a_planewave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure smatrix_helmholtz_class::smatrix_helmholtz::calc_a_planewave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><img class="formulaInl" alt="$ p\in S^2 $" src="form_40.png"/>方向に進む平面波を表すincoming coefficients Aを計算 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a49199bb7bdeb677126070e427462d81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49199bb7bdeb677126070e427462d81a">&#9670;&nbsp;</a></span>calc_sol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure smatrix_helmholtz_class::smatrix_helmholtz::calc_sol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>incoming coefficients Aを与えたときの解solを計算する </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6f455d70de49e5923f7911e31d005cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f455d70de49e5923f7911e31d005cdd">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure smatrix_helmholtz_class::smatrix_helmholtz::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BEMを用いてS行列を作る </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0270c6392d98199267d33749e31cf28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0270c6392d98199267d33749e31cf28d">&#9670;&nbsp;</a></span>init_sphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure smatrix_helmholtz_class::smatrix_helmholtz::init_sphere </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>散乱体が球の場合について，解析解を用いてS行列を作る </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa1791864dc2a670edd0d32ee6e6e062e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1791864dc2a670edd0d32ee6e6e062e">&#9670;&nbsp;</a></span>output_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure smatrix_helmholtz_class::smatrix_helmholtz::output_s </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sの成分をファイルに出力 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a5b993f6c5c782e7be8e58071a9a2b326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b993f6c5c782e7be8e58071a9a2b326">&#9670;&nbsp;</a></span>b_condition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">character(20) smatrix_helmholtz_class::smatrix_helmholtz::b_condition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>境界条件 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00027">27</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;     <span class="keywordtype">character(20)</span> :: b_condition</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ae17d1bec0dea47867d542795d68beeec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17d1bec0dea47867d542795d68beeec">&#9670;&nbsp;</a></span>cs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8), dimension(2) smatrix_helmholtz_class::smatrix_helmholtz::cs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>位相速度 1:外部 2:内部 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00019">19</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;     <span class="keywordtype">real(8)</span> :: cs(2)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a5305ce899b693e62301fc7934232f1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5305ce899b693e62301fc7934232f1d5">&#9670;&nbsp;</a></span>k</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) smatrix_helmholtz_class::smatrix_helmholtz::k</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>外部領域 (領域1) の波数 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00021">21</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;     <span class="keywordtype">real(8)</span> :: k</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a508e37fb872281de28c2649e9deff368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a508e37fb872281de28c2649e9deff368">&#9670;&nbsp;</a></span>mesh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>), pointer smatrix_helmholtz_class::smatrix_helmholtz::mesh =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>境界メッシュ </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00015">15</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     <span class="keywordtype">type</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">pointer</span> :: mesh =&gt; null()</div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a001a52a07aff33d479bae5f46670d268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001a52a07aff33d479bae5f46670d268">&#9670;&nbsp;</a></span>nmax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer smatrix_helmholtz_class::smatrix_helmholtz::nmax</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次数nの最大値 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00024">24</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;     <span class="keywordtype">integer</span> :: nmax</div></div><!-- fragment -->
+</div>
+</div>
+<a id="afde8270cf9d5a55070fac09c37b34829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde8270cf9d5a55070fac09c37b34829">&#9670;&nbsp;</a></span>s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8), dimension(:,:), allocatable smatrix_helmholtz_class::smatrix_helmholtz::s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>S行列 <img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/> (1:size,1:size) </p>
+<p><img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/>はS(loct(k,l),loct(n,m))に格納される </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00034">34</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: s(:,:)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a0c2fe432d421cf0a37b6f5c477284ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2fe432d421cf0a37b6f5c477284ba7">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer smatrix_helmholtz_class::smatrix_helmholtz::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>S行列のサイズ </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00030">30</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     <span class="keywordtype">integer</span> :: size</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ab1610d79243793f360fae2d0c2ef07a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1610d79243793f360fae2d0c2ef07a0">&#9670;&nbsp;</a></span>sols</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>), dimension(:), allocatable smatrix_helmholtz_class::smatrix_helmholtz::sols</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/>の(n,m)に対応する解 (1:size) </p>
+<p>(n,m)に対応する解はsols(loct(n,m))に格納される </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00038">38</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     <span class="keywordtype">type</span>(<a class="code" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>),<span class="keywordtype">allocatable</span> :: sols(:)</div><div class="ttc" id="structsolution__helmholtz__class_1_1solution__helmholtz_html"><div class="ttname"><a href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz_class::solution_helmholtz</a></div><div class="ttdef"><b>Definition:</b> <a href="solution__helmholtz__class_8f90_source.html#l00008">solution_helmholtz_class.f90:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7594faa683c6ecf61f098ed535ce61d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7594faa683c6ecf61f098ed535ce61d5">&#9670;&nbsp;</a></span>w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">real(8) smatrix_helmholtz_class::smatrix_helmholtz::w</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>角周波数 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00017">17</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;     <span class="keywordtype">real(8)</span> :: w</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>次のファイルから型の詳解が抽出されました:<ul>
+<li><a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

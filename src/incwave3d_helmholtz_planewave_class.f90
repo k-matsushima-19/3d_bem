@@ -1,25 +1,24 @@
+!> 3D-Helmholtz方程式を満たす平面波
 module incwave3d_helmholtz_planewave_class
   use misc
   use math
+  use incwave3d_helmholtz_class
   implicit none
   private  
 
-  type,public :: incwave3d_helmholtz_planewave
-     !> 角周波数
-     real(8) :: w
-     !> 位相速度
-     real(8) :: c
-     !> 波数
-     real(8) :: k
-
+  type,public,extends(incwave3d_helmholtz) :: incwave3d_helmholtz_planewave
      !> 伝播方向の単位ベクトル
      complex(8) :: pvec(3)
      !> 複素振幅
      complex(8) :: amp
    contains
+     !> finalizer
      procedure :: destructor
+     !> 初期化
      procedure :: init
+     !> 点xでの入射波の値を計算
      procedure :: calc
+     !> 点xでの入射波の勾配の値を計算
      procedure :: calc_derivative
   end type incwave3d_helmholtz_planewave
 

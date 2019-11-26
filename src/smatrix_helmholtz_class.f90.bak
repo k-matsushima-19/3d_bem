@@ -1,0 +1,67 @@
+!> 3D-HelmholtzのS行列
+module smatrix_helmholtz_class
+  use misc
+  use math
+  use mesh3d_class
+  implicit none
+  private
+
+  !> 3D-HelmholtzのS行列
+  type,public :: smatrix_helmholtz
+     !> 境界メッシュ
+     type(mesh3d),pointer :: mesh => null()
+     !> 角周波数
+     real(8) :: w
+     !> 位相速度 1:外部 2:内部
+     real(8) :: cs(2)
+
+     !> 次数nの最大値
+     integer :: nmax
+     
+     !> 境界条件
+     character(20) :: b_condition
+
+     !> S行列 \f$ S_{ij}^{kl} \f$
+     !! \details \f$ S_{ij}^{kl} \f$はS(loct_sph(i,k),loct_sph(j,l))に格納される
+     complex(8),allocatable :: S(:,:)
+   contains
+     !> 散乱体が球の場合について，解析解を用いてS行列を作る
+     procedure :: init_sphere
+  end type smatrix_helmholtz
+
+contains
+  !> 散乱体が球の場合について，解析解を用いてS行列を作る
+  !! \param self
+  !! \param mesh 球の境界mesh
+  !! \param b_condition 境界条件 "neumann"
+  !! \param w 角周波数
+  !! \param cs 各領域の位相速度 1:外部 2:内部
+  !! \param nmax 次数nの最大値
+  subroutine init_sphere(self, mesh, b_condition, w, cs, nmax)
+    class(smatrix_helmholtz),intent(out) :: self
+    type(mesh3d),intent(inout),target :: mesh
+    character(*),intent(in) :: b_condition
+    real(8),intent(in) :: w
+    real(8),intent(in) :: cs(2)
+    integer,intent(in) :: nmax
+
+    real(8) :: rad
+    
+    self%mesh => mesh
+    self%b_condition = b_condition
+
+    self%w = w
+    self%cs = cs
+
+    self%nmax = nmax
+
+    ! Neumann条件のみ対応
+    call assert(self%b_condition == "neumann")
+
+    ! 球の半径
+    rad = mesh%radius
+    
+    
+    
+  end subroutine init_sphere
+end module smatrix_helmholtz_class

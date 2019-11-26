@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: incwave3d_helmholtz_spherical_class.f90 ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','検索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_c89bd538986b5fa2f5874f9b3c9fae5c.html">hdd</a></li><li class="navelem"><a class="el" href="dir_0530d4d7188df132349cdbe2232239d9.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_b847784016724036b77217bbc510813b.html">program</a></li><li class="navelem"><a class="el" href="dir_dd104d35df4266e0cb1aab18a512d7bf.html">3d_bem</a></li><li class="navelem"><a class="el" href="dir_ad1e22684a7d39f9291b696175a955f5.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ型</a> &#124;
+<a href="#namespaces">モジュール</a> &#124;
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">incwave3d_helmholtz_spherical_class.f90 ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="incwave3d__helmholtz__spherical__class_8f90_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structincwave3d__helmholtz__spherical__class_1_1incwave3d__helmholtz__spherical.html">incwave3d_helmholtz_spherical_class::incwave3d_helmholtz_spherical</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+モジュール</h2></td></tr>
+<tr class="memitem:namespaceincwave3d__helmholtz__spherical__class"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__spherical__class.html">incwave3d_helmholtz_spherical_class</a></td></tr>
+<tr class="memdesc:namespaceincwave3d__helmholtz__spherical__class"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D-Helmholtz方程式を満たす球面波 <img class="formulaInl" alt="$ I_n^m(x-c)=j_n(k|x-c|)Y_n^m((x-c)/|x-c|) $" src="form_34.png"/> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:a09fe018554ce08efab314d1fbde55e9b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__spherical__class.html#a09fe018554ce08efab314d1fbde55e9b">incwave3d_helmholtz_spherical_class::init</a> (self, w, c, amp, n, m, origin)</td></tr>
+<tr class="memdesc:a09fe018554ce08efab314d1fbde55e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="namespaceincwave3d__helmholtz__spherical__class.html#a09fe018554ce08efab314d1fbde55e9b">[詳解]</a><br /></td></tr>
+<tr class="separator:a09fe018554ce08efab314d1fbde55e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0810335ad5984bf2f9ce0f3f3212830"><td class="memItemLeft" align="right" valign="top">elemental subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__spherical__class.html#af0810335ad5984bf2f9ce0f3f3212830">incwave3d_helmholtz_spherical_class::destructor</a> (self)</td></tr>
+<tr class="memdesc:af0810335ad5984bf2f9ce0f3f3212830"><td class="mdescLeft">&#160;</td><td class="mdescRight">finalizer  <a href="namespaceincwave3d__helmholtz__spherical__class.html#af0810335ad5984bf2f9ce0f3f3212830">[詳解]</a><br /></td></tr>
+<tr class="separator:af0810335ad5984bf2f9ce0f3f3212830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7698529580f6d301e3f9674ed6e323a5"><td class="memItemLeft" align="right" valign="top">complex(8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__spherical__class.html#a7698529580f6d301e3f9674ed6e323a5">incwave3d_helmholtz_spherical_class::calc</a> (self, x)</td></tr>
+<tr class="memdesc:a7698529580f6d301e3f9674ed6e323a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">点xでの入射波の値を計算  <a href="namespaceincwave3d__helmholtz__spherical__class.html#a7698529580f6d301e3f9674ed6e323a5">[詳解]</a><br /></td></tr>
+<tr class="separator:a7698529580f6d301e3f9674ed6e323a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3436fa8f5f4136c5f4c646644d30ad"><td class="memItemLeft" align="right" valign="top">complex(8) function, dimension(3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceincwave3d__helmholtz__spherical__class.html#a7e3436fa8f5f4136c5f4c646644d30ad">incwave3d_helmholtz_spherical_class::calc_derivative</a> (self, x)</td></tr>
+<tr class="memdesc:a7e3436fa8f5f4136c5f4c646644d30ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">点xでの入射波の勾配の値を計算  <a href="namespaceincwave3d__helmholtz__spherical__class.html#a7e3436fa8f5f4136c5f4c646644d30ad">[詳解]</a><br /></td></tr>
+<tr class="separator:a7e3436fa8f5f4136c5f4c646644d30ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

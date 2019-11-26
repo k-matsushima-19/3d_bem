@@ -26,3 +26,16 @@
 \form#25:$ y_n(x) $
 \form#26:$ h_n^{(1)}(x) $
 \form#27:$ \geq 1 $
+\form#28:$ j_n(k|x-c|)Y_n^m((x-c)/|x-c|) $
+\form#29:$ I_n^m(x)=j_n(k|x|)Y_n^m(x/|x|) $
+\form#30:$ n=1,\ldots,n_\mathrm{max}$
+\form#31:$ n=0,\ldots,n_\mathrm{max}$
+\form#32:$ x_1 $
+\form#33:$ x_i $
+\form#34:$ I_n^m(x-c)=j_n(k|x-c|)Y_n^m((x-c)/|x-c|) $
+\form#35:$ I_n^m(x) $
+\form#36:$ S_{ij}^{kl} $
+\form#37:$ S_{nk}^{ml} $
+\form#38:$ S_{kn}^{lm} $
+\form#39:$ O_n^m(x)=h^{(1)}_n(k|x|)Y_n^m(x/|x|) $
+\form#40:$ p\in S^2 $

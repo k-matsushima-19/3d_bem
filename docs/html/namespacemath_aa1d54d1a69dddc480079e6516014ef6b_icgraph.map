@@ -1,4 +1,3 @@
 <map id="math::loct_sph" name="math::loct_sph">
-<area shape="rect" id="node2" href="$namespaceexamples__helmholtz.html#a05e3d73b62db43ad6f55d3b6d4e4fe7a" title="球による平面波散乱の解析解を計算 " alt="" coords="289,5,431,47"/>
-<area shape="rect" id="node3" href="$namespacemath.html#a37ce1e76924fad0dbc73becee4a44182" title="球面調和関数 を から与えられた まで計算する。ynm(loct_sph(n,m))に格納される " alt="" coords="161,38,241,65"/>
+<area shape="rect" id="node2" href="$structincwave3d__helmholtz__spherical__class_1_1incwave3d__helmholtz__spherical.html#aaf018742a1ecee23da127db30c85004c" title="点xでの入射波の勾配の値を計算 " alt="" coords="161,5,351,76"/>
 </map>
