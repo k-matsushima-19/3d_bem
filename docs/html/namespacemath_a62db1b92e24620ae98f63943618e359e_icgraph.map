@@ -1,4 +1,5 @@
 <map id="math::convert_area_to_cartesian" name="math::convert_area_to_cartesian">
 <area shape="rect" id="node2" href="$namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="188,5,364,47"/>
 <area shape="rect" id="node3" href="$namespacesolution__helmholtz__class.html#a4b295b474edd0847dadc88f6d8c4103b" title="境界の解を積分してmeshcenterを原点とするoutgoing coefficientsを計算 " alt="" coords="211,71,341,112"/>
+<area shape="rect" id="node4" href="$namespacesmatrix__helmholtz__class.html#a430f0bf83820076b83c1c507aad6d2b0" title="を計算してファイルに出力する． " alt="" coords="193,136,359,177"/>
 </map>

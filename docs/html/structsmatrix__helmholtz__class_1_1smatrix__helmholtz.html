@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,14 +30,32 @@
 </div>
 <!-- end header part -->
 <!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div id="nav-path" class="navpath">
   <ul>
 <li class="navelem"><a class="el" href="namespacesmatrix__helmholtz__class.html">smatrix_helmholtz_class</a></li><li class="navelem"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html">smatrix_helmholtz</a></li>  </ul>
@@ -79,6 +100,12 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 <tr class="memitem:aa1791864dc2a670edd0d32ee6e6e062e"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#aa1791864dc2a670edd0d32ee6e6e062e">output_s</a></td></tr>
 <tr class="memdesc:aa1791864dc2a670edd0d32ee6e6e062e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sの成分をファイルに出力  <a href="#aa1791864dc2a670edd0d32ee6e6e062e">[詳解]</a><br /></td></tr>
 <tr class="separator:aa1791864dc2a670edd0d32ee6e6e062e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2230eaebcf599cbf4296597adb9e421d"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a2230eaebcf599cbf4296597adb9e421d">calc_t</a></td></tr>
+<tr class="memdesc:a2230eaebcf599cbf4296597adb9e421d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ O_n^m $" src="form_43.png"/>のtranslation matrix <img class="formulaInl" alt="$ T_{nn^\prime}^{mm^\prime} $" src="form_44.png"/>を計算  <a href="#a2230eaebcf599cbf4296597adb9e421d">[詳解]</a><br /></td></tr>
+<tr class="separator:a2230eaebcf599cbf4296597adb9e421d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9daf39f49b915768a9d13449506d25ee"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a9daf39f49b915768a9d13449506d25ee">calc_t_tilde</a></td></tr>
+<tr class="memdesc:a9daf39f49b915768a9d13449506d25ee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ I_n^m $" src="form_45.png"/>のtranslation matrix <img class="formulaInl" alt="$ \tilde{T}_{nn^\prime}^{mm^\prime} $" src="form_46.png"/>を計算  <a href="#a9daf39f49b915768a9d13449506d25ee">[詳解]</a><br /></td></tr>
+<tr class="separator:a9daf39f49b915768a9d13449506d25ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -109,11 +136,17 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 <tr class="memitem:ab1610d79243793f360fae2d0c2ef07a0"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#ab1610d79243793f360fae2d0c2ef07a0">sols</a></td></tr>
 <tr class="memdesc:ab1610d79243793f360fae2d0c2ef07a0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/>の(n,m)に対応する解 (1:size)  <a href="#ab1610d79243793f360fae2d0c2ef07a0">[詳解]</a><br /></td></tr>
 <tr class="separator:ab1610d79243793f360fae2d0c2ef07a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ffec3c5cc37aabeab13c0a8021bf9b7"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#a6ffec3c5cc37aabeab13c0a8021bf9b7">nmax_e</a></td></tr>
+<tr class="memdesc:a6ffec3c5cc37aabeab13c0a8021bf9b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} $" src="form_41.png"/>の次数 <img class="formulaInl" alt="$ n,n^\prime,n^{\prime\prime} $" src="form_42.png"/>の最大値  <a href="#a6ffec3c5cc37aabeab13c0a8021bf9b7">[詳解]</a><br /></td></tr>
+<tr class="separator:a6ffec3c5cc37aabeab13c0a8021bf9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1f39105b3d4837b8055ae5ac5626c2"><td class="memItemLeft" align="right" valign="top">complex(8), dimension(:,:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrix__helmholtz__class_1_1smatrix__helmholtz.html#ace1f39105b3d4837b8055ae5ac5626c2">e</a></td></tr>
+<tr class="memdesc:ace1f39105b3d4837b8055ae5ac5626c2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} $" src="form_41.png"/>の値  <a href="#ace1f39105b3d4837b8055ae5ac5626c2">[詳解]</a><br /></td></tr>
+<tr class="separator:ace1f39105b3d4837b8055ae5ac5626c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>3D-HelmholtzのS行列 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00013">13</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00014">14</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">メンバ関数/サブルーチン詳解</h2>
 <a id="a2d25404c8ff96b73c367ddd5ab348c8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d25404c8ff96b73c367ddd5ab348c8b">&#9670;&nbsp;</a></span>calc_a_planewave()</h2>
@@ -132,7 +165,7 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p><img class="formulaInl" alt="$ p\in S^2 $" src="form_40.png"/>方向に進む平面波を表すincoming coefficients Aを計算 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00053">53</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -153,7 +186,49 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>incoming coefficients Aを与えたときの解solを計算する </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00045">45</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2230eaebcf599cbf4296597adb9e421d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2230eaebcf599cbf4296597adb9e421d">&#9670;&nbsp;</a></span>calc_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure smatrix_helmholtz_class::smatrix_helmholtz::calc_t </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><img class="formulaInl" alt="$ O_n^m $" src="form_43.png"/>のtranslation matrix <img class="formulaInl" alt="$ T_{nn^\prime}^{mm^\prime} $" src="form_44.png"/>を計算 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9daf39f49b915768a9d13449506d25ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9daf39f49b915768a9d13449506d25ee">&#9670;&nbsp;</a></span>calc_t_tilde()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure smatrix_helmholtz_class::smatrix_helmholtz::calc_t_tilde </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><img class="formulaInl" alt="$ I_n^m $" src="form_45.png"/>のtranslation matrix <img class="formulaInl" alt="$ \tilde{T}_{nn^\prime}^{mm^\prime} $" src="form_46.png"/>を計算 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00059">59</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -174,7 +249,7 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>BEMを用いてS行列を作る </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00041">41</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00047">47</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -195,7 +270,7 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>散乱体が球の場合について，解析解を用いてS行列を作る </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00049">49</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -216,7 +291,7 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>Sの成分をファイルに出力 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00049">49</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00055">55</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -235,8 +310,8 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>境界条件 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00027">27</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;     <span class="keywordtype">character(20)</span> :: b_condition</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;     <span class="keywordtype">character(20)</span> :: b_condition</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ae17d1bec0dea47867d542795d68beeec"></a>
@@ -253,8 +328,26 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>位相速度 1:外部 2:内部 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00019">19</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;     <span class="keywordtype">real(8)</span> :: cs(2)</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00020">20</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;     <span class="keywordtype">real(8)</span> :: cs(2)</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ace1f39105b3d4837b8055ae5ac5626c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1f39105b3d4837b8055ae5ac5626c2">&#9670;&nbsp;</a></span>e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">complex(8), dimension(:,:,:), allocatable smatrix_helmholtz_class::smatrix_helmholtz::e</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><img class="formulaInl" alt="$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} $" src="form_41.png"/>の値 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00044">44</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;     <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: e(:,:,:)</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a5305ce899b693e62301fc7934232f1d5"></a>
@@ -271,8 +364,8 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>外部領域 (領域1) の波数 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00021">21</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;     <span class="keywordtype">real(8)</span> :: k</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;     <span class="keywordtype">real(8)</span> :: k</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a508e37fb872281de28c2649e9deff368"></a>
@@ -289,8 +382,8 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>境界メッシュ </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00015">15</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     <span class="keywordtype">type</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">pointer</span> :: mesh =&gt; null()</div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00016">16</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     <span class="keywordtype">type</span>(<a class="code" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a>),<span class="keywordtype">pointer</span> :: mesh =&gt; null()</div><div class="ttc" id="structmesh3d__class_1_1mesh3d_html"><div class="ttname"><a href="structmesh3d__class_1_1mesh3d.html">mesh3d_class::mesh3d</a></div><div class="ttdoc">三角形メッシュ </div><div class="ttdef"><b>Definition:</b> <a href="mesh3d__class_8f90_source.html#l00009">mesh3d_class.f90:9</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -308,8 +401,26 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>次数nの最大値 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00024">24</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;     <span class="keywordtype">integer</span> :: nmax</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00025">25</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;     <span class="keywordtype">integer</span> :: nmax</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a6ffec3c5cc37aabeab13c0a8021bf9b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ffec3c5cc37aabeab13c0a8021bf9b7">&#9670;&nbsp;</a></span>nmax_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer smatrix_helmholtz_class::smatrix_helmholtz::nmax_e</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><img class="formulaInl" alt="$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} $" src="form_41.png"/>の次数 <img class="formulaInl" alt="$ n,n^\prime,n^{\prime\prime} $" src="form_42.png"/>の最大値 </p>
+
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00042">42</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;     <span class="keywordtype">integer</span> :: nmax_e</div></div><!-- fragment -->
 </div>
 </div>
 <a id="afde8270cf9d5a55070fac09c37b34829"></a>
@@ -327,8 +438,8 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 <p>S行列 <img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/> (1:size,1:size) </p>
 <p><img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/>はS(loct(k,l),loct(n,m))に格納される </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00034">34</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: s(:,:)</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00035">35</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     <span class="keywordtype">complex(8)</span>,<span class="keywordtype">allocatable</span> :: s(:,:)</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a0c2fe432d421cf0a37b6f5c477284ba7"></a>
@@ -345,8 +456,8 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>S行列のサイズ </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00030">30</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     <span class="keywordtype">integer</span> :: size</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00031">31</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;     <span class="keywordtype">integer</span> :: size</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ab1610d79243793f360fae2d0c2ef07a0"></a>
@@ -364,8 +475,8 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 <p><img class="formulaInl" alt="$ S_{kn}^{lm} $" src="form_38.png"/>の(n,m)に対応する解 (1:size) </p>
 <p>(n,m)に対応する解はsols(loct(n,m))に格納される </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00038">38</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     <span class="keywordtype">type</span>(<a class="code" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>),<span class="keywordtype">allocatable</span> :: sols(:)</div><div class="ttc" id="structsolution__helmholtz__class_1_1solution__helmholtz_html"><div class="ttname"><a href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz_class::solution_helmholtz</a></div><div class="ttdef"><b>Definition:</b> <a href="solution__helmholtz__class_8f90_source.html#l00008">solution_helmholtz_class.f90:8</a></div></div>
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00039">39</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     <span class="keywordtype">type</span>(<a class="code" href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz</a>),<span class="keywordtype">allocatable</span> :: sols(:)</div><div class="ttc" id="structsolution__helmholtz__class_1_1solution__helmholtz_html"><div class="ttname"><a href="structsolution__helmholtz__class_1_1solution__helmholtz.html">solution_helmholtz_class::solution_helmholtz</a></div><div class="ttdef"><b>Definition:</b> <a href="solution__helmholtz__class_8f90_source.html#l00008">solution_helmholtz_class.f90:8</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -383,8 +494,8 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 
 <p>角周波数 </p>
 
-<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00017">17</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;     <span class="keywordtype">real(8)</span> :: w</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="smatrix__helmholtz__class_8f90_source.html">smatrix_helmholtz_class.f90</a> の <a class="el" href="smatrix__helmholtz__class_8f90_source.html#l00018">18</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;     <span class="keywordtype">real(8)</span> :: w</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>次のファイルから型の詳解が抽出されました:<ul>
@@ -393,7 +504,7 @@ smatrix_helmholtz_class::smatrix_helmholtz 連携図</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月27日(水) 22時57分11秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -9,12 +9,15 @@ import numpy as np
 import sys
 
 # 参考: https://scipython.com/book/chapter-8-scipy/examples/visualizing-the-spherical-harmonics/
-def plot_surface(fig, ax, file_stl, file_sol, mode="real"):
+def plot_surface(fig, ax, file_stl, file_sol=None, mode="real"):
 
     data = mesh.Mesh.from_file(file_stl)
 
     # polygonを生成
-    polys = mplot3d.art3d.Poly3DCollection(data.vectors, lw=0)
+    if file_sol is not None:
+        polys = mplot3d.art3d.Poly3DCollection(data.vectors, lw=0)
+    else:
+        polys = mplot3d.art3d.Poly3DCollection(data.vectors, lw=2)
     scale = data.points.flatten(-1)
 
     # 各要素の中点
@@ -24,25 +27,26 @@ def plot_surface(fig, ax, file_stl, file_sol, mode="real"):
     centers = np.array(centers)
     
     # 各要素の色
-    fcolors = centers[:,0]
-    data = np.genfromtxt(file_sol)
-    u = data[:,3] + 1j*data[:,4]
+    if file_sol is not None:
+        fcolors = centers[:,0]
+        data = np.genfromtxt(file_sol)
+        u = data[:,3] + 1j*data[:,4]
 
-    if mode == "real":
-        fcolors = np.real(u)
-    elif mode == "imag":
-        fcolors = np.imag(u)
-    elif mode == "abs":
-        fcolors = np.abs(u)
+        if mode == "real":
+            fcolors = np.real(u)
+        elif mode == "imag":
+            fcolors = np.imag(u)
+        elif mode == "abs":
+            fcolors = np.abs(u)
 
-    # [-1,1]に正規化
-    fmax, fmin = fcolors.max(), fcolors.min()
-    # fcolors = (fcolors - fmin)/(fmax - fmin)
-    fcolors_normalized = (fcolors - fmin)/(fmax - fmin)
-    
-    # 色を塗る
-    # polys.set_facecolor(cm.seismic(fcolors))
-    polys.set_facecolor(cm.jet(fcolors_normalized))
+        # [-1,1]に正規化
+        fmax, fmin = fcolors.max(), fcolors.min()
+        # fcolors = (fcolors - fmin)/(fmax - fmin)
+        fcolors_normalized = (fcolors - fmin)/(fmax - fmin)
+
+        # 色を塗る
+        # polys.set_facecolor(cm.seismic(fcolors))
+        polys.set_facecolor(cm.jet(fcolors_normalized))
     
     image = ax.add_collection3d(polys)
 
@@ -50,16 +54,17 @@ def plot_surface(fig, ax, file_stl, file_sol, mode="real"):
     ax.auto_scale_xyz(scale, scale, scale)
 
     # color bar
-    vmin = min(fcolors)
-    vmax = max(fcolors)
-    cmap = plt.get_cmap("jet")
-    cNorm = matplotlib.colors.Normalize(vmin=vmin, vmax=vmax)
-    scalarMap = cmx.ScalarMappable(norm=cNorm, cmap=cmap)
-    scalarMap.set_array(fcolors)
+    if file_sol is not None:
+        vmin = min(fcolors)
+        vmax = max(fcolors)
+        cmap = plt.get_cmap("jet")
+        cNorm = matplotlib.colors.Normalize(vmin=vmin, vmax=vmax)
+        scalarMap = cmx.ScalarMappable(norm=cNorm, cmap=cmap)
+        scalarMap.set_array(fcolors)
 
-    # divider = mpl_toolkits.axes_grid1.make_axes_locatable(ax)
-    # cax = divider.append_axes('right', '5%', pad='3%')
-    cb = fig.colorbar(scalarMap, shrink=0.8)
+        # divider = mpl_toolkits.axes_grid1.make_axes_locatable(ax)
+        # cax = divider.append_axes('right', '5%', pad='3%')
+        cb = fig.colorbar(scalarMap, shrink=0.8)
 
 if __name__ == "__main__":
 
@@ -71,7 +76,10 @@ if __name__ == "__main__":
 
         # plot_surface(fig, ax, "sphere.stl", "bndry.dat")
 
-        plot_surface(fig, ax, sys.argv[1], sys.argv[2], mode=mode)
+        if len(sys.argv) == 2:
+            plot_surface(fig, ax, sys.argv[1], mode=mode)
+        else:
+            plot_surface(fig, ax, sys.argv[1], file_sol=sys.argv[2], mode=mode)
 
         ax.tick_params(pad=10)
         ax.tick_params(labelsize=15)

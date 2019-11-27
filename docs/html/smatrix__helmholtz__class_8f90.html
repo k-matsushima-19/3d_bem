@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,14 +30,32 @@
 </div>
 <!-- end header part -->
 <!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div id="nav-path" class="navpath">
   <ul>
 <li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_c89bd538986b5fa2f5874f9b3c9fae5c.html">hdd</a></li><li class="navelem"><a class="el" href="dir_0530d4d7188df132349cdbe2232239d9.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_b847784016724036b77217bbc510813b.html">program</a></li><li class="navelem"><a class="el" href="dir_dd104d35df4266e0cb1aab18a512d7bf.html">3d_bem</a></li><li class="navelem"><a class="el" href="dir_ad1e22684a7d39f9291b696175a955f5.html">src</a></li>  </ul>
@@ -81,11 +102,20 @@ $(function() {
 <tr class="memitem:ac6e71ca6f601f411534fa0fa253a4b60"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#ac6e71ca6f601f411534fa0fa253a4b60">smatrix_helmholtz_class::output_s</a> (self, filename)</td></tr>
 <tr class="memdesc:ac6e71ca6f601f411534fa0fa253a4b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sの成分をファイルに出力  <a href="namespacesmatrix__helmholtz__class.html#ac6e71ca6f601f411534fa0fa253a4b60">[詳解]</a><br /></td></tr>
 <tr class="separator:ac6e71ca6f601f411534fa0fa253a4b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430f0bf83820076b83c1c507aad6d2b0"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#a430f0bf83820076b83c1c507aad6d2b0">smatrix_helmholtz_class::output_e</a> (filename_mesh, filename, nmax)</td></tr>
+<tr class="memdesc:a430f0bf83820076b83c1c507aad6d2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} $" src="form_41.png"/>を計算してファイルに出力する．  <a href="namespacesmatrix__helmholtz__class.html#a430f0bf83820076b83c1c507aad6d2b0">[詳解]</a><br /></td></tr>
+<tr class="separator:a430f0bf83820076b83c1c507aad6d2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b81efe1a26a7f31490db5413fecadc4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#a1b81efe1a26a7f31490db5413fecadc4">smatrix_helmholtz_class::calc_t</a> (self, vec, out)</td></tr>
+<tr class="memdesc:a1b81efe1a26a7f31490db5413fecadc4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ O_n^m $" src="form_43.png"/>のtranslation matrix <img class="formulaInl" alt="$ T_{nn^\prime}^{mm^\prime} $" src="form_44.png"/>を計算  <a href="namespacesmatrix__helmholtz__class.html#a1b81efe1a26a7f31490db5413fecadc4">[詳解]</a><br /></td></tr>
+<tr class="separator:a1b81efe1a26a7f31490db5413fecadc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202a553d8e836ba31f52ffbf02582192"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrix__helmholtz__class.html#a202a553d8e836ba31f52ffbf02582192">smatrix_helmholtz_class::calc_t_tilde</a> (self, vec, out)</td></tr>
+<tr class="memdesc:a202a553d8e836ba31f52ffbf02582192"><td class="mdescLeft">&#160;</td><td class="mdescRight"><img class="formulaInl" alt="$ I_n^m $" src="form_45.png"/>のtranslation matrix <img class="formulaInl" alt="$ \tilde{T}_{nn^\prime}^{mm^\prime} $" src="form_46.png"/>を計算  <a href="namespacesmatrix__helmholtz__class.html#a202a553d8e836ba31f52ffbf02582192">[詳解]</a><br /></td></tr>
+<tr class="separator:a202a553d8e836ba31f52ffbf02582192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月27日(水) 22時57分11秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

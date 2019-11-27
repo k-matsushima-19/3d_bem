@@ -47,6 +47,8 @@ module mesh3d_class
      procedure :: expand
      !> .off形式で境界メッシュをファイルに出力
      procedure :: output_off
+     !> selfに他のmeshを結合する
+     procedure :: add_mesh
   end type mesh3d
 
   interface
@@ -275,5 +277,39 @@ contains
     close(10)
 
   end subroutine output_off
+
+  !> selfに他のmeshを結合する
+  !! \param self
+  !! \param other selfに結合するmesh
+  subroutine add_mesh(self, other)
+    class(mesh3d),intent(inout) :: self
+    type(mesh3d),intent(in) :: other
+
+    type(mesh3d),allocatable :: mesh
+    
+    allocate(mesh)
+    mesh%ne = self%ne + other%ne
+    mesh%np = self%np + other%np
+    
+    allocate(mesh%p(3,mesh%np))
+    mesh%p(:,1:self%np)         = self%p(:,:)
+    mesh%p(:,self%np+1:mesh%np) = other%p(:,:)
+
+    allocate(mesh%nd(3,mesh%ne))
+    mesh%nd(:,1:self%ne)         = self%nd(:,:)
+    mesh%nd(:,self%ne+1:mesh%ne) = other%nd(:,:) + self%np
+
+    call self%destructor
+
+    self%ne = mesh%ne
+    self%np = mesh%np
+    allocate(self%p(3,mesh%np))
+    self%p = mesh%p
+    allocate(self%nd(3,mesh%ne))
+    self%nd = mesh%nd
+
+    call self%init
+    
+  end subroutine add_mesh
 
 end module mesh3d_class

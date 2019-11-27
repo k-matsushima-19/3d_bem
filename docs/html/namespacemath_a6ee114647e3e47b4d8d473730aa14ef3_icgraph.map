@@ -1,5 +1,6 @@
 <map id="math::bessel_sph_hn_array" name="math::bessel_sph_hn_array">
 <area shape="rect" id="node2" href="$namespaceexamples__helmholtz.html#af1bc7510d26480af38fd366f60dde31e" title="球による平面波散乱の解析解を計算 " alt="" coords="200,5,367,47"/>
-<area shape="rect" id="node3" href="$namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26" title="の を計算 " alt="" coords="226,71,341,98"/>
-<area shape="rect" id="node4" href="$namespacesmatrix__helmholtz__class.html#ae6b7ebc52236363235b43b16fd61e1fb" title="散乱体が球の場合について，解析解を用いてS行列を作る " alt="" coords="415,89,581,131"/>
+<area shape="rect" id="node3" href="$namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26" title="の を計算 " alt="" coords="226,122,341,149"/>
+<area shape="rect" id="node4" href="$namespacesmatrix__helmholtz__class.html#ae6b7ebc52236363235b43b16fd61e1fb" title="散乱体が球の場合について，解析解を用いてS行列を作る " alt="" coords="415,64,581,105"/>
+<area shape="rect" id="node5" href="$namespacesmatrix__helmholtz__class.html#a1b81efe1a26a7f31490db5413fecadc4" title="のtranslation matrix を計算 " alt="" coords="415,129,581,171"/>
 </map>

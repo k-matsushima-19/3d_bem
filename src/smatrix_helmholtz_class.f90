@@ -8,6 +8,7 @@ module smatrix_helmholtz_class
   use incwave3d_helmholtz_spherical_class
   implicit none
   private
+  public :: output_E
 
   !> 3D-HelmholtzのS行列
   type,public :: smatrix_helmholtz
@@ -36,6 +37,11 @@ module smatrix_helmholtz_class
      !> \f$ S_{kn}^{lm} \f$の(n,m)に対応する解 (1:size)
      !! \details (n,m)に対応する解はsols(loct(n,m))に格納される
      type(solution_helmholtz),allocatable :: sols(:)
+
+     !> \f$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} \f$の次数\f$ n,n^\prime,n^{\prime\prime} \f$の最大値
+     integer :: nmax_E
+     !> \f$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} \f$の値
+     complex(8),allocatable :: E(:,:,:)
    contains
      !> BEMを用いてS行列を作る
      procedure :: init
@@ -47,6 +53,10 @@ module smatrix_helmholtz_class
      procedure :: calc_A_planewave
      !> Sの成分をファイルに出力
      procedure :: output_S
+     !> \f$ O_n^m \f$のtranslation matrix \f$ T_{nn^\prime}^{mm^\prime} \f$を計算
+     procedure :: calc_T
+     !> \f$ I_n^m \f$のtranslation matrix \f$ \tilde{T}_{nn^\prime}^{mm^\prime} \f$を計算
+     procedure :: calc_T_tilde
   end type smatrix_helmholtz
 
 contains
@@ -66,8 +76,11 @@ contains
     integer,intent(in) :: nmax
 
     type(bem3d_helmholtz),allocatable :: bem
-    integer :: m, n
+    integer :: n, nn, nnn
+    integer :: m, mm, mmm
     type(incwave3d_helmholtz_spherical),allocatable :: incw
+
+    real(8) :: tmp1, tmp2
 
     self%mesh => mesh
     self%b_condition = b_condition
@@ -83,6 +96,32 @@ contains
 
     ! Neumann条件のみ対応
     call assert(self%b_condition == "neumann")
+
+    ! Eをファイルから読み込む
+    write(*,*) "# Reading E from E.dat"
+    open(10,file="E.dat",status="old")
+    read(10,*) self%nmax_E
+    call assert(self%nmax_E >= self%nmax)
+    allocate(self%E(self%size,self%size,self%size))
+    do nnn=0,self%nmax_E
+       do mmm=-nnn,nnn
+          do nn=0,self%nmax_E
+             do mm=-nn,nn
+                do n=0,self%nmax_E
+                   do m=-n,n
+                      read(10,'(2e24.16)') tmp1, tmp2
+                      ! 必要な次数の分だけ格納
+                      if(n <= self%nmax) then
+                         self%E(loct(n,m),loct(nn,mm),loct(nnn,mmm)) = dcmplx(tmp1,tmp2)
+                      end if
+                      
+                   end do
+                end do
+             end do
+          end do
+       end do
+    end do
+    close(10)
 
     !
     ! BEM
@@ -137,7 +176,7 @@ contains
     integer,intent(in) :: nmax
 
     real(8) :: rad
-    integer :: n, m, k, l
+    integer :: k, l
     integer :: i
 
     real(8),allocatable :: besj(:)
@@ -147,6 +186,10 @@ contains
     complex(8),allocatable :: Inm(:), Onm(:)
 
     real(8) :: x(3)
+
+    integer :: n, nn, nnn
+    integer :: m, mm, mmm
+    real(8) :: tmp1, tmp2
     
     self%mesh => mesh
     self%b_condition = b_condition
@@ -162,6 +205,32 @@ contains
 
     ! Neumann条件のみ対応
     call assert(self%b_condition == "neumann")
+
+    ! Eをファイルから読み込む
+    write(*,*) "# Reading E from E.dat"
+    open(10,file="E.dat",status="old")
+    read(10,*) self%nmax_E
+    call assert(self%nmax_E >= self%nmax)
+    allocate(self%E(self%size,self%size,self%size))
+    do nnn=0,self%nmax_E
+       do mmm=-nnn,nnn
+          do nn=0,self%nmax_E
+             do mm=-nn,nn
+                do n=0,self%nmax_E
+                   do m=-n,n
+                      read(10,'(2e24.16)') tmp1, tmp2
+                      ! 必要な次数の分だけ格納
+                      if(n <= self%nmax) then
+                         self%E(loct(n,m),loct(nn,mm),loct(nnn,mmm)) = dcmplx(tmp1,tmp2)
+                      end if
+                      
+                   end do
+                end do
+             end do
+          end do
+       end do
+    end do
+    close(10)
 
     ! 球の半径
     rad = mesh%radius
@@ -288,6 +357,8 @@ contains
     open(10,file=filename,status="replace")
     ! 外部領域の波数
     write(10,*) self%k
+    ! 原点
+    write(10,*) self%mesh%center
     ! nmax
     write(10,*) self%nmax
     do k=0,self%nmax
@@ -303,4 +374,203 @@ contains
     end do
     close(10)
   end subroutine output_S
+
+  !> \f$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} \f$を計算してファイルに出力する．
+  !! \param filename_mesh 単位球の境界メッシュ (数値積分用) の.offファイル
+  !! \param filename 出力ファイル
+  !! \param nmax 次数\f$ n,n^\prime,n^{\prime\prime} \f$の最大値
+  subroutine output_E(filename_mesh, filename, nmax)
+    character(*),intent(in) :: filename_mesh
+    character(*),intent(in) :: filename
+    integer,intent(in) :: nmax
+
+    integer :: i, ig
+    integer :: n, nn, nnn
+    integer :: m, mm, mmm
+    complex(8),allocatable :: integ(:,:,:), E(:,:,:)
+    integer :: size
+    
+    type(mesh3d),allocatable :: sphere
+
+    ! 三角形上のGauss積分の積分点の数
+    integer :: ng_tri
+    ! 三角形上のGauss積分の積分点の面積座標 (3,ng_tri)
+    real(8),allocatable :: gauss_tri_xi(:,:)
+    ! 三角形上のGauss積分の積分点の重み (ng_tri)
+    real(8),allocatable :: gauss_tri_w(:)
+
+    real(8) :: y_vec(3)
+    complex(8),allocatable :: ynm(:)
+
+    ! 三角形Gauss積分の点数はとりあえず6とする
+    ng_tri = 6
+    allocate(gauss_tri_xi(3,ng_tri), gauss_tri_w(ng_tri))
+    call generate_gauss_triangle(ng_tri, gauss_tri_xi, gauss_tri_w)
+
+    allocate(sphere)
+    call sphere%read_off(filename_mesh)
+    
+
+    ! 各要素についてGauss積分し，integに代入
+    size = (nmax+1)**2
+    allocate(integ(size,size,size))
+    allocate(E(size,size,size))
+    allocate(ynm(size))
+    E(:,:,:) = zero
+    do i=1,sphere%ne
+       write(*,*) i, "/", sphere%ne
+       
+       ! Gauss積分
+       integ(:,:,:) = zero
+       do ig=1,ng_tri
+          ! 積分点 (Cartesian)
+          y_vec = convert_area_to_Cartesian(&
+               sphere%p(:,sphere%nd(1,i)),&
+               sphere%p(:,sphere%nd(2,i)),&
+               sphere%p(:,sphere%nd(3,i)),&
+               gauss_tri_xi(:,ig))
+
+          ! 球面調和関数Yを計算
+          call sph(nmax, y_vec, ynm)
+          ! 各(n,m),(nn,mm),(nnn,mmm)について被積分関数を計算
+          do nnn=0,nmax
+             do mmm=-nnn,nnn
+                do nn=0,nmax
+                   do mm=-nn,nn
+                      do n=0,nmax
+                         do m=-n,n
+                            integ(loct(n,m),loct(nn,mm),loct(nnn,mmm)) = integ(loct(n,m),loct(nn,mm),loct(nnn,mmm)) + &
+                                 gauss_tri_w(ig) * ynm(loct(n,m)) * ynm(loct(nn,-mm)) * ynm(loct(nnn,-mmm))
+                                 
+                         end do
+                      end do
+                   end do
+                end do
+             end do
+          end do                         
+       end do
+       ! integの計算終わり
+
+       ! 係数を掛けてEに足す
+       do nnn=0,nmax
+          do mmm=-nnn,nnn
+             do nn=0,nmax
+                do mm=-nn,nn
+                   do n=0,nmax
+                      do m=-n,n
+                         E(loct(n,m),loct(nn,mm),loct(nnn,mmm)) = E(loct(n,m),loct(nn,mm),loct(nnn,mmm)) + &
+                              sphere%ar(i)*integ(loct(n,m),loct(nn,mm),loct(nnn,mmm)) &
+                              * ione**(nn+nnn-n)/(4.d0*pi)*(-1)**(mm+mmm)
+                      end do
+                   end do
+                end do
+             end do
+          end do
+       end do
+                 
+    end do
+
+    ! ファイルに出力
+    open(10,file=filename)
+    write(10,*) nmax
+    do nnn=0,nmax
+       do mmm=-nnn,nnn
+          do nn=0,nmax
+             do mm=-nn,nn
+                do n=0,nmax
+                   do m=-n,n
+                      write(10,'(2e24.16)') E(loct(n,m),loct(nn,mm),loct(nnn,mmm))
+                   end do
+                end do
+             end do
+          end do
+       end do
+    end do
+
+    close(10)
+    
+  end subroutine output_E
+
+  !> \f$ O_n^m \f$のtranslation matrix \f$ T_{nn^\prime}^{mm^\prime} \f$を計算
+  !! \param self
+  !! \param vec \f$ T_{nn^\prime}^{mm^\prime} \f$の引数
+  !! \param out \f$ T_{nn^\prime}^{mm^\prime} \f$の値を格納する配列
+  subroutine calc_T(self, vec, out)
+    class(smatrix_helmholtz),intent(in) :: self
+    real(8),intent(in) :: vec(3)
+    complex(8),intent(out) :: out(self%size,self%size)
+
+    integer :: n, nn, nnn
+    integer :: m, mm, mmm
+    complex(8),allocatable :: Onm(:)
+
+    allocate(Onm(self%size))
+
+    ! Oを計算
+    call calc_Onm(self%k, vec, self%nmax, Onm)
+    
+    ! 各(n,m), (nn,mm)について，Tの成分を計算
+    out(:,:) = zero
+    do nnn=0,self%nmax
+       do mmm=-nnn,nnn          
+          
+          do nn=0,self%nmax
+             do mm=-nn,nn
+                do n=0,self%nmax
+                   do m=-n,n
+                      out(loct(n,m),loct(nn,mm)) = out(loct(n,m),loct(nn,mm)) + &
+                           (2*n+1)*(2*nnn+1)*self%E(loct(nn,mm),loct(n,m),loct(nnn,mmm))*Onm(loct(nnn,mmm))
+                      ! out(loct(n,m),loct(nn,mm)) = out(loct(n,m),loct(nn,mm)) + &
+                      !      (2*nn+1)*(2*nnn+1)*self%E(loct(n,m),loct(nn,mm),loct(nnn,mmm))*Onm(loct(nnn,mmm))
+                   end do
+                end do
+             end do
+          end do
+
+       end do
+    end do
+    
+  end subroutine calc_T
+
+  !> \f$ I_n^m \f$のtranslation matrix \f$ \tilde{T}_{nn^\prime}^{mm^\prime} \f$を計算
+  !! \param self
+  !! \param vec \f$ T_{nn^\prime}^{mm^\prime} \f$の引数
+  !! \param out \f$ T_{nn^\prime}^{mm^\prime} \f$の値を格納する配列
+  subroutine calc_T_tilde(self, vec, out)
+    class(smatrix_helmholtz),intent(in) :: self
+    real(8),intent(in) :: vec(3)
+    complex(8),intent(out) :: out(self%size,self%size)
+
+    integer :: n, nn, nnn
+    integer :: m, mm, mmm
+    complex(8),allocatable :: Inm(:)
+
+    allocate(Inm(self%size))
+
+    ! Iを計算
+    call calc_Inm(self%k, vec, self%nmax, Inm)
+    
+    ! 各(n,m), (nn,mm)について，Tの成分を計算
+    out(:,:) = zero
+    do nnn=0,self%nmax
+       do mmm=-nnn,nnn          
+          
+          do nn=0,self%nmax
+             do mm=-nn,nn
+                do n=0,self%nmax
+                   do m=-n,n
+                      out(loct(n,m),loct(nn,mm)) = out(loct(n,m),loct(nn,mm)) + &
+                           (2*n+1)*(2*nnn+1)*self%E(loct(nn,mm),loct(n,m),loct(nnn,mmm))*Inm(loct(nnn,mmm))
+                      ! out(loct(n,m),loct(nn,mm)) = out(loct(n,m),loct(nn,mm)) + &
+                      !      (2*nn+1)*(2*nnn+1)*self%E(loct(n,m),loct(nn,mm),loct(nnn,mmm))*Inm(loct(nnn,mmm))
+                   end do
+                end do
+             end do
+          end do
+
+       end do
+    end do
+    
+  end subroutine calc_T_tilde
+  
 end module smatrix_helmholtz_class

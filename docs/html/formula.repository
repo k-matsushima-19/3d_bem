@@ -39,3 +39,11 @@
 \form#38:$ S_{kn}^{lm} $
 \form#39:$ O_n^m(x)=h^{(1)}_n(k|x|)Y_n^m(x/|x|) $
 \form#40:$ p\in S^2 $
+\form#41:$ E_{n n^\prime n^{\prime\prime}}^{m m^\prime m^{\prime\prime}} $
+\form#42:$ n,n^\prime,n^{\prime\prime} $
+\form#43:$ O_n^m $
+\form#44:$ T_{nn^\prime}^{mm^\prime} $
+\form#45:$ I_n^m $
+\form#46:$ \tilde{T}_{nn^\prime}^{mm^\prime} $
+\form#47:$ \mathrm{amp}*\exp(\mathrm{i}kp\dot x) $
+\form#48:$ \mathrm{amp}*\exp(\mathrm{i}kp\cdot x) $

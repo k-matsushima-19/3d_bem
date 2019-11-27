@@ -75,7 +75,7 @@ contains
 
     complex(8) :: Inm((self%n+1)**2)
 
-    call calc_Inm(self%k, x, self%n, Inm)
+    call calc_Inm(self%k, x-self%origin, self%n, Inm)
 
     calc = Inm(loct(self%n,self%m))
 
@@ -92,7 +92,7 @@ contains
 
     complex(8) :: Inm_deri(3,(self%n+1)**2)
 
-    call calc_Inm_derivative(self%k, x, self%n, Inm_deri)
+    call calc_Inm_derivative(self%k, x-self%origin, self%n, Inm_deri)
 
     calc_derivative(:) = Inm_deri(:,loct(self%n,self%m))
 

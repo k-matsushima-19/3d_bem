@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,14 +30,32 @@
 </div>
 <!-- end header part -->
 <!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div id="nav-path" class="navpath">
   <ul>
 <li class="navelem"><a class="el" href="namespacemesh3d__class.html">mesh3d_class</a></li><li class="navelem"><a class="el" href="interfacemesh3d__class_1_1calc__miniball__wrapper.html">calc_miniball_wrapper</a></li>  </ul>
@@ -56,7 +77,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock">
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00054">54</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00056">56</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a7a1d04219f839ae18b399c26a59e33d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a1d04219f839ae18b399c26a59e33d7">&#9670;&nbsp;</a></span>calc_miniball_wrapper()</h2>
@@ -110,8 +131,8 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00055">55</a> 行目に定義があります。</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;       <span class="keywordtype">use </span>iso_c_binding</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;       <span class="keywordtype">integer(c_int)</span>,<span class="keywordtype">value</span> :: dim</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;       <span class="keywordtype">integer(c_int)</span>,<span class="keywordtype">value</span> :: n</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;       <span class="keywordtype">real(c_double)</span> :: points(dim,n)</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <span class="keywordtype">real(c_double)</span> :: center(dim)</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;       <span class="keywordtype">real(c_double)</span> :: radius</div></div><!-- fragment -->
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00057">57</a> 行目に定義があります。</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;       <span class="keywordtype">use </span>iso_c_binding</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;       <span class="keywordtype">integer(c_int)</span>,<span class="keywordtype">value</span> :: dim</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <span class="keywordtype">integer(c_int)</span>,<span class="keywordtype">value</span> :: n</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;       <span class="keywordtype">real(c_double)</span> :: points(dim,n)</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;       <span class="keywordtype">real(c_double)</span> :: center(dim)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       <span class="keywordtype">real(c_double)</span> :: radius</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>次のファイルからインターフェースの詳解が抽出されました:<ul>
@@ -120,7 +141,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月27日(水) 22時57分11秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BEM for 3D acoustics/elastodynamics: smatrices_helmholtz_class.f90 ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BEM for 3D acoustics/elastodynamics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_c89bd538986b5fa2f5874f9b3c9fae5c.html">hdd</a></li><li class="navelem"><a class="el" href="dir_0530d4d7188df132349cdbe2232239d9.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_b847784016724036b77217bbc510813b.html">program</a></li><li class="navelem"><a class="el" href="dir_dd104d35df4266e0cb1aab18a512d7bf.html">3d_bem</a></li><li class="navelem"><a class="el" href="dir_ad1e22684a7d39f9291b696175a955f5.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ型</a> &#124;
+<a href="#namespaces">モジュール</a> &#124;
+<a href="#func-members">関数/サブルーチン</a>  </div>
+  <div class="headertitle">
+<div class="title">smatrices_helmholtz_class.f90 ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="smatrices__helmholtz__class_8f90_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ型</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmatrices__helmholtz__class_1_1smatrices__helmholtz.html">smatrices_helmholtz_class::smatrices_helmholtz</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D-HelmholtzのS行列を複数用いて，multiple scatteringを解くための構造体  <a href="structsmatrices__helmholtz__class_1_1smatrices__helmholtz.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+モジュール</h2></td></tr>
+<tr class="memitem:namespacesmatrices__helmholtz__class"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrices__helmholtz__class.html">smatrices_helmholtz_class</a></td></tr>
+<tr class="memdesc:namespacesmatrices__helmholtz__class"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D-HelmholtzのS行列を複数用いて，multiple scatteringを解くための構造体 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数/サブルーチン</h2></td></tr>
+<tr class="memitem:aa354138bab2165c2835060c2534fa982"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrices__helmholtz__class.html#aa354138bab2165c2835060c2534fa982">smatrices_helmholtz_class::init</a> (self, nobj, smats)</td></tr>
+<tr class="memdesc:aa354138bab2165c2835060c2534fa982"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="namespacesmatrices__helmholtz__class.html#aa354138bab2165c2835060c2534fa982">[詳解]</a><br /></td></tr>
+<tr class="separator:aa354138bab2165c2835060c2534fa982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830ba7e7cd9982ac5e2dc009fbdc32c3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrices__helmholtz__class.html#a830ba7e7cd9982ac5e2dc009fbdc32c3">smatrices_helmholtz_class::gen_amat</a> (self)</td></tr>
+<tr class="memdesc:a830ba7e7cd9982ac5e2dc009fbdc32c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位行列，S行列，translation matrixを並べた係数行列amatを作る  <a href="namespacesmatrices__helmholtz__class.html#a830ba7e7cd9982ac5e2dc009fbdc32c3">[詳解]</a><br /></td></tr>
+<tr class="separator:a830ba7e7cd9982ac5e2dc009fbdc32c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626adfc9563b936c661ff93e960c7342"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrices__helmholtz__class.html#a626adfc9563b936c661ff93e960c7342">smatrices_helmholtz_class::lu_decompose</a> (self)</td></tr>
+<tr class="memdesc:a626adfc9563b936c661ff93e960c7342"><td class="mdescLeft">&#160;</td><td class="mdescRight">係数行列amatをLU分解する  <a href="namespacesmatrices__helmholtz__class.html#a626adfc9563b936c661ff93e960c7342">[詳解]</a><br /></td></tr>
+<tr class="separator:a626adfc9563b936c661ff93e960c7342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5b07316cb9a9b69352c5a322f907da"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrices__helmholtz__class.html#a8f5b07316cb9a9b69352c5a322f907da">smatrices_helmholtz_class::lu_solve</a> (self)</td></tr>
+<tr class="memdesc:a8f5b07316cb9a9b69352c5a322f907da"><td class="mdescLeft">&#160;</td><td class="mdescRight">LU分解した係数行列amatとbvecを用いて連立方程式を解く．bvecに解が上書きされる．  <a href="namespacesmatrices__helmholtz__class.html#a8f5b07316cb9a9b69352c5a322f907da">[詳解]</a><br /></td></tr>
+<tr class="separator:a8f5b07316cb9a9b69352c5a322f907da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11789dbb9c6699672e47dcfdbf42e530"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrices__helmholtz__class.html#a11789dbb9c6699672e47dcfdbf42e530">smatrices_helmholtz_class::gen_bvec_planewave</a> (self, amp, pvec)</td></tr>
+<tr class="memdesc:a11789dbb9c6699672e47dcfdbf42e530"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面波 <img class="formulaInl" alt="$ \mathrm{amp}*\exp(\mathrm{i}kp\cdot x) $" src="form_48.png"/>が入射波するときの右辺ベクトルを生成  <a href="namespacesmatrices__helmholtz__class.html#a11789dbb9c6699672e47dcfdbf42e530">[詳解]</a><br /></td></tr>
+<tr class="separator:a11789dbb9c6699672e47dcfdbf42e530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c907e647ff885129f4728fb490461e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesmatrices__helmholtz__class.html#ad9c907e647ff885129f4728fb490461e">smatrices_helmholtz_class::gen_solution</a> (self, sol)</td></tr>
+<tr class="memdesc:ad9c907e647ff885129f4728fb490461e"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のbvecから境界・内点の解を計算  <a href="namespacesmatrices__helmholtz__class.html#ad9c907e647ff885129f4728fb490461e">[詳解]</a><br /></td></tr>
+<tr class="separator:ad9c907e647ff885129f4728fb490461e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年11月27日(水) 22時57分11秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

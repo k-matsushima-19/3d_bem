@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,14 +30,32 @@
 </div>
 <!-- end header part -->
 <!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div id="nav-path" class="navpath">
   <ul>
 <li class="navelem"><a class="el" href="namespacemesh3d__class.html">mesh3d_class</a></li><li class="navelem"><a class="el" href="structmesh3d__class_1_1mesh3d.html">mesh3d</a></li>  </ul>
@@ -82,6 +103,9 @@ $(function() {
 <tr class="memitem:a96868673b17273483da342e7a12b5644"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#a96868673b17273483da342e7a12b5644">output_off</a></td></tr>
 <tr class="memdesc:a96868673b17273483da342e7a12b5644"><td class="mdescLeft">&#160;</td><td class="mdescRight">.off形式で境界メッシュをファイルに出力  <a href="#a96868673b17273483da342e7a12b5644">[詳解]</a><br /></td></tr>
 <tr class="separator:a96868673b17273483da342e7a12b5644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb98d5ca63344e32edbfd1c3c7ca5cc5"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmesh3d__class_1_1mesh3d.html#afb98d5ca63344e32edbfd1c3c7ca5cc5">add_mesh</a></td></tr>
+<tr class="memdesc:afb98d5ca63344e32edbfd1c3c7ca5cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">selfに他のmeshを結合する  <a href="#afb98d5ca63344e32edbfd1c3c7ca5cc5">[詳解]</a><br /></td></tr>
+<tr class="separator:afb98d5ca63344e32edbfd1c3c7ca5cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -118,6 +142,27 @@ $(function() {
 
 <p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00009">9</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">メンバ関数/サブルーチン詳解</h2>
+<a id="afb98d5ca63344e32edbfd1c3c7ca5cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb98d5ca63344e32edbfd1c3c7ca5cc5">&#9670;&nbsp;</a></span>add_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure mesh3d_class::mesh3d::add_mesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>selfに他のmeshを結合する </p>
+
+<p class="definition"> <a class="el" href="mesh3d__class_8f90_source.html">mesh3d_class.f90</a> の <a class="el" href="mesh3d__class_8f90_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="afa300b29852ee792f178cb3d79a347bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa300b29852ee792f178cb3d79a347bc">&#9670;&nbsp;</a></span>calc_enclosing_circle()</h2>
 
@@ -476,7 +521,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月27日(水) 22時57分11秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

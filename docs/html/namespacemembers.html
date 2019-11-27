@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,19 +30,40 @@
 </div>
 <!-- end header part -->
 <!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="contents">
 <div class="textblock">これはモジュールメンバ一覧です。それぞれ 属しているモジュールの詳解へリンクしています。</div>
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>add_mesh()
+: <a class="el" href="namespacemesh3d__class.html#a178123cfb02c1adc899849aabc92b301">mesh3d_class</a>
+</li>
 <li>ana_sphere_planewave()
 : <a class="el" href="namespaceexamples__helmholtz.html#af1bc7510d26480af38fd366f60dde31e">examples_helmholtz</a>
 </li>
@@ -99,6 +123,12 @@ $(function() {
 <li>calc_sol()
 : <a class="el" href="namespacesmatrix__helmholtz__class.html#ae8080b72be872b8e7dd0b34ad46322fd">smatrix_helmholtz_class</a>
 </li>
+<li>calc_t()
+: <a class="el" href="namespacesmatrix__helmholtz__class.html#a1b81efe1a26a7f31490db5413fecadc4">smatrix_helmholtz_class</a>
+</li>
+<li>calc_t_tilde()
+: <a class="el" href="namespacesmatrix__helmholtz__class.html#a202a553d8e836ba31f52ffbf02582192">smatrix_helmholtz_class</a>
+</li>
 <li>calc_y_theta()
 : <a class="el" href="namespacemath.html#ab041e4120511217efc3b83843cc42798">math</a>
 </li>
@@ -145,12 +175,17 @@ $(function() {
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>gen_amat()
 : <a class="el" href="namespacebem3d__helmholtz__class.html#a98fb5cbe7bd8f644ede7bf6fbbd71009">bem3d_helmholtz_class</a>
+, <a class="el" href="namespacesmatrices__helmholtz__class.html#a830ba7e7cd9982ac5e2dc009fbdc32c3">smatrices_helmholtz_class</a>
 </li>
 <li>gen_bvec()
 : <a class="el" href="namespacebem3d__helmholtz__class.html#a4fc7b1442be94b7ee98b7726be517a98">bem3d_helmholtz_class</a>
 </li>
+<li>gen_bvec_planewave()
+: <a class="el" href="namespacesmatrices__helmholtz__class.html#a11789dbb9c6699672e47dcfdbf42e530">smatrices_helmholtz_class</a>
+</li>
 <li>gen_solution()
 : <a class="el" href="namespacebem3d__helmholtz__class.html#a64942bfd2c330cdbd257de0df0c6c50a">bem3d_helmholtz_class</a>
+, <a class="el" href="namespacesmatrices__helmholtz__class.html#ad9c907e647ff885129f4728fb490461e">smatrices_helmholtz_class</a>
 </li>
 <li>generate_gauss_triangle()
 : <a class="el" href="namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e">math</a>
@@ -168,6 +203,7 @@ $(function() {
 , <a class="el" href="namespaceincwave3d__helmholtz__spherical__class.html#a09fe018554ce08efab314d1fbde55e9b">incwave3d_helmholtz_spherical_class</a>
 , <a class="el" href="namespacelayerpotential3d__helmholtz__class.html#aa07b262341a2b42eb7dce37c04467bab">layerpotential3d_helmholtz_class</a>
 , <a class="el" href="namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572">mesh3d_class</a>
+, <a class="el" href="namespacesmatrices__helmholtz__class.html#aa354138bab2165c2835060c2534fa982">smatrices_helmholtz_class</a>
 , <a class="el" href="namespacesmatrix__helmholtz__class.html#aeebbc4329ffbb9acea5eb8cd3536e09e">smatrix_helmholtz_class</a>
 , <a class="el" href="namespacesolution__helmholtz__class.html#af28be2d6f13daad2944651304ebd4005">solution_helmholtz_class</a>
 </li>
@@ -189,9 +225,18 @@ $(function() {
 </li>
 <li>lu_decompose()
 : <a class="el" href="namespacebem3d__class.html#a939df2433a6414faefe40d8aec982ed9">bem3d_class</a>
+, <a class="el" href="namespacesmatrices__helmholtz__class.html#a626adfc9563b936c661ff93e960c7342">smatrices_helmholtz_class</a>
 </li>
 <li>lu_solve()
 : <a class="el" href="namespacebem3d__class.html#a417981f6d5c1c508b8f1bb1c35410946">bem3d_class</a>
+, <a class="el" href="namespacesmatrices__helmholtz__class.html#a8f5b07316cb9a9b69352c5a322f907da">smatrices_helmholtz_class</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>multi_smatrix_ana()
+: <a class="el" href="namespaceexamples__helmholtz.html#abbf82277da7fa08e4d8d9011f403a288">examples_helmholtz</a>
 </li>
 </ul>
 
@@ -208,6 +253,9 @@ $(function() {
 </li>
 <li>output_bndry_geomview()
 : <a class="el" href="namespacesolution__helmholtz__class.html#a9cf893d0656226598dd451022fffe04c">solution_helmholtz_class</a>
+</li>
+<li>output_e()
+: <a class="el" href="namespacesmatrix__helmholtz__class.html#a430f0bf83820076b83c1c507aad6d2b0">smatrix_helmholtz_class</a>
 </li>
 <li>output_off()
 : <a class="el" href="namespacemesh3d__class.html#a47de05cb5da8e4068290dbd7fabea365">mesh3d_class</a>
@@ -312,7 +360,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月27日(水) 22時57分11秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

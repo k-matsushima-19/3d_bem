@@ -4,6 +4,95 @@ module examples_helmholtz
 
 contains
   !> 球による平面波散乱の解析解を計算
+  subroutine multi_smatrix_ana
+    use misc
+    use file_io
+    use math
+    use mesh3d_class
+    use solution_helmholtz_class
+    use smatrix_helmholtz_class
+    use smatrices_helmholtz_class
+
+    real(8) :: w
+    real(8) :: c
+    real(8) :: k
+    
+    integer :: nmax
+
+    type(mesh3d),allocatable :: mesh1, mesh2
+    character(:),allocatable :: fn_mesh
+
+    type(solution_helmholtz),allocatable :: sol
+    type(smatrix_helmholtz),allocatable :: smat1, smat2
+    type(smatrices_helmholtz),allocatable :: smats
+
+    complex(8),allocatable :: A(:)
+
+    real(8) :: pvec(3)
+
+    ! tmp
+    real(8) :: x_p(3), x_q(3), x(3)
+    complex(8),allocatable :: O(:), B(:), TB(:), T(:,:), I(:)
+    complex(8) :: ret
+    integer :: n, m
+    
+    !
+    ! read input
+    !
+    open(10, file="input.conf")
+    call read_config(10, "w", w, "3.0 # angular freq.")
+    call read_config(10, "c", c, "1.2 # phase velocity")
+    call read_config(10, "nmax", nmax, "+20 # maximum index of spherical funcs >= 0")
+    close(10)
+
+    
+
+    ! ! Eを計算
+    ! call output_E("E.off", "E.dat", 10)
+    ! stop
+
+    ! 球1のメッシュを読み込み
+    allocate(mesh1)
+    call mesh1%read_off("sphere.off")
+    call mesh1%invert
+    ! mesh1をshift
+    call mesh1%shift([-1.5d0,0.d0,0.d0])
+    ! S行列を作る
+    allocate(smat1)
+    ! call smat1%init_sphere(mesh1, "neumann", w, [c,c], nmax)
+    call smat1%init(mesh1, "neumann", w, [c,c], nmax)
+    call smat1%output_S("smatrix1.dat")
+
+    ! 球2のメッシュを読み込み
+    allocate(mesh2)
+    call mesh2%read_off("sphere.off")
+    call mesh2%invert
+    ! mesh2をshift
+    call mesh2%shift([+1.5d0,0.d0,0.d0])
+    ! S行列を作る
+    allocate(smat2)
+    ! call smat2%init_sphere(mesh2, "neumann", w, [c,c], nmax)
+    call smat2%init(mesh2, "neumann", w, [c,c], nmax)
+    call smat1%output_S("smatrix2.dat")
+    
+    ! 2つのS行列からsmatrices構造体を作る
+    allocate(smats)
+    call smats%init(2, [smat1, smat2])
+
+    call smats%gen_amat
+    call smats%lu_decompose
+    pvec = [0.d0, 1.d0, 0.d0]
+    call smats%gen_bvec_planewave(one, pvec)
+    call smats%lu_solve
+
+    allocate(sol)
+    call smats%gen_solution(sol)
+
+    call sol%output_bndry("bndry.dat")
+    
+  end subroutine multi_smatrix_ana
+  
+  !> 球による平面波散乱の解析解を計算
   subroutine compute_smatrix_ana
     use misc
     use file_io

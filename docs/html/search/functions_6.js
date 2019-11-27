@@ -1,0 +1,16 @@
+var searchData=
+[
+  ['gen_5famat',['gen_amat',['../structbem3d__helmholtz__class_1_1bem3d__helmholtz.html#a7dfae6492f44c68aa909bb6349a82ec0',1,'bem3d_helmholtz_class::bem3d_helmholtz::gen_amat()'],['../structsmatrices__helmholtz__class_1_1smatrices__helmholtz.html#a890577cfe8e5e4c6d795cfde033a28b9',1,'smatrices_helmholtz_class::smatrices_helmholtz::gen_amat()'],['../namespacebem3d__helmholtz__class.html#a98fb5cbe7bd8f644ede7bf6fbbd71009',1,'bem3d_helmholtz_class::gen_amat()'],['../namespacesmatrices__helmholtz__class.html#a830ba7e7cd9982ac5e2dc009fbdc32c3',1,'smatrices_helmholtz_class::gen_amat()']]],
+  ['gen_5fbvec',['gen_bvec',['../structbem3d__helmholtz__class_1_1bem3d__helmholtz.html#a881483fa1be420b3ee6a65ca011021f5',1,'bem3d_helmholtz_class::bem3d_helmholtz::gen_bvec()'],['../namespacebem3d__helmholtz__class.html#a4fc7b1442be94b7ee98b7726be517a98',1,'bem3d_helmholtz_class::gen_bvec()']]],
+  ['gen_5fbvec_5fplanewave',['gen_bvec_planewave',['../structsmatrices__helmholtz__class_1_1smatrices__helmholtz.html#ae27f0d9614a8eec7a64de1ccaa064592',1,'smatrices_helmholtz_class::smatrices_helmholtz::gen_bvec_planewave()'],['../namespacesmatrices__helmholtz__class.html#a11789dbb9c6699672e47dcfdbf42e530',1,'smatrices_helmholtz_class::gen_bvec_planewave()']]],
+  ['gen_5fsolution',['gen_solution',['../structbem3d__helmholtz__class_1_1bem3d__helmholtz.html#a5bbb286d21a09c593ca74cd427d663f1',1,'bem3d_helmholtz_class::bem3d_helmholtz::gen_solution()'],['../structsmatrices__helmholtz__class_1_1smatrices__helmholtz.html#ae0082c3f2b239bceb6973b0a809549ca',1,'smatrices_helmholtz_class::smatrices_helmholtz::gen_solution()'],['../namespacebem3d__helmholtz__class.html#a64942bfd2c330cdbd257de0df0c6c50a',1,'bem3d_helmholtz_class::gen_solution()'],['../namespacesmatrices__helmholtz__class.html#ad9c907e647ff885129f4728fb490461e',1,'smatrices_helmholtz_class::gen_solution()']]],
+  ['generate_5fgauss',['generate_gauss',['../interfacelayerpotential3d__helmholtz__class_1_1generate__gauss.html#acd62ef86c170ce54b391e9df66a0d55f',1,'layerpotential3d_helmholtz_class::generate_gauss']]],
+  ['generate_5fgauss_5ftriangle',['generate_gauss_triangle',['../namespacemath.html#aa75ccce9740302b8e238a9a10e76f33e',1,'math']]],
+  ['get_5fmemory',['get_memory',['../namespacemisc.html#aaea0384517da4daa90d2732bfe69d69a',1,'misc']]],
+  ['getedge',['getedge',['../kyu_8f.html#ac6a70a0b763a0dae91e236bda7a43000',1,'kyu.f']]],
+  ['getmem',['getmem',['../interfacemisc_1_1getmem.html#a95186c91abdc33f3ae58bf7259a84faf',1,'misc::getmem']]],
+  ['gsl_5fsf_5fbessel_5fjl',['gsl_sf_bessel_jl',['../interfacemath_1_1gsl__sf__bessel__jl.html#a1b4e1d2a97a03fe2461ced587d35f0f2',1,'math::gsl_sf_bessel_jl']]],
+  ['gsl_5fsf_5fbessel_5fjl_5farray',['gsl_sf_bessel_jl_array',['../interfacemath_1_1gsl__sf__bessel__jl__array.html#a1edabc8030bf95e0a0cf6483ecbfc7b9',1,'math::gsl_sf_bessel_jl_array']]],
+  ['gsl_5fsf_5fbessel_5fyl',['gsl_sf_bessel_yl',['../interfacemath_1_1gsl__sf__bessel__yl.html#a7fd95be4bff6d73dd9ece867fc04c95f',1,'math::gsl_sf_bessel_yl']]],
+  ['gsl_5fsf_5fbessel_5fyl_5farray',['gsl_sf_bessel_yl_array',['../interfacemath_1_1gsl__sf__bessel__yl__array.html#ab54aaae0320d9a9d06c6248a5eaf90ce',1,'math::gsl_sf_bessel_yl_array']]]
+];

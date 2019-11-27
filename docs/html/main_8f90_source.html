@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,14 +30,32 @@
 </div>
 <!-- end header part -->
 <!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',false,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div id="nav-path" class="navpath">
   <ul>
 <li class="navelem"><a class="el" href="dir_19225156eb7ba052e31d1a736469917a.html">mnt</a></li><li class="navelem"><a class="el" href="dir_c89bd538986b5fa2f5874f9b3c9fae5c.html">hdd</a></li><li class="navelem"><a class="el" href="dir_0530d4d7188df132349cdbe2232239d9.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_b847784016724036b77217bbc510813b.html">program</a></li><li class="navelem"><a class="el" href="dir_dd104d35df4266e0cb1aab18a512d7bf.html">3d_bem</a></li><li class="navelem"><a class="el" href="dir_ad1e22684a7d39f9291b696175a955f5.html">src</a></li>  </ul>
@@ -45,13 +66,13 @@ $(function() {
 <div class="title">main.f90</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="main_8f90.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="main_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">    2</a></span>&#160;<span class="keyword">program</span> <a class="code" href="merge_8f.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a>  </div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceexamples__helmholtz.html">examples_helmholtz</a></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="comment">! call ana_sphere</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="comment">! call solve_helmholtz3d_planewave</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="comment">! call solve_helmholtz3d_spherical</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">call </span><a class="code" href="namespaceexamples__helmholtz.html#af425f6bfc1ffb8f6ae1c3bc287f33513">compute_smatrix_ana</a></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  </div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">end program </span><a class="code" href="merge_8f.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  </div><div class="ttc" id="merge_8f_html_a8ec2266d83cd6c0b762cbcbc92c0af3d"><div class="ttname"><a href="merge_8f.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div><div class="ttdeci">program main</div><div class="ttdef"><b>Definition:</b> <a href="merge_8f_source.html#l00012">merge.f:12</a></div></div>
+<a href="main_8f90.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="main_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">    2</a></span>&#160;<span class="keyword">program</span> <a class="code" href="merge_8f.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="comment">! use mesh3d_class</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="comment">! type(mesh3d) :: mesh1, mesh2</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="comment">! call mesh1%read_off(&quot;sphere.off&quot;)</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="comment">! call mesh2%read_off(&quot;sphere.off&quot;)</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="comment">! call mesh1%shift([-1.5d0, 0.d0, 0.d0])</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">! call mesh2%shift([+1.5d0, 0.d0, 0.d0])</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">! call mesh1%add_mesh(mesh2)</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">! call mesh1%output_off(&quot;double.off&quot;)</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  </div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceexamples__helmholtz.html">examples_helmholtz</a></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">implicit none</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">! call ana_sphere</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">! call solve_helmholtz3d_planewave</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">! call solve_helmholtz3d_spherical</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">! call compute_smatrix_ana</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">call </span><a class="code" href="namespaceexamples__helmholtz.html#abbf82277da7fa08e4d8d9011f403a288">multi_smatrix_ana</a></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">end program </span><a class="code" href="merge_8f.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  </div><div class="ttc" id="merge_8f_html_a8ec2266d83cd6c0b762cbcbc92c0af3d"><div class="ttname"><a href="merge_8f.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div><div class="ttdeci">program main</div><div class="ttdef"><b>Definition:</b> <a href="merge_8f_source.html#l00012">merge.f:12</a></div></div>
+<div class="ttc" id="namespaceexamples__helmholtz_html_abbf82277da7fa08e4d8d9011f403a288"><div class="ttname"><a href="namespaceexamples__helmholtz.html#abbf82277da7fa08e4d8d9011f403a288">examples_helmholtz::multi_smatrix_ana</a></div><div class="ttdeci">subroutine multi_smatrix_ana</div><div class="ttdoc">球による平面波散乱の解析解を計算 </div><div class="ttdef"><b>Definition:</b> <a href="examples__helmoltz_8f90_source.html#l00008">examples_helmoltz.f90:8</a></div></div>
 <div class="ttc" id="namespaceexamples__helmholtz_html"><div class="ttname"><a href="namespaceexamples__helmholtz.html">examples_helmholtz</a></div><div class="ttdoc">3次元Helmholtzに関連する例 </div><div class="ttdef"><b>Definition:</b> <a href="examples__helmoltz_8f90_source.html#l00002">examples_helmoltz.f90:2</a></div></div>
-<div class="ttc" id="namespaceexamples__helmholtz_html_af425f6bfc1ffb8f6ae1c3bc287f33513"><div class="ttname"><a href="namespaceexamples__helmholtz.html#af425f6bfc1ffb8f6ae1c3bc287f33513">examples_helmholtz::compute_smatrix_ana</a></div><div class="ttdeci">subroutine compute_smatrix_ana</div><div class="ttdoc">球による平面波散乱の解析解を計算 </div><div class="ttdef"><b>Definition:</b> <a href="examples__helmoltz_8f90_source.html#l00008">examples_helmoltz.f90:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2019年11月26日(火) 22時31分39秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2019年11月27日(水) 22時57分11秒作成 - BEM for 3D acoustics/elastodynamics / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

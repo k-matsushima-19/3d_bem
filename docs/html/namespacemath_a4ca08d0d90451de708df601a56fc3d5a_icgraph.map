@@ -1,14 +1,16 @@
 <map id="math::vector_length" name="math::vector_length">
-<area shape="rect" id="node2" href="$namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="191,16,367,57"/>
-<area shape="rect" id="node3" href="$namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63" title="の を計算 " alt="" coords="223,82,334,109"/>
-<area shape="rect" id="node9" href="$namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26" title="の を計算 " alt="" coords="221,133,336,159"/>
-<area shape="rect" id="node10" href="$namespacemath.html#ae5da5aafa9f0b315cd1d34a2a28d6be1" title="デカルト座標から球面座標を計算 " alt="" coords="213,187,344,228"/>
-<area shape="rect" id="node13" href="$namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="ne, np, p, ndを与えた後，その他のメンバを初期化する " alt="" coords="213,253,344,279"/>
+<area shape="rect" id="node2" href="$namespacelayerpotential3d__helmholtz__class.html#a91a4d06d45dc3c117bb59e046261ec86" title="1重層,2重層,2重層随伴、2重層微分の三角形上の積分を計算 " alt="" coords="191,97,367,139"/>
+<area shape="rect" id="node3" href="$namespacemath.html#aeb1ff6da21b91faf43af5bbd19353b63" title="の を計算 " alt="" coords="223,163,334,190"/>
+<area shape="rect" id="node10" href="$namespacemath.html#ac5c6d9d380516f028b781392ae1d7b26" title="の を計算 " alt="" coords="221,238,336,265"/>
+<area shape="rect" id="node12" href="$namespacemath.html#ae5da5aafa9f0b315cd1d34a2a28d6be1" title="デカルト座標から球面座標を計算 " alt="" coords="213,292,344,333"/>
+<area shape="rect" id="node15" href="$namespacemesh3d__class.html#ad705600a8742c631f57be26373fdb572" title="ne, np, p, ndを与えた後，その他のメンバを初期化する " alt="" coords="213,358,344,385"/>
 <area shape="rect" id="node4" href="$namespaceincwave3d__helmholtz__spherical__class.html#a7698529580f6d301e3f9674ed6e323a5" title="点xでの入射波の値を計算 " alt="" coords="427,5,577,47"/>
 <area shape="rect" id="node5" href="$namespacemath.html#aaaf8f49356a86e70de5b17f784390b26" title="の 微分を について計算 " alt="" coords="415,71,589,98"/>
-<area shape="rect" id="node8" href="$namespacesmatrix__helmholtz__class.html#ae6b7ebc52236363235b43b16fd61e1fb" title="散乱体が球の場合について，解析解を用いてS行列を作る " alt="" coords="419,123,585,164"/>
+<area shape="rect" id="node8" href="$namespacesmatrix__helmholtz__class.html#a202a553d8e836ba31f52ffbf02582192" title="のtranslation matrix を計算 " alt="" coords="419,123,585,164"/>
+<area shape="rect" id="node9" href="$namespacesmatrix__helmholtz__class.html#ae6b7ebc52236363235b43b16fd61e1fb" title="散乱体が球の場合について，解析解を用いてS行列を作る " alt="" coords="419,188,585,229"/>
 <area shape="rect" id="node6" href="$namespacesolution__helmholtz__class.html#a4b295b474edd0847dadc88f6d8c4103b" title="境界の解を積分してmeshcenterを原点とするoutgoing coefficientsを計算 " alt="" coords="647,28,778,69"/>
 <area shape="rect" id="node7" href="$namespaceincwave3d__helmholtz__spherical__class.html#a7e3436fa8f5f4136c5f4c646644d30ad" title="点xでの入射波の勾配の値を計算 " alt="" coords="637,94,788,150"/>
-<area shape="rect" id="node11" href="$namespaceexamples__helmholtz.html#af1bc7510d26480af38fd366f60dde31e" title="球による平面波散乱の解析解を計算 " alt="" coords="419,188,585,229"/>
-<area shape="rect" id="node12" href="$namespacemath.html#ab041e4120511217efc3b83843cc42798" title="math::calc_y_theta" alt="" coords="435,254,569,281"/>
+<area shape="rect" id="node11" href="$namespacesmatrix__helmholtz__class.html#a1b81efe1a26a7f31490db5413fecadc4" title="のtranslation matrix を計算 " alt="" coords="419,253,585,295"/>
+<area shape="rect" id="node13" href="$namespaceexamples__helmholtz.html#af1bc7510d26480af38fd366f60dde31e" title="球による平面波散乱の解析解を計算 " alt="" coords="419,319,585,360"/>
+<area shape="rect" id="node14" href="$namespacemath.html#ab041e4120511217efc3b83843cc42798" title="math::calc_y_theta" alt="" coords="435,385,569,411"/>
 </map>
